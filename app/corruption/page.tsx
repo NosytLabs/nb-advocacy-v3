@@ -8,6 +8,7 @@ import { DataCard } from "@/components/DataCard";
 import { Timeline } from "@/components/Timeline";
 import { QuoteBlock } from "@/components/QuoteBlock";
 import { SourceCard } from "@/components/SourceCard";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Systemic Corruption | Reform NB",
@@ -45,10 +46,11 @@ export default function CorruptionPage() {
       
       {/* Hero Image */}
       <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
-        <img 
+        <Image 
           src="https://images.unsplash.com/photo-1523292562811-8fa7962a78c8?w=1200&q=80" 
           alt="Government building representing systemic corruption in New Brunswick"
-          className="w-full h-48 md:h-80 object-cover"
+          fill
+          sizes="(max-width: 768px) 100vw, 1200px"
         />
         <div className="bg-neutral-900 p-4 text-xs text-neutral-500 uppercase tracking-widest text-center">
           Government corruption, untendered contracts, and whistleblower suppression — accountability has been replaced by &quot;litigation privilege&quot;
@@ -69,11 +71,11 @@ export default function CorruptionPage() {
             High-Level Embezzlement
           </h2>
           <p className="text-neutral-400 leading-relaxed mb-6">
-            New Brunswick has seen some of the most brazen acts of public fund theft in Atlantic Canadian 
-            history — perpetrated not by low-level bureaucrats, but by individuals in the highest offices 
-            of government. The fact that two separate senior officials were able to steal over $1 million 
-            combined, over extended periods, without detection, points to systemic failures in financial 
-            oversight.
+            Let's be clear: this isn't some small-time theft. We're talking about senior government officials 
+            stealing over $1 million combined from the public purse. The Lieutenant Governor's principal 
+            secretary and the Deputy Attorney General - the province's top legal official - both had their 
+            hands in the till for years. And nobody noticed? That's not incompetence. That's the system 
+            working exactly as designed.
           </p>
           <div className="grid md:grid-cols-2 gap-8 my-8">
             <div className="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 hover:border-crisis-red/50 transition-all shadow-xl relative overflow-hidden group">
@@ -332,7 +334,7 @@ export default function CorruptionPage() {
             <SourceCard type="article" title="CBC: Yassin Choukri — Deputy AG Guilty Plea" url="https://www.cbc.ca/news/canada/new-brunswick/yassin-choukri-guilty-plea-1.6986538" description="$481K stolen from law society trust" />
             <SourceCard type="article" title="NB Media Co-op: 3+ Corporation — 19 RCMP Charges" url="https://nbmediacoop.org/?s=daniel+bard+3+corporation" description="$1M+ procurement fraud, Daniel Bard" />
             <SourceCard type="pdf" title="Auditor General: $173.9M Travel Nurse Scandal" url="https://www.agnb-vgnb.ca/uploads/volume_translations/81/report/agnb-V2-2025-Report_E.pdf" description="2025 Report — Chapter 2: Untendered Contracts" />
-            <SourceCard type="article" title="CBC: 3+ Corporation Fraud Charges" url="https://www.cbc.ca/news/canada/new-brunswick/3-plus-rcmp-charges-fraud-daniel-bard-1.6511214" description="19 criminal charges laid, July 2022" />
+            <SourceCard type="article" title="CBC: 3+ Corporation Fraud Charges" url="https://www.cbc.ca/news/canada/new-brunswick" description="19 criminal charges laid, July 2022" />
             <SourceCard type="article" title="National Post: Canada's ER Deaths Investigation" url="https://nationalpost.com/news/canada/emergency-department-deaths" description="Connected to healthcare spending corruption" date="MAR 2026" />
           </div>
         </section>

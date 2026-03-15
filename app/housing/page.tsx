@@ -10,6 +10,7 @@ import { Timeline } from "@/components/Timeline";
 import { QuoteBlock } from "@/components/QuoteBlock";
 import { VideoGrid } from "@/components/VideoGrid";
 import { SourceCard } from "@/components/SourceCard";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Housing & Affordability Crisis | Reform NB",
@@ -20,8 +21,10 @@ export const metadata: Metadata = {
 const housingData = [
   { value: "1,500+", label: "Chronically Homeless", sublabel: "Across Moncton (830), Saint John (437), Fredericton (275)" },
   { value: "440", label: "Youth Without Shelter", sublabel: "Ages 16-26, left homeless in 2025 alone" },
-  { value: "100+", label: "Unhoused Deaths in 2025", sublabel: "From toxic drug supply (carfentanil) and exposure" },
+  { value: "12%", label: "Population Surge", sublabel: "775K → 869K in 4 years, straining housing supply" },
+  { value: "$1.5M", label: "Golden Ball Sold", sublabel: "Saint John landmark sold to JDI for demolition, not housing conversion" },
   { value: "50-100%", label: "Rent Increases", sublabel: "Corporate landlords raising rents through mass renovictions" },
+  { value: "100+", label: "Unhoused Deaths in 2025", sublabel: "From toxic drug supply (carfentanil) and exposure" },
 ];
 
 const housingTimeline = [
@@ -47,10 +50,11 @@ export default function HousingPage() {
       
       {/* Hero Image */}
       <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
-        <img 
-          src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80" 
+        <Image 
+          src="https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?w=1200&q=80" 
           alt="Affordable housing need representing New Brunswick housing crisis"
-          className="w-full h-48 md:h-80 object-cover"
+          fill
+          sizes="(max-width: 768px) 100vw, 1200px"
         />
         <div className="bg-neutral-900 p-4 text-xs text-neutral-500 uppercase tracking-widest text-center">
           1,500+ New Brunswickers chronically homeless while housing remains unaffordable and corporate landlords profit
@@ -71,21 +75,20 @@ export default function HousingPage() {
             The Eviction Epidemic
           </h2>
           <p className="text-neutral-400 leading-relaxed mb-6">
-            With the abolition of meaningful rent control, corporate landlords are
-            indiscriminately increasing rents by 50% to 100% and executing mass
-            &quot;renovictions&quot; to displace working-class tenants. Successive
-            governments have prioritized the profits of Real Estate Investment
-            Trusts (REITs) over the survival of citizens.
+            Rent control? Gone. Corporate landlords are jacking up rents by 50-100% and tossing families out on the street with fake &quot;renovictions&quot;. They call it upgrading. We call it theft. Every government in the last decade has chosen REIT profits over whether your kids have a roof over their heads.
           </p>
           <p className="text-neutral-400 leading-relaxed mb-6">
-            The term &quot;renoviction&quot; describes the practice of evicting tenants 
-            under the pretext of renovations, then re-listing the unit at dramatically 
-            higher rents. In Saint John&apos;s north end — historically one of the most 
-            affordable neighborhoods in Atlantic Canada — entire blocks have been 
-            cleared by corporate landlords who purchased aging buildings at fire-sale 
-            prices and now seek to gentrify the area. Long-term tenants, many of them 
-            seniors on fixed incomes, are given 30 days to find new housing in a market 
-            where vacancy rates hover below <strong className="text-white">1%</strong>.
+            "Renoviction" is a fancy word for kicking people out so landlords can jack up the rent. 
+            In Saint John's north end - where families have lived for generations - whole blocks 
+            are being cleared out. Seniors on pensions, workers making ends meet - given 30 days 
+            to find somewhere else to live in a market where finding ANYTHING affordable is nearly 
+            impossible. Vacancy rates? Less than 1%. Good luck.
+          </p>
+          <p className="text-neutral-400 leading-relaxed">
+            Moncton's story is just as brutal. The city's growth - fueled by people seeking 
+            opportunity - has been met not with homes, but with speculation. What rented for 
+            $800 in 2020 now goes for $1,500-2,000. A city that was affordable is becoming 
+            one of the most expensive places to live in Atlantic Canada.
           </p>
           <p className="text-neutral-400 leading-relaxed">
             In Moncton, the situation is equally dire. The city&apos;s rapid population 
@@ -103,11 +106,7 @@ export default function HousingPage() {
             Homelessness Explosion & The Addiction Crisis
           </h2>
           <p className="text-neutral-400 leading-relaxed mb-6">
-            The housing crisis has created an unprecedented humanitarian disaster.
-            By late 2025, chronic homelessness skyrocketed with an estimated 830
-            people unhoused in Moncton, 437 in Saint John, and 275 in
-            Fredericton—totaling over 1,500 people across the major cities. Over
-            440 youth (ages 16–26) were left homeless in 2025 alone.
+            The numbers hit you like a punch to the gut: 830 people sleeping rough in Moncton. 437 in Saint John. 275 in Fredericton. Over 1,500 souls without a roof across our three biggest cities. And 440 kids - teenagers and young adults barely out of high school - tossed onto the streets in 2025 alone. This isn't just homelessness. It's abandonment.
           </p>
           <p className="text-neutral-400 leading-relaxed mb-6">
             Instead of investing in deeply affordable social housing, historical
@@ -350,7 +349,7 @@ export default function HousingPage() {
             <SourceCard type="report" title="National Advisory Council on Poverty: 2025 Annual Report" url="https://www.canada.ca/en/employment-social-development/programs/poverty-reduction/national-advisory-council/reports/2025-annual.html" description="Federal report with NB-specific data" date="2025" />
             <SourceCard type="article" title="CBC: Child Poverty 'Alarmingly High' — Housing & Poverty Linked" url="https://www.cbc.ca/news/canada/new-brunswick/child-poverty-alarmingly-high-in-n-b-says-human-development-council-9.7105164" description="February 2026 HDC report coverage" date="FEB 2026" />
             <SourceCard type="pdf" title="Campaign 2000: 2025 NB Child and Family Poverty Report Card" url="https://campaign2000.ca/wp-content/uploads/2026/02/2025-NB-Report-Card-on-Child-and-Family-Poverty.pdf" description="Comprehensive poverty data by region" date="FEB 2026" />
-            <SourceCard type="organization" title="NB Housing" url="https://www2.gnb.ca/content/gnb/en/departments/ohc.html" description="Provincial housing authority" />
+            <SourceCard type="organization" title="NB Housing" url="https://www.gnb.ca/housing" description="Provincial housing authority" />
           </div>
         </section>
       </div>

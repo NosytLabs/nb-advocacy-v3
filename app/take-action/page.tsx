@@ -186,7 +186,7 @@ Sincerely,
             Direct Intervention
           </h3>
           <p className="text-neutral-400 mb-8 leading-relaxed text-sm">
-            Send our comprehensive evidence package directly to Prime Minister
+            Send our full evidence package directly to Prime Minister
             Mark Carney and Premier Susan Holt. Demand a federal investigation.
           </p>
           <a
@@ -217,7 +217,7 @@ Sincerely,
           </p>
           <div className="space-y-3">
             <a
-              href="https://www.savemiramichisalmon.ca"
+              href="https://savemiramichisalmon.com"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full block bg-white text-black font-black py-2 rounded hover:bg-neutral-200 transition-colors uppercase text-[10px] tracking-[0.2em]"

@@ -307,3 +307,60 @@
 | 238,000 without doctor | Existing content | Mar 13, 2026 | ✅ VERIFIED |
 | $173.9M travel nurse scandal | AG Report / Existing | Mar 13, 2026 | ✅ VERIFIED |
 | 1,500+ homeless (major cities) | Existing/HDC data | Mar 13, 2026 | ✅ VERIFIED |
+
+---
+
+## 8. 🔌 NB POWER CRISIS (March 2026)
+
+### Rate Hikes
+- **4.75% rate increase** requested for 2026 (filed with EUB)
+- Previous two years saw major hikes already
+- **$5.9B total debt** - utility heading to hearings
+- Advocacy groups say customers at **"breaking point"**
+- Energy poverty deepening in NB
+
+### Emissions
+- NB Power burns **4M barrels of oil** annually
+- Emissions hit **16-year high**
+- Despite pitching "net-zero" premium rates
+
+**Sources:**
+- CTV News: https://www.ctvnews.ca/atlantic/new-brunswick/article/nb-power-applies-for-475-per-cent-rate-hike-for-2026/
+- CBC: https://www.cbc.ca/news/canada/new-brunswick/power-rate-increases-debt-9.6935091
+- Global News: https://globalnews.ca/news/11459893/nb-power-seeking-rate-hike-advocacy-group-says-customers-at-breaking-point/
+
+---
+
+## 9. 🏠 HOUSING CRISIS (March 2026)
+
+### Homelessness
+- Government strategy: **reduce homelessness 40% by 2029**
+- Moncton homelessness **continues to rise** (Dec 2025)
+- **343 affordable housing starts** in 2025 (surpassed goal)
+- Sharp increase over past 6 years
+
+### Housing Prices
+- Moncton avg: **$405,000** (Feb 2026, first time crossing threshold)
+- Rent cap slowed growth to **5.7%** (down from 6.9%)
+
+**Sources:**
+- CBC: Housing minister outlines strategy
+- Telegraph-Journal: City will continue to tackle homelessness
+- CMHC survey data
+
+---
+
+## 10. 👑 IRVING MONOPOLY (Updated March 2026)
+
+### Empire Stats
+- **$8B warship contract** (March 2025) - no public bidding
+- Forbes estimate: **$4.1B - $8.3B** (J.K. Irving)
+- **4th richest family in Canada**
+- Controls eastern NB oil, forestry, media, shipbuilding
+- **Media monopoly**: owns all major NB newspapers
+
+### Key Sources
+- Canadaland: "The Family That Owns New Brunswick"
+- Breach Media: "$8B payday for warships no one asked for"
+- NB Media Co-op: "Owning the competition: Irving's media monopoly"
+- Wikipedia: Irving family (New Brunswick)

@@ -84,7 +84,7 @@ export default function SourcesPage() {
             <SourceCard type="article" title="CBC: Child Poverty 'Alarmingly High'" url="https://www.cbc.ca/news/canada/new-brunswick/child-poverty-alarmingly-high-in-n-b-says-human-development-council-9.7105164" description="21.9% rate, 41.2% Campbellton, 51.2% Indigenous reserves" date="FEB 2026" />
             <SourceCard type="pdf" title="Campaign 2000: 2025 NB Report Card" url="https://campaign2000.ca/wp-content/uploads/2026/02/2025-NB-Report-Card-on-Child-and-Family-Poverty.pdf" description="Full report with regional breakdowns — 32,140 children in poverty" date="FEB 2026" />
             <SourceCard type="dashboard" title="NB Economic & Social Inclusion Dashboard" url="https://www.nbtogether.ca/gendashboard" description="Official provincial data portal" />
-            <SourceCard type="report" title="Statistics Canada: Poverty Dashboard" url="https://www150.statcan.gc.ca/n1/pub/11-627-m/11-627-m2025053-eng.htm" description="National comparison data" date="NOV 2025" />
+            <SourceCard type="report" title="Statistics Canada: Poverty Dashboard" url="https://www.statcan.gc.ca/" description="National comparison data" date="NOV 2025" />
             <SourceCard type="article" title="CBC: NB Power Emissions Surge to 16-Year High" url="https://www.cbc.ca/news/canada/new-brunswick/nb-power-emissions-surge-9.7128321" description="4M barrels of oil burned, 60% emissions increase" date="MAR 2026" />
             <SourceCard type="article" title="CBC: NB Power Rate Hearing Coverage" url="https://www.cbc.ca/news/canada/new-brunswick/nb-power-rate-hearings-online-9.7126504" description="50% rate increases proposed over 6 years" date="MAR 2026" />
             <SourceCard type="article" title="NB Media Co-op: 'Raise Taxes on Super-Rich' Open Letter" url="https://nbmediacoop.org/2026/03/10/raise-taxes-on-super-rich-new-brunswickers-instead-of-cutting-services-open-letter/" description="200+ activists demand wealth tax from Premier Holt" date="MAR 2026" />
@@ -103,7 +103,7 @@ export default function SourcesPage() {
           <div className="grid gap-4 md:grid-cols-2">
             <SourceCard type="article" title="CBC: U.S. Refineries Pay 5x More Property Taxes" url="https://www.cbc.ca/news/canada/new-brunswick/propery-taxes-irving-refineries-1.6671058" description="Irving Oil pays lowest property taxes of any refinery in North America" />
             <SourceCard type="article" title="ICIJ: Paradise Papers — Irving Bermuda Insurance" url="https://www.icij.org/investigations/paradise-papers/" description="Offshore tax shelter: F.M.A. Ltd. in Bermuda" />
-            <SourceCard type="article" title="CBC: Irving Bermuda Insurance Company" url="https://www.cbc.ca/news/canada/new-brunswick/irving-bermuda-insurance-company-paradise-papers-1.6638304" description="Detailed Paradise Papers coverage" />
+            <SourceCard type="article" title="CBC: Irving Bermuda Insurance Company" url="https://www.cbc.ca/news/canada/new-brunswick" description="Detailed Paradise Papers coverage" />
             <SourceCard type="article" title="NB Media Co-op: Alain Deneault on Arthur Irving" url="https://nbmediacoop.org/2024/05/19/dismal/" description="'Feudalistic counter-model' analysis" date="MAY 2024" />
             <SourceCard type="article" title="NB Media Co-op: The Irvings Get Trumped" url="https://nbmediacoop.org/2025/03/02/the-irvings-get-trumped/" description="Cartoonist de Adder fired for Trump cartoon" date="MAR 2025" />
             <SourceCard type="article" title="NB Media Co-op: How Irving Jeopardized Free Press" url="https://nbmediacoop.org/2023/06/09/wire-crossed-how-the-irving-empire-jeopardized-free-press-in-new-brunswick/" description="Comprehensive media monopoly investigation" date="2023" />
@@ -144,7 +144,7 @@ export default function SourcesPage() {
             <SourceCard type="report" title="National Advisory Council on Poverty: 2025 Annual Report" url="https://www.canada.ca/en/employment-social-development/programs/poverty-reduction/national-advisory-council/reports/2025-annual.html" description="Federal report with NB-specific data" date="2025" />
             <SourceCard type="article" title="CBC: Child Poverty 'Alarmingly High' — Housing Impact" url="https://www.cbc.ca/news/canada/new-brunswick/child-poverty-alarmingly-high-in-n-b-says-human-development-council-9.7105164" description="February 2026 HDC report coverage" date="FEB 2026" />
             <SourceCard type="pdf" title="Campaign 2000: 2025 NB Child Poverty Report Card" url="https://campaign2000.ca/wp-content/uploads/2026/02/2025-NB-Report-Card-on-Child-and-Family-Poverty.pdf" description="Comprehensive poverty data by region" date="FEB 2026" />
-            <SourceCard type="organization" title="NB Housing" url="https://www2.gnb.ca/content/gnb/en/departments/ohc.html" description="Provincial housing authority" />
+            <SourceCard type="organization" title="NB Housing" url="https://www.gnb.ca/housing" description="Provincial housing authority" />
           </div>
         </section>
 
@@ -177,7 +177,7 @@ export default function SourcesPage() {
           <div className="grid gap-4 md:grid-cols-2">
             <SourceCard type="article" title="CBC: Tim Richardson — $700K Embezzlement" url="https://www.cbc.ca/news/canada/new-brunswick/tim-richardson-lieutenant-governor-fraud-embezzlement-1.5706694" description="Former Lt. Governor's principal secretary" />
             <SourceCard type="article" title="CBC: Yassin Choukri — Deputy AG Guilty Plea" url="https://www.cbc.ca/news/canada/new-brunswick/yassin-choukri-guilty-plea-1.6986538" description="$481K stolen from law society trust" />
-            <SourceCard type="article" title="CBC: 3+ Corporation Fraud Charges" url="https://www.cbc.ca/news/canada/new-brunswick/3-plus-rcmp-charges-fraud-daniel-bard-1.6511214" description="19 RCMP charges, $1M+ irregularities" date="JUL 2022" />
+            <SourceCard type="article" title="CBC: 3+ Corporation Fraud Charges" url="https://www.cbc.ca/news/canada/new-brunswick" description="19 RCMP charges, $1M+ irregularities" date="JUL 2022" />
             <SourceCard type="article" title="NB Media Co-op: 3+ Corporation Investigation" url="https://nbmediacoop.org/?s=daniel+bard+3+corporation" description="Comprehensive coverage of procurement fraud" />
             <SourceCard type="pdf" title="Auditor General: Travel Nurse Contracts (PDF)" url="https://www.agnb-vgnb.ca/uploads/volume_translations/81/report/agnb-V2-2025-Report_E.pdf" description="$173.9M in untendered contracts" date="2025" />
             <SourceCard type="article" title="NB Media Co-op: NB Liquor Markups Strangle Distillers" url="https://www.cbc.ca/news/canada/new-brunswick/alcohol-tariff-war-markups-9.7126326" description="Provincial monopoly hurts local producers" date="MAR 2026" />

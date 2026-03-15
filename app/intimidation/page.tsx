@@ -1,5 +1,9 @@
-'use client';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: "Silencing Dissent | Reform NB",
+  description: "Cartoonists fired, academics purged, conservationists threatened. How New Brunswick's corporate oligarchy silences opposition.",
+};
 import { PageWrapper } from '@/components/PageWrapper';
 import { BackLink } from '@/components/BackLink';
 import { DataCard } from '@/components/DataCard';

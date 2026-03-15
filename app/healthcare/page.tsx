@@ -11,6 +11,7 @@ import { QuoteBlock } from "@/components/QuoteBlock";
 import { VideoGrid } from "@/components/VideoGrid";
 import { SourceCard } from "@/components/SourceCard";
 import { YouTubeEmbed } from "@/components/YouTubeEmbed";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Healthcare Collapse | Reform NB",
@@ -51,10 +52,11 @@ export default function HealthcarePage() {
 
       {/* Hero Image */}
       <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
-        <img 
+        <Image 
           src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&q=80" 
           alt="Empty hospital corridor representing the healthcare crisis in New Brunswick"
-          className="w-full h-48 md:h-80 object-cover"
+          fill
+          sizes="(max-width: 768px) 100vw, 1200px"
         />
         <div className="bg-neutral-900 p-4 text-xs text-neutral-500 uppercase tracking-widest text-center">
           238,000 New Brunswickers without a family doctor — patients dying in waiting rooms while the government calls it &quot;efficiency&quot;
@@ -75,35 +77,25 @@ export default function HealthcarePage() {
             The Scale of Collapse
           </h2>
           <p className="text-neutral-400 leading-relaxed">
-            As of March 2026, approximately{" "}
-            <strong className="text-white">238,000 New Brunswickers</strong>—nearly one-third of the
-            entire population—are without a permanent family doctor or nurse
-            practitioner. This is not a mere administrative backlog; it is a
-            death sentence for those with chronic conditions.
+            238,000 New Brunswickers - that's nearly one in three people in this province - don't have a family doctor. 
+            This isn't just a waiting list. It's a death sentence. People with diabetes, heart disease, cancer - they're 
+            left to deteriorate while the government spins recruitment numbers that mean nothing.
           </p>
           <p className="text-neutral-400 leading-relaxed mt-4">
-            Our investigation into waitlist mortality found that{" "}
-            <strong className="text-white">121 patients died</strong> while on surgical or diagnostic
-            waiting lists in the 2024-2025 fiscal year alone. The province now
-            faces the highest financial burden in Canada for medical waiting,
-            costing patients an average of <strong className="text-white">$4,864</strong> in lost
-            productivity.
+            121 people died in 2024-2025 waiting for surgery or diagnostic tests. 
+            That's 121 New Brunswickers who showed up for appointments, got put on a list, 
+            and never made it off that list alive. The province calls this a financial burden - 
+            I call it negligence with a price tag.
           </p>
           <p className="text-neutral-400 leading-relaxed mt-4">
-            The crisis is not limited to primary care. Specialist referrals routinely take 
-            <strong className="text-white"> 12 to 18 months</strong>, with some patients waiting over two years for 
-            orthopedic surgery. Cancer patients report diagnostic delays of 
-            <strong className="text-white"> 6 to 8 weeks</strong> for imaging that should happen within days. Each delay 
-            represents a potential escalation in disease severity — a mathematical certainty that 
-            some of these delays are fatal.
+            Need a specialist? Good luck. Try 12 to 18 months for a consultation. 
+            Need cancer imaging? You're looking at 6-8 weeks when it should be days. 
+            These aren't just delays - they're death sentences scheduled by bureaucracy.
           </p>
           <p className="text-neutral-400 leading-relaxed mt-4">
-            New Brunswick&apos;s doctor-to-population ratio is among the worst in Canada, at 
-            roughly <strong className="text-white">220 physicians per 100,000 people</strong>, compared to the national 
-            average of 260. The province trains fewer doctors per capita than any other 
-            province, and recruitment efforts have netted fewer than 50 new physicians annually 
-            — while retirements and departures outpace arrivals. The result is a system in 
-            <strong className="text-white"> terminal deficit</strong>: more patients, fewer providers, longer waits, worse outcomes.
+            New Brunswick has 220 doctors per 100,000 people. The Canadian average? 260. 
+            We train fewer doctors than any province. We hire fewer than 50 new doctors a year while 
+            retirements leave us behind. More patients. Fewer doctors. Longer waits. People dying.
           </p>
         </section>
 
@@ -113,10 +105,7 @@ export default function HealthcarePage() {
             Dying in the Dark: Case Records
           </h2>
           <p className="text-neutral-400 leading-relaxed mb-10">
-            A December 2025 Auditor General report confirmed{" "}
-            <strong className="text-white">2,199 patients</strong> were pronounced deceased after
-            arriving at NB ERs between 2020 and 2024. Crucially, 43% were not
-            seen within safe triage timeframes.
+            December 2025. The Auditor General drops a bomb: 2,199 people walked into New Brunswick ERs between 2020-2024 and were pronounced dead. Dead. Not treated. Just... dead. And 43% of them never even got seen by a doctor within safe timeframes. They were triaged and forgotten.
           </p>
 
           <div className="grid gap-8">
@@ -205,10 +194,9 @@ export default function HealthcarePage() {
             The &quot;Regional Nursing Home&quot; Failure
           </h2>
           <p className="text-neutral-400 leading-relaxed mb-6">
-            In February 2026, health officials admitted New Brunswick hospitals
-            have effectively become &quot;regional nursing homes.&quot;{" "}
-            <strong className="text-white">40% of all acute care beds</strong> are currently occupied by
-            seniors waiting for long-term care placements.
+            February 2026. Health officials finally admit what we've known for years: our hospitals are now nursing homes. 
+            40% of every hospital bed meant for sick people? Occupied by seniors waiting for long-term care. 
+            There's literally no room for the acutely ill.
           </p>
           <p className="text-neutral-400 leading-relaxed">
             This &quot;bed-block&quot; is the direct driver of the{" "}
@@ -306,10 +294,11 @@ export default function HealthcarePage() {
 
         {/* Nurse Burnout Image */}
         <div className="my-12 rounded-2xl overflow-hidden shadow-2xl">
-          <img 
+          <Image 
             src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=1200&q=80" 
             alt="Healthcare worker representing nurse burnout and staffing crisis in NB"
-            className="w-full h-48 md:h-64 object-cover"
+            fill
+            sizes="(max-width: 768px) 100vw, 1200px"
           />
           <div className="bg-neutral-900 p-3 text-xs text-neutral-500 uppercase tracking-widest text-center">
             Nurse burnout and unsafe staffing ratios while $173.9M flows to private travel agencies
@@ -433,10 +422,11 @@ export default function HealthcarePage() {
 
         {/* ER Waiting Room Image */}
         <div className="my-12 rounded-2xl overflow-hidden shadow-2xl">
-          <img 
+          <Image 
             src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=1200&q=80" 
             alt="Emergency room entrance representing the healthcare crisis in New Brunswick"
-            className="w-full h-48 md:h-64 object-cover"
+            fill
+            sizes="(max-width: 768px) 100vw, 1200px"
           />
           <div className="bg-neutral-900 p-3 text-xs text-neutral-500 uppercase tracking-widest text-center">
             Emergency rooms overwhelmed — patients triaged in parking lots, 63,000 leaving untreated annually
@@ -471,6 +461,9 @@ export default function HealthcarePage() {
             <SourceCard type="pdf" title="MEI Report: Patients Leaving NB Emergency Departments" url="https://www.iedm.org/wp-content/uploads/2025/09/2025-09-18-NR-Leaving-ER-NB.pdf" description="Full academic report with methodology and data" date="SEP 2025" />
             <SourceCard type="pdf" title="Auditor General: $173.9M Travel Nurse Contract Scandal" url="https://www.agnb-vgnb.ca/uploads/volume_translations/81/report/agnb-V2-2025-Report_E.pdf" description="2025 Report — Chapter 2: Untendered Contracts" date="2025" />
             <SourceCard type="article" title="National Post: Canada's ER 'Hidden Pandemic'" url="https://nationalpost.com/news/canada/emergency-department-deaths" description="Investigating preventable ER deaths across Canada" date="MAR 2026" />
+            <SourceCard type="article" title="Globe and Mail: NB Travel Nurse Scandal" url="https://www.theglobeandmail.com/canada/article-new-brunswick-spent-173-million-on-private-travel-nurses-over-two/" description="$174M in untendered contracts, AG says 'no value for money'" date="JUN 2024" />
+            <SourceCard type="article" title="Global News: 'This Can't Continue'" url="https://globalnews.ca/news/10543917/travel-nurses-new-brunswick-auditor-general-money/" description="Auditor General says travel nurse spending unsustainable" date="JUN 2024" />
+            <SourceCard type="article" title="CBC: Darrell Mesheau Lawsuit" url="https://www.cbc.ca/news/canada/new-brunswick/darrell-mesheau-lawsuit-fredericton-chalmers-er-patient-died-family-horizon-nurses-1.7301283" description="Family sues Horizon Health and nurses for negligence" date="AUG 2024" />
             <SourceCard type="article" title="CTV: Darrell Mesheau ER Death Lawsuit" url="https://www.ctvnews.ca/atlantic/new-brunswick/article/hospital-and-nurses-deny-negligence-in-nb-emergency-room-death-of-78-year-old-man/" description="Chalmers ER negligence case" date="2023" />
             <SourceCard type="report" title="NB Government: Official Health Plan" url="https://www2.gnb.ca/content/gnb/en/corporate/promo/new-brunswick-health-plan.html" description="Government's own acknowledgment of the crisis" date="2024" />
             <SourceCard type="organization" title="NB Nurses' Union — Advocacy & Reports" url="https://nbnu.ca/" description="Union representing 8,000+ NB nurses" />
@@ -479,6 +472,48 @@ export default function HealthcarePage() {
         </section>
       </div>
 
+
+
+      <div className="mb-12">
+        <h2 className="text-2xl font-bold text-white mb-6">Medical Negligence: A Pattern of Harm</h2>
+        <p className="text-neutral-300 mb-6 leading-relaxed">
+          In March 2026, Aimee Dunn settled her negligence lawsuit against Horizon Health and four doctors 
+          after delivering a stillborn girl at Chalmers Hospital in Fredericton in 2022. She arrived at the 
+          emergency department in pain — no one checked on her unborn baby. By morning, the fetus had no heartbeat.
+        </p>
+        <p className="text-neutral-300 mb-6 leading-relaxed">
+          Her lawyer, who is also an emergency medicine physician, called it a <strong className="text-white">&quot;summation of things&quot;</strong> — 
+          failures to consider life-threatening diagnoses, failures to check on the fetus, failures to communicate 
+          among doctors, nurses, and obstetrical teams. The case was settled out of court. Horizon Health declined to comment.
+        </p>
+        <p className="text-neutral-300 mb-6 leading-relaxed">
+          This is the same emergency department where Darrell Mesheau, 78, died alone. Dunn said she was 
+          &quot;angry&quot; when she heard about his death — she had felt &quot;overlooked and dismissed&quot; in the same ER.
+        </p>
+      </div>
+      <div className="mb-12">
+        <h2 className="text-2xl font-bold text-white mb-6">Long-Term Care Crisis (March 2026 Update)</h2>
+        <p className="text-neutral-300 mb-6 leading-relaxed">
+          A new 60-bed nursing home opened in Oromocto (Maple Ridge) and filled in 57 days. But the minister 
+          responsible for seniors admitted it will <strong className="text-white">"not really"</strong> reduce the waitlist.
+        </p>
+        <p className="text-neutral-300 mb-6 leading-relaxed">
+          As of March 2026: <strong className="text-white">1,006 people</strong> are on the nursing home waitlist. 
+          <strong className="text-white">471 of them are blocking hospital beds</strong> — acute care beds that should be 
+          treating sick patients, not housing seniors who have nowhere to go. In the Fredericton area alone, 
+          94 people wait in hospital for nursing home placement.
+        </p>
+        <div className="bg-zinc-900 border border-crisis-red/30 rounded-lg p-6 mb-6">
+          <h3 className="text-lg font-bold text-crisis-red mb-3">The Math Doesn&apos;t Add Up</h3>
+          <ul className="space-y-2 text-neutral-300 text-sm">
+            <li>• 60 new beds opened in Oromocto → filled in 57 days → waitlist barely moved</li>
+            <li>• 471 hospital beds blocked by seniors waiting for long-term care</li>
+            <li>• Premier Holt promised a long-term care strategy in February 2026 — still waiting</li>
+            <li>• Since Holt government took power: zero new nursing homes announced</li>
+            <li>• The Oromocto facility was announced under the previous Higgs government</li>
+          </ul>
+        </div>
+      </div>
       <CTASection
         icon={Activity}
         title="The Silence is Fatal."

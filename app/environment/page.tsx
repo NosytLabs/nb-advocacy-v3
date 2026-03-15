@@ -1,5 +1,9 @@
-'use client';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: "Environmental Devastation | Reform NB",
+  description: "96% salmon collapse, 15,000 hectares of glyphosate spraying, 3M+ tonnes of CO2. The environmental destruction of New Brunswick.",
+};
 import { PageWrapper } from '@/components/PageWrapper';
 import { BackLink } from '@/components/BackLink';
 import { DataCard } from '@/components/DataCard';

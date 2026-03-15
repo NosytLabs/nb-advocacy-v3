@@ -28,42 +28,44 @@ export default function AboutPage() {
 
       <div className="prose prose-invert prose-lg max-w-none">
         <p className="text-xl text-neutral-300 leading-relaxed mb-8">
-          Reform NB was born out of a collective frustration shared by thousands
-          of New Brunswickers. We are tired of being told we are &quot;too
-          poor&quot; for quality healthcare while billionaire families receive
-          retroactive tax refunds and multi-million dollar subsidies.
+          Reform NB started with a simple question: How can we be told we're 
+          too poor for healthcare while Irving family fortunes grow? How can 
+          our emergency rooms close while McCain Foods gets tax breaks? This 
+          isn't about politics. It's about survival.
         </p>
 
         <h2 className="text-3xl font-serif font-bold text-white mt-12 mb-6">
           Who We Are
         </h2>
         <p className="text-neutral-400 mb-6">
-          We are a decentralized network of investigative journalists, former
-          civil servants, whistleblowers, and concerned citizens. We don&apos;t
-          have a head office in Saint John or a corporate board in Bermuda. We
-          are your neighbors, your healthcare workers, and your students.
+          We're nurses who've seen patients die in waiting rooms. We're teachers 
+          who watch kids come to school hungry. We're journalists who've been 
+          told to stop asking questions. We're regular New Brunswickers who 
+          refused to look away anymore. No corporate offices. No Bermuda 
+          shell companies. Just people who live here and refuse to stay silent.
         </p>
         <p className="text-neutral-400 mb-6">
-          Our goal is simple: to pull back the curtain on the &quot;Company
-          Province.&quot; We provide the data, the documents, and the stories
-          that traditional media—long consolidated and suppressed—has failed to
-          report.
+          Our job? Pull back the curtain on what they call the 'Company 
+          Province.' We bring you the documents they don't want you to see. 
+          We tell the stories they pay to keep quiet. We do what the 
+          established media won't - because they're part of the problem.
         </p>
 
         <h2 className="text-3xl font-serif font-bold text-white mt-12 mb-6">
           Why Now?
         </h2>
         <p className="text-neutral-400 mb-6">
-          New Brunswick is at a breaking point. With 1 in 4 children in poverty
-          and our emergency rooms shuttering, the status quo is no longer just
-          inefficient—it is deadly. The transition of power between political
-          parties has proven to be a rebranding exercise rather than a
-          structural reform.
+          Look around New Brunswick in 2026. Nearly one in four kids lives in 
+          poverty. People are dying in ERs because there's no room. Our power 
+          bills keep going up while corporations get handouts. The government 
+          changes faces but the story stays the same: extract, abandon, repeat.
+          This isn't inefficient anymore. It's lethal.
         </p>
         <p className="text-neutral-400 mb-6">
-          We believe that a province this rich in natural resources and human
-          talent shouldn&apos;t be the poorest in Canada. It&apos;s time to stop
-          the extraction and start the restoration.
+          We know what's possible. We've seen the forests, the rivers, the 
+          talent of our people. This province should be thriving, not 
+          surviving. It's time to stop the looting and start rebuilding what's 
+          been taken from us.
         </p>
       </div>
 

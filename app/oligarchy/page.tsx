@@ -12,6 +12,7 @@ import { QuoteBlock } from "@/components/QuoteBlock";
 import { VideoGrid } from "@/components/VideoGrid";
 import { SourceCard } from "@/components/SourceCard";
 import { YouTubeEmbed } from "@/components/YouTubeEmbed";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "The Oligarchy: Irvings & McCains | Reform NB",
@@ -46,6 +47,8 @@ const oligarchyTimeline = [
   { date: "2025", title: "Irving Family Wealth: $8.42B", description: "Canadian Business ranking: Irving family net worth grows to $8.42 billion during $25B federal shipbuilding contracts.", color: "gold" as const },
   { date: "EARLY 2026", title: "$45M Irving Paper Grant", description: "Government hands Irving Paper $45M 'tariff relief' while residents face 19.4% electricity rate hike.", color: "red" as const },
   { date: "MAR 2026", title: "Fredericton Chemical Spill", description: "Potentially cancer-causing chemical coats roads. Government slow to notify Environment Department. Regulatory capture questioned.", color: "red" as const },
+  { date: "FEB 2025", title: "Reddit: 'Canada's Robber Barons'", description: "Viral thread (544+ upvotes) links to Le Monde Diplomatique exposé on Irving vertical monopoly in New Brunswick. Community calls for 'oligarchs' accountability'.", color: "gold" as const },
+  { date: "MAR 2025", title: "$5.57B Irving Shipbuilding Contract", description: "Federal government awards Irving Shipbuilding $5.57B for River-class destroyers. Total project: $25B+. Taxpayer money flowing to Irving monopoly while NB healthcare collapses.", color: "red" as const },
 ];
 
 export default function IrvingPage() {
@@ -63,10 +66,11 @@ export default function IrvingPage() {
       
       {/* Hero Image */}
       <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
-        <img 
-          src="https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=1200&q=80" 
-          alt="Oil refinery at night representing Irving's industrial monopoly in New Brunswick"
-          className="w-full h-48 md:h-80 object-cover"
+        <Image 
+          src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1200&q=80" 
+          alt="Industrial smokestacks representing corporate monopoly in New Brunswick"
+          fill
+          sizes="(max-width: 768px) 100vw, 1200px"
         />
         <div className="bg-neutral-900 p-4 text-xs text-neutral-500 uppercase tracking-widest text-center">
           U.S. refineries pay 5× more in property taxes than Irving Oil — the lowest-taxed refinery in North America

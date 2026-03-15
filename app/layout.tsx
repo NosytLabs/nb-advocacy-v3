@@ -15,23 +15,22 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Systemic Failure: The New Brunswick Crisis | Reform NB",
+  title: {
+    default: "Systemic Failure: The New Brunswick Crisis | Reform NB",
+    template: "%s | Reform NB",
+  },
   description:
     "Investigating the systemic governance failure in New Brunswick. Exposing the truth about healthcare collapse, corporate monopoly, and government corruption.",
   openGraph: {
-    title: "Systemic Failure: The New Brunswick Crisis | Reform NB",
-    description:
-      "Investigating the systemic governance failure in New Brunswick. Exposing the truth about healthcare collapse, corporate monopoly, and government corruption.",
-    url: "https://reformnb.ca",
     siteName: "Reform NB",
     type: "website",
+    locale: "en_CA",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Systemic Failure: The New Brunswick Crisis | Reform NB",
-    description:
-      "Investigating the systemic governance failure in New Brunswick.",
+    site: "@ReformNB",
   },
+  metadataBase: new URL("https://reformnb.ca"),
 };
 
 export const viewport = "width=device-width, initial-scale=1";
@@ -39,8 +38,12 @@ export const viewport = "width=device-width, initial-scale=1";
 const navLinks = [
   { href: "/healthcare", label: "Healthcare" },
   { href: "/housing", label: "Housing" },
+  { href: "/infrastructure", label: "Infrastructure" },
   { href: "/economy", label: "Economy" },
+  { href: "/environment", label: "Environment" },
   { href: "/oligarchy", label: "The Oligarchy" },
+  { href: "/corruption", label: "Corruption" },
+  { href: "/intimidation", label: "Intimidation" },
   { href: "/take-action", label: "Take Action", accent: true },
 ];
 
@@ -52,12 +55,14 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        <link rel="canonical" href="https://reformnb.ca" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
       <body
         className={`${inter.variable} ${playfair.variable} antialiased bg-background text-foreground font-sans relative`}
       >
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-crisis-red focus:text-white focus:px-4 focus:py-2 focus:rounded">
+          Skip to main content
+        </a>
         <div className="noise-overlay" />
         <header className="main-header border-b border-neutral-900 bg-black/80 backdrop-blur-xl py-6 sticky top-0 z-50 relative">
           <div className="container mx-auto px-8 flex justify-between items-center max-w-5xl">
@@ -90,7 +95,7 @@ export default function RootLayout({
             <MobileNav />
           </div>
         </header>
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <footer className="py-16 text-center text-sm text-neutral-500 border-t border-neutral-200 dark:border-neutral-800 dark:bg-black mt-20">
           <nav
             className="flex justify-center gap-8 mb-4 flex-wrap"
