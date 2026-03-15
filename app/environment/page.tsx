@@ -12,6 +12,7 @@ import { QuoteBlock } from '@/components/QuoteBlock';
 import { VideoGrid } from '@/components/VideoGrid';
 import { SourceCard } from '@/components/SourceCard';
 import { Fish, TreePine, Skull, AlertTriangle, Shield, Factory } from 'lucide-react';
+import Image from 'next/image';
 
 const environmentData = [
   { value: "96%", label: "Salmon Collapse", sublabel: "Miramichi River wild Atlantic salmon returns at historic lows" },
@@ -56,10 +57,11 @@ export default function EnvironmentPage() {
       
       {/* Hero Image */}
       <div className="my-10 rounded-2xl overflow-hidden shadow-2xl">
-        <img
-          src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=1200&q=80"
+        <Image
+          src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=1200&q=80"
           alt="Aerial view of forest clearcutting - devastated landscape"
-          className="w-full h-64 md:h-80 object-cover"
+          fill
+          sizes="(max-width: 768px) 100vw, 1200px"
         />
         <div className="bg-neutral-900 p-4 text-xs text-neutral-500 uppercase tracking-widest text-center">
           New Brunswick&apos;s Crown forests are clearcut and sprayed with glyphosate — destroying salmon habitat and poisoning watersheds
@@ -290,10 +292,11 @@ export default function EnvironmentPage() {
 
         {/* Polluted Water Image */}
         <div className="my-12 rounded-2xl overflow-hidden shadow-2xl">
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&q=80"
             alt="Foggy forest landscape representing environmental degradation in New Brunswick"
-            className="w-full h-48 md:h-64 object-cover"
+            fill
+            sizes="(max-width: 768px) 100vw, 1200px"
           />
           <div className="bg-neutral-900 p-3 text-xs text-neutral-500 uppercase tracking-widest text-center">
             New Brunswick's environment under siege — from glyphosate spraying to record emissions to chemical spills

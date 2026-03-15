@@ -51,13 +51,16 @@ export default function HousingPage() {
       {/* Hero Image */}
       <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
         <Image 
-          src="https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?w=1200&q=80" 
+          src="https://i.cbc.ca/ais/2a1d4054-ff17-43cd-98ff-f193d398a82f,1767887619910/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C2048%2C1152%29%3BResize%3D1200" 
           alt="Affordable housing need representing New Brunswick housing crisis"
           fill
           sizes="(max-width: 768px) 100vw, 1200px"
         />
         <div className="bg-neutral-900 p-4 text-xs text-neutral-500 uppercase tracking-widest text-center">
           1,500+ New Brunswickers chronically homeless while housing remains unaffordable and corporate landlords profit
+        </div>
+        <div className="bg-neutral-900 p-2 text-xs text-neutral-400 uppercase tracking-widest text-center">
+          CBC/Radio-Canada
         </div>
       </div>
 
@@ -151,13 +154,17 @@ export default function HousingPage() {
         
         {/* Tent City Image */}
         <div className="my-12 rounded-2xl overflow-hidden shadow-2xl">
-          <img 
-            src="https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?w=1200&q=80" 
+          <Image 
+            src="https://i.cbc.ca/ais/d80e8653-d327-427a-9ce8-92f1a14714c7,1766090265595/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C378%2C4032%2C2268%29%3BResize%3D1200" 
             alt="Tent encampment representing New Brunswick's homelessness crisis"
-            className="w-full h-48 md:h-64 object-cover"
+            fill
+            sizes="(max-width: 768px) 100vw, 1200px"
           />
           <div className="bg-neutral-900 p-3 text-xs text-neutral-500 uppercase tracking-widest text-center">
             Encampments have become permanent fixtures in Moncton, Saint John, and Fredericton — the visible face of systemic failure
+          </div>
+          <div className="bg-neutral-900 p-2 text-xs text-neutral-400 uppercase tracking-widest text-center">
+            CBC/Radio-Canada
           </div>
         </div>
 

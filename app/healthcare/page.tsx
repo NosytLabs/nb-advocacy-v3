@@ -53,13 +53,16 @@ export default function HealthcarePage() {
       {/* Hero Image */}
       <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
         <Image 
-          src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&q=80" 
+          src="https://i.cbc.ca/ais/1.4510834,1713200915000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C620%2C348%29%3BResize%3D1200" 
           alt="Empty hospital corridor representing the healthcare crisis in New Brunswick"
           fill
           sizes="(max-width: 768px) 100vw, 1200px"
         />
         <div className="bg-neutral-900 p-4 text-xs text-neutral-500 uppercase tracking-widest text-center">
           238,000 New Brunswickers without a family doctor — patients dying in waiting rooms while the government calls it &quot;efficiency&quot;
+        </div>
+        <div className="bg-neutral-900 p-2 text-xs text-neutral-400 uppercase tracking-widest text-center">
+          CBC/Radio-Canada
         </div>
       </div>
 
@@ -295,13 +298,16 @@ export default function HealthcarePage() {
         {/* Nurse Burnout Image */}
         <div className="my-12 rounded-2xl overflow-hidden shadow-2xl">
           <Image 
-            src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=1200&q=80" 
+            src="https://i.cbc.ca/ais/8074aef2-7467-470c-b7e5-824bfa023934,1770926786521/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C40%2C1309%2C736%29%3BResize%3D1200" 
             alt="Healthcare worker representing nurse burnout and staffing crisis in NB"
             fill
             sizes="(max-width: 768px) 100vw, 1200px"
           />
           <div className="bg-neutral-900 p-3 text-xs text-neutral-500 uppercase tracking-widest text-center">
             Nurse burnout and unsafe staffing ratios while $173.9M flows to private travel agencies
+          </div>
+          <div className="bg-neutral-900 p-2 text-xs text-neutral-400 uppercase tracking-widest text-center">
+            CBC/Radio-Canada
           </div>
         </div>
 

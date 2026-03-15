@@ -50,13 +50,16 @@ export default function EconomyPage() {
       {/* Hero Image */}
       <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
         <Image 
-          src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1200&q=80" 
+          src="https://i.cbc.ca/ais/5a5cca46-1e79-4235-a886-5da76df6d3ee,1760127597177/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D1200" 
           alt="Electrical grid infrastructure representing NB Power debt crisis"
           fill
           sizes="(max-width: 768px) 100vw, 1200px"
         />
         <div className="bg-neutral-900 p-4 text-xs text-neutral-500 uppercase tracking-widest text-center">
           $5.9 billion in NB Power debt — rate increases of 50% over six years proposed while emissions surge to 16-year highs
+        </div>
+        <div className="bg-neutral-900 p-2 text-xs text-neutral-400 uppercase tracking-widest text-center">
+          CBC/Radio-Canada
         </div>
       </div>
 

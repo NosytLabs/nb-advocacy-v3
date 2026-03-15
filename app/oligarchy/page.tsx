@@ -67,13 +67,16 @@ export default function IrvingPage() {
       {/* Hero Image */}
       <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
         <Image 
-          src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1200&q=80" 
+          src="https://i.cbc.ca/ais/1.6635856,1686155638000/full/max/0/default.jpg?im=Crop%2Crect%3D%28283%2C185%2C1492%2C839%29%3BResize%3D1200" 
           alt="Industrial smokestacks representing corporate monopoly in New Brunswick"
           fill
           sizes="(max-width: 768px) 100vw, 1200px"
         />
         <div className="bg-neutral-900 p-4 text-xs text-neutral-500 uppercase tracking-widest text-center">
           U.S. refineries pay 5× more in property taxes than Irving Oil — the lowest-taxed refinery in North America
+        </div>
+        <div className="bg-neutral-900 p-2 text-xs text-neutral-400 uppercase tracking-widest text-center">
+          CBC/Radio-Canada
         </div>
       </div>
 
@@ -216,13 +219,17 @@ export default function IrvingPage() {
           
         {/* Industrial Image */}
         <div className="my-8 rounded-2xl overflow-hidden shadow-2xl">
-          <img 
-            src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1200&q=80" 
-            alt="Industrial smokestacks representing corporate monopoly in New Brunswick"
-            className="w-full h-48 md:h-64 object-cover"
+          <Image 
+            src="https://i.cbc.ca/ais/1.7243467,1719010481000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C994%2C559%29%3BResize%3D1200" 
+            alt="JK Irving representing Irving family's influence in New Brunswick"
+            fill
+            sizes="(max-width: 768px) 100vw, 1200px"
           />
           <div className="bg-neutral-900 p-3 text-xs text-neutral-500 uppercase tracking-widest text-center">
             Vertical integration — from forests to fuel to retail — ensures no independent business can survive in the Company Province
+          </div>
+          <div className="bg-neutral-900 p-2 text-xs text-neutral-400 uppercase tracking-widest text-center">
+            CBC/Radio-Canada
           </div>
         </div>
 
