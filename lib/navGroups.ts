@@ -14,6 +14,7 @@ export const navGroups: NavGroup[] = [
   {
     label: "Issues",
     links: [
+      { href: "/issues", label: "All Issues" },
       { href: "/healthcare", label: "Healthcare" },
       { href: "/housing", label: "Housing" },
       { href: "/education", label: "Education" },
@@ -52,11 +53,19 @@ export const navGroups: NavGroup[] = [
   {
     label: "Resources",
     links: [
+      { href: "/resources", label: "All Resources" },
       { href: "/articles", label: "Articles" },
       { href: "/sources", label: "Sources" },
       { href: "/faq", label: "FAQ" },
       { href: "/about", label: "About" },
       { href: "/contact", label: "Contact" },
+    ],
+  },
+  {
+    label: "Donate",
+    links: [
+      { href: "/donate", label: "Donate" },
+      { href: "/take-action", label: "Take Action" },
     ],
   },
 ];
