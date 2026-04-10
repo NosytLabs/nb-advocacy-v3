@@ -21,7 +21,7 @@ export function Newsletter() {
   return (
     <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 text-center">
       <Mail className="mx-auto mb-4 text-crisis-text" size={32} />
-      <h3 className="text-xl font-black text-white mb-2 uppercase tracking-tight">Stay Informed</h3>
+      <h3 className="text-xl font-bold text-white mb-2 uppercase tracking-tight">Stay Informed</h3>
       <p className="text-neutral-400 text-sm mb-6 max-w-md mx-auto">
         Get updates on NB governance investigations. We don&apos;t track you or sell your data.
       </p>

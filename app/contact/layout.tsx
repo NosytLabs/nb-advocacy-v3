@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Reform NB",
+  title: "Contact Us",
   description: "Contact Reform NB securely. Submit tips, volunteer, or reach out to our investigative team.",
 };
 

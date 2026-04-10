@@ -15,7 +15,7 @@ interface RelatedPagesProps {
 export function RelatedPages({ pages, title = "Related Investigations" }: RelatedPagesProps) {
   return (
     <section className="my-16">
-      <h3 className="text-xl font-black font-serif uppercase tracking-tight text-white mb-6">
+      <h3 className="text-xl font-bold font-serif uppercase tracking-tight text-white mb-6">
         {title}
       </h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">

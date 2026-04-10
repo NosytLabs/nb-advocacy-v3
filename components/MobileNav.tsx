@@ -64,7 +64,7 @@ export function MobileNav() {
                   onClick={() => toggleGroup(group.label)}
                   aria-expanded={openGroups.has(group.label)}
                 >
-                  <span className="text-xs font-black uppercase tracking-[0.2em] text-neutral-400">
+                  <span className="text-xs font-semibold uppercase tracking-wide text-neutral-400">
                     {group.label}
                   </span>
                   <ChevronDown
@@ -97,7 +97,7 @@ export function MobileNav() {
             <a
               href={takeActionLink.href}
               onClick={closeMenu}
-              className="mt-4 text-center text-lg font-black uppercase tracking-wider text-white bg-crisis-red hover:bg-red-800 transition-all duration-200 py-3 rounded focus:outline-none focus:ring-2 focus:ring-white hover:shadow-lg hover:shadow-red-900/30"
+              className="mt-4 text-center text-lg font-semibold uppercase tracking-wider text-white bg-crisis-red hover:bg-red-800 transition-all duration-200 py-3 rounded focus:outline-none focus:ring-2 focus:ring-white hover:shadow-lg hover:shadow-red-900/30"
             >
               {takeActionLink.label}
             </a>

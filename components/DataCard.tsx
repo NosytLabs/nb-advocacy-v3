@@ -38,21 +38,15 @@ function getIcon(label: string): React.ReactNode {
 export function DataCard({ value, label, sublabel, color = 'red', className = '', href }: DataCardProps) {
   const colorStyles = {
     red: {
-      border: 'border-l-red-600',
       icon: 'text-red-500',
-      glow: 'hover:shadow-red-900/30',
       value: 'text-red-500',
     },
     gold: {
-      border: 'border-l-yellow-600',
       icon: 'text-yellow-500',
-      glow: 'hover:shadow-yellow-900/20',
       value: 'text-yellow-500',
     },
     neutral: {
-      border: 'border-l-neutral-500',
       icon: 'text-neutral-400',
-      glow: 'hover:shadow-neutral-900/30',
       value: 'text-white',
     },
   };
@@ -61,27 +55,26 @@ export function DataCard({ value, label, sublabel, color = 'red', className = ''
 
   const cardContent = (
     <div className={`
-      bg-gradient-to-br from-neutral-900 to-neutral-950 
-      border border-neutral-800 border-l-4 ${styles.border} 
-      rounded-xl p-5 
-      transition-all duration-300 
-      hover:-translate-y-1 hover:shadow-xl ${styles.glow}
+      bg-neutral-900 
+      border border-neutral-800
+      rounded-lg p-5 
+      transition-all duration-300
       group 
-      ${href ? 'cursor-pointer' : ''}
+      ${href ? 'cursor-pointer hover:border-neutral-700' : ''}
       ${className}
     `}>
       {/* Icon */}
-      <div className={`${styles.icon} opacity-30 group-hover:opacity-70 transition-opacity mb-3`}>
+      <div className={`${styles.icon} opacity-40 group-hover:opacity-70 transition-opacity mb-3`}>
         {getIcon(label)}
       </div>
       
       {/* Value */}
-      <div className={`${styles.value} text-3xl md:text-4xl font-black tracking-tight leading-none mb-2`}>
+      <div className={`${styles.value} text-3xl md:text-4xl font-bold tracking-tight leading-none mb-2`}>
         {value}
       </div>
       
       {/* Label */}
-      <div className="text-white font-bold text-sm uppercase tracking-wide mb-1">
+      <div className="text-white font-semibold text-sm uppercase tracking-wide mb-1">
         {label}
       </div>
       

@@ -13,11 +13,22 @@ import { VideoGrid } from "@/components/VideoGrid";
 import { SourceCard } from "@/components/SourceCard";
 import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 import Image from "next/image";
+import { ArticleSchema } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "The Oligarchy: Irvings & McCains | Reform NB",
-  description:
-    "How billionaire families control New Brunswick's agriculture, forestry, media, oil, transportation, and government through systematic regulatory capture, vertical integration, and offshore tax shelters.",
+  description: "How billionaire families control New Brunswick's agriculture, forestry, media, oil, transportation, and government through systematic regulatory capture, vertical integration, and offshore tax shelters.",
+  openGraph: {
+    title: "Reform NB",
+    url: "https://nbreform.ca",
+    siteName: "Reform NB",
+    images: [{ url: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1200&q=80", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Reform NB",
+    images: ["https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1200&q=80"],
+  },
 };
 
 const oligarchyData = [
@@ -65,14 +76,15 @@ export default function IrvingPage() {
       <LogoBar />
       
       {/* Hero Image */}
-      <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
+      <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl relative">
         <Image 
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80" 
           alt="Industrial smokestacks representing corporate monopoly in New Brunswick"
           fill
           sizes="(max-width: 768px) 100vw, 1200px"
         />
-        <div className="bg-neutral-900 p-4 text-xs text-neutral-400 uppercase tracking-widest text-center">
+        <div className="absolute inset-0 bg-black/70 z-10"></div>
+        <div className="bg-neutral-900 p-4 text-xs text-neutral-400 uppercase tracking-widest text-center relative z-20">
           U.S. refineries pay 5× more in property taxes than Irving Oil — the lowest-taxed refinery in North America
         </div>
         <div className="bg-neutral-900 p-2 text-xs text-neutral-400 uppercase tracking-widest text-center">
@@ -87,7 +99,7 @@ export default function IrvingPage() {
         ))}
       </div>
 
-      <div className="prose prose-invert prose-lg max-w-none space-y-16">
+      <div className="prose prose-invert prose-lg max-w-4xl space-y-16">
         {/* Section 1: The Monopoly Map */}
         <section>
           <h2 className="text-3xl font-serif font-bold text-white mb-6 border-b border-neutral-800 pb-2 uppercase tracking-tighter italic">
@@ -118,7 +130,7 @@ export default function IrvingPage() {
             <div key={i} className="bg-neutral-900 border border-neutral-800 rounded-xl p-6 hover:border-crisis-red/50 transition-all">
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-crisis-text">{sector.icon}</span>
-                <h4 className="text-white font-black uppercase tracking-tight text-sm">{sector.name}</h4>
+                <h4 className="text-white font-bold uppercase tracking-tight text-sm">{sector.name}</h4>
               </div>
               <p className="text-neutral-400 text-xs leading-relaxed">{sector.description}</p>
             </div>
@@ -146,7 +158,7 @@ export default function IrvingPage() {
             produces a fraction of the energy at a fraction of the revenue.
           </p>
           <div className="bg-neutral-900 p-6 rounded-xl border border-crisis-red/30 mb-6">
-            <h4 className="text-crisis-text font-black uppercase text-xs tracking-widest mb-2 flex items-center gap-2">
+            <h4 className="text-crisis-text font-bold uppercase text-xs tracking-widest mb-2 flex items-center gap-2">
               <TrendingDown size={14} aria-hidden="true" /> Retroactive Welfare
             </h4>
             <p className="text-sm text-neutral-300">
@@ -178,7 +190,7 @@ export default function IrvingPage() {
 
         {/* Video: Family That Owns NB */}
         <div className="my-12">
-          <h3 className="text-xl font-black font-serif uppercase tracking-tight text-white mb-4">📺 The Family That Owns New Brunswick</h3>
+          <h3 className="text-xl font-bold font-serif uppercase tracking-tight text-white mb-4">📺 The Family That Owns New Brunswick</h3>
           <YouTubeEmbed
             videoId="N9I-HY3wfVM"
             title="The Family That Owns New Brunswick — Spoke Media Documentary (140,000+ views)"
@@ -198,7 +210,7 @@ export default function IrvingPage() {
 
         {/* Irving Trump Connection */}
         <div className="my-8 bg-neutral-900 p-6 rounded-xl border border-neutral-800">
-          <h4 className="text-crisis-text font-black uppercase text-xs tracking-widest mb-2">🤐 Silencing Dissent: The Cartoonist Firing</h4>
+          <h4 className="text-crisis-text font-bold uppercase text-xs tracking-widest mb-2">🤐 Silencing Dissent: The Cartoonist Firing</h4>
           <p className="text-sm text-neutral-300 mb-3">
             In July 2019, Brunswick News (then owned by the Irving family) fired cartoonist <strong className="text-white">Michael de Adder</strong> and rejected his editorial cartoon depicting Donald Trump. The cartoon showed Trump standing over the bodies of drowned migrants. De Adder&apos;s contract was terminated the same day. The message was clear: <strong className="text-white">do not offend powerful allies</strong>.{" "}
             <a href="https://nbmediacoop.org/2025/03/02/the-irvings-get-trumped/" target="_blank" rel="noopener noreferrer" className="text-crisis-text hover:text-white underline">[NB Media Co-op: The Irvings Get Trumped]</a>
@@ -207,7 +219,7 @@ export default function IrvingPage() {
 
         {/* Crown Lands / Forestry */}
         <div className="my-8 bg-neutral-900 p-6 rounded-xl border border-neutral-800">
-          <h4 className="text-crisis-text font-black uppercase text-xs tracking-widest mb-2">🌲 Crown Lands: The Forestry Monopoly</h4>
+          <h4 className="text-crisis-text font-bold uppercase text-xs tracking-widest mb-2">🌲 Crown Lands: The Forestry Monopoly</h4>
           <p className="text-sm text-neutral-300 mb-4">
             J.D. Irving holds rights to approximately <strong className="text-white">2.7 million hectares</strong> of New Brunswick&apos;s Crown forests — public land — at below-market rates. The 2014 Crown Lands Act changes gave Irving a <strong className="text-white">21% increase</strong> in allowable softwood cut while slashing wildlife habitat protections. Irving&apos;s sawmills, paper mills, and trucking fleet are the sole beneficiaries of this public subsidy. Independent forestry operators have been squeezed out.
           </p>
@@ -326,7 +338,7 @@ export default function IrvingPage() {
 
         {/* External Links */}
         <section className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8">
-          <h3 className="text-xl font-black font-serif uppercase tracking-tight text-white mb-6">Investigative Sources</h3>
+          <h3 className="text-xl font-bold font-serif uppercase tracking-tight text-white mb-6">Investigative Sources</h3>
           <div className="grid gap-4 md:grid-cols-2">
             <SourceCard type="article" title="CBC: U.S. Refineries Pay 5x More Property Taxes Than Irving" url="https://www.cbc.ca/news/canada/new-brunswick/propery-taxes-irving-refineries-1.6671058" description="Investigative report on property tax inequality" />
             <SourceCard type="article" title="ICIJ: Paradise Papers — Irving Bermuda Insurance Scheme" url="https://www.icij.org/investigations/paradise-papers/" description="Offshore tax shelter investigation" />
@@ -337,8 +349,8 @@ export default function IrvingPage() {
           </div>
         </section>
 
-        <div className="my-12 p-12 bg-crisis-red text-white border border-red-900 rounded-3xl text-center shadow-[0_0_50px_rgba(179,0,0,0.3)]">
-          <h3 className="text-4xl font-black font-serif mb-6 uppercase tracking-tighter underline decoration-4 underline-offset-8">
+        <div className="my-12 p-12 bg-crisis-red text-white border border-red-900 rounded-3xl text-center ">
+          <h3 className="text-4xl font-bold font-serif mb-6 uppercase tracking-tighter underline decoration-4 underline-offset-8">
             Take Back Your Province.
           </h3>
           <p className="text-white/90 text-xl mb-10 max-w-2xl mx-auto font-medium leading-tight">
@@ -348,13 +360,14 @@ export default function IrvingPage() {
           </p>
           <Link
             href="/take-action"
-            className="inline-block bg-white text-crisis-text font-black py-5 px-16 rounded-xl text-xl hover:bg-neutral-100 transition-all shadow-2xl hover:scale-105 uppercase tracking-widest"
+            className="inline-block bg-white text-crisis-text font-bold py-5 px-16 rounded-xl text-xl hover:bg-neutral-100 transition-all shadow-2xl uppercase tracking-widest"
             aria-label="Join the petition"
           >
             Join the Petition
           </Link>
         </div>
       </div>
+      <ArticleSchema title="The Oligarchy" description="Exposing the vertical monopoly controlling New Brunswick" datePublished="2025-03-31" image="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80" url="https://nbreform.ca/oligarchy" />
     </PageWrapper>
   );
 }

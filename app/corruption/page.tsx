@@ -9,11 +9,22 @@ import { Timeline } from "@/components/Timeline";
 import { QuoteBlock } from "@/components/QuoteBlock";
 import { SourceCard } from "@/components/SourceCard";
 import Image from "next/image";
+import { ArticleSchema } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "Systemic Corruption | Reform NB",
-  description:
-    "Exposing embezzlement, untendered contracts, whistleblower suppression, and the systemic corruption within the New Brunswick provincial administration — from Lt. Governor fraud to $173.9M travel nurse cover-ups.",
+  description: "Exposing embezzlement, untendered contracts, whistleblower suppression, and the systemic corruption within the New Brunswick provincial administration — from Lt. Governor fraud to $173.9M travel nurse cover-ups.",
+  openGraph: {
+    title: "Reform NB",
+    url: "https://nbreform.ca",
+    siteName: "Reform NB",
+    images: [{ url: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1200&q=80", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Reform NB",
+    images: ["https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1200&q=80"],
+  },
 };
 
 const corruptionData = [
@@ -45,15 +56,16 @@ export default function CorruptionPage() {
       />
       
       {/* Hero Image */}
-      <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
+      <div className="mb-12 rounded-2xl overflow-hidden shadow-xl relative">
         <Image 
           src="https://images.unsplash.com/photo-1555848962-6e79363ec58f?w=1200&q=80" 
           alt="Government building representing systemic corruption in New Brunswick"
           fill
           sizes="(max-width: 768px) 100vw, 1200px"
         />
-        <div className="bg-neutral-900 p-4 text-xs text-neutral-400 uppercase tracking-widest text-center">
-          Daniel Bard court proceedings — 19 RCMP charges for financial irregularities | <span className="text-neutral-500">CBC/Radio-Canada</span>
+        <div className="absolute inset-0 bg-black/70 z-10"></div>
+        <div className="bg-neutral-900 p-4 text-xs text-neutral-400 uppercase tracking-widest text-center relative z-20">
+          Daniel Bard court proceedings — 19 RCMP charges for financial irregularities | <span className="text-neutral-400">CBC/Radio-Canada</span>
         </div>
       </div>
 
@@ -64,7 +76,7 @@ export default function CorruptionPage() {
         ))}
       </div>
 
-      <div className="prose prose-invert prose-lg max-w-none space-y-16">
+      <div className="prose prose-invert prose-lg max-w-4xl space-y-16">
         {/* Section 1: High-Level Embezzlement */}
         <section>
           <h2 className="text-3xl font-serif font-bold text-white mb-6 border-b border-neutral-800 pb-2 uppercase tracking-tighter italic">
@@ -79,7 +91,7 @@ export default function CorruptionPage() {
           </p>
           <div className="grid md:grid-cols-2 gap-8 my-8">
             <div className="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 hover:border-crisis-red/50 transition-all shadow-xl relative overflow-hidden group">
-              <h3 className="text-2xl font-black mb-4 uppercase tracking-tight text-white group-hover:text-crisis-text transition-colors">
+              <h3 className="text-2xl font-semibold mb-4 uppercase tracking-tight text-white group-hover:text-crisis-text transition-colors">
                 Tim Richardson
               </h3>
               <p className="text-base text-neutral-400 mb-6 leading-relaxed">
@@ -89,12 +101,12 @@ export default function CorruptionPage() {
                 The theft continued undetected because Richardson controlled the financial 
                 records and had no independent oversight.
               </p>
-              <div className="flex items-center gap-2 text-[10px] font-black text-crisis-text uppercase tracking-[0.2em] bg-black/50 px-3 py-1 rounded-full w-fit">
+              <div className="flex items-center gap-2 text-xs font-semibold text-crisis-text uppercase tracking-wide bg-black/50 px-3 py-1 rounded-full w-fit">
                 <Lock size={12} aria-hidden="true" /> Status: Deceased / Case Closed
               </div>
             </div>
             <div className="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 hover:border-crisis-red/50 transition-all shadow-xl relative overflow-hidden group">
-              <h3 className="text-2xl font-black mb-4 uppercase tracking-tight text-white group-hover:text-crisis-text transition-colors">
+              <h3 className="text-2xl font-semibold mb-4 uppercase tracking-tight text-white group-hover:text-crisis-text transition-colors">
                 Yassin Choukri
               </h3>
               <p className="text-base text-neutral-400 mb-6 leading-relaxed">
@@ -103,7 +115,7 @@ export default function CorruptionPage() {
                 serving as the province&apos;s top legal official. The irony: the 
                 person responsible for upholding the law was systematically breaking it.
               </p>
-              <div className="flex items-center gap-2 text-[10px] font-black text-crisis-text uppercase tracking-[0.2em] bg-black/50 px-3 py-1 rounded-full w-fit">
+              <div className="flex items-center gap-2 text-xs font-semibold text-crisis-text uppercase tracking-wide bg-black/50 px-3 py-1 rounded-full w-fit">
                 <Scale size={12} aria-hidden="true" /> Status: Convicted
               </div>
             </div>
@@ -174,28 +186,28 @@ export default function CorruptionPage() {
           </p>
 
           <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 my-8">
-            <h4 className="text-crisis-text font-black uppercase text-xs tracking-widest mb-4 flex items-center gap-2">
+            <h4 className="text-crisis-text font-semibold uppercase text-xs tracking-widest mb-4 flex items-center gap-2">
               <FileWarning size={16} aria-hidden="true" /> The Cover-Up Timeline
             </h4>
             <ul className="space-y-3 text-neutral-300 text-sm" role="list">
               <li className="flex items-start gap-3">
-                <span className="text-crisis-text font-black">2023-24</span>
+                <span className="text-crisis-text font-semibold">2023-24</span>
                 <span>Auditor General begins requesting travel nurse contract documents from Vitalité</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-crisis-text font-black">2024</span>
+                <span className="text-crisis-text font-semibold">2024</span>
                 <span>Vitalité invokes &quot;litigation privilege&quot; — refuses to provide records</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-crisis-text font-black">DEC 2025</span>
+                <span className="text-crisis-text font-semibold">DEC 2025</span>
                 <span>AG publishes partial report: $173.9M in untendered contracts confirmed</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-crisis-text font-black">JUNE 2025</span>
+                <span className="text-crisis-text font-semibold">JUNE 2025</span>
                 <span>Chief Justice DeWare rules litigation privilege overrides AG mandate</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-crisis-text font-black">2026</span>
+                <span className="text-crisis-text font-semibold">2026</span>
                 <span>Full internal records remain sealed. No one held accountable.</span>
               </li>
             </ul>
@@ -254,7 +266,7 @@ export default function CorruptionPage() {
             least likely to be protected</strong>.
           </p>
           <div className="bg-black/40 p-8 rounded-2xl border border-neutral-800">
-            <h4 className="text-crisis-text font-black uppercase text-[10px] tracking-[0.3em] mb-4">
+            <h4 className="text-crisis-text font-semibold uppercase text-xs tracking-wide mb-4">
               Mystery Disease Case Update
             </h4>
             <p className="text-white font-bold leading-relaxed mb-4 italic">
@@ -315,7 +327,7 @@ export default function CorruptionPage() {
         </section>
 
         {/* Money Image */}
-        <div className="my-12 rounded-2xl overflow-hidden shadow-2xl">
+        <div className="my-12 rounded-2xl overflow-hidden shadow-xl">
           <Image 
             src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80" 
             alt="Money and documents representing government corruption and financial mismanagement"
@@ -329,7 +341,7 @@ export default function CorruptionPage() {
         
         {/* External Links */}
         <section className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8">
-          <h3 className="text-xl font-black font-serif uppercase tracking-tight text-white mb-6">Case Sources & Documents</h3>
+          <h3 className="text-xl font-semibold font-serif uppercase tracking-tight text-white mb-6">Case Sources & Documents</h3>
           <div className="grid gap-4 md:grid-cols-2">
             <SourceCard type="article" title="CBC: Tim Richardson — $700K Embezzlement" url="https://www.cbc.ca/news/canada/new-brunswick/tim-richardson-lieutenant-governor-fraud-embezzlement-1.5706694" description="Former Lt. Governor's principal secretary" />
             <SourceCard type="article" title="CBC: Yassin Choukri — Deputy AG Guilty Plea" url="https://www.cbc.ca/news/canada/new-brunswick/yassin-choukri-guilty-plea-1.6986538" description="$481K stolen from law society trust" />
@@ -348,6 +360,7 @@ export default function CorruptionPage() {
         buttonText="Mobilize"
         buttonHref="/take-action"
       />
+      <ArticleSchema title="Systemic Corruption" description="Documenting systemic corruption in New Brunswick government" datePublished="2025-03-31" image="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80" url="https://nbreform.ca/corruption" />
     </PageWrapper>
   );
 }

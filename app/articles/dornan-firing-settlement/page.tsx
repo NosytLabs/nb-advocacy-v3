@@ -1,12 +1,13 @@
 import { Metadata } from "next";
 import { ArticleLayout } from "@/components/ArticleLayout";
+import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 
 export const metadata: Metadata = {
   title: "$1.8M Settlement: Health Minister Dornan's Firing Exposed",
   description: "Province paid $1.8M to settle Dr. John Dornan's unjust dismissal case. Fired as Horizon CEO after ER patient death, now NB Health Minister.",
   alternates: { canonical: "https://nbreform.ca/articles/dornan-firing-settlement/" },
   openGraph: {
-    title: "$1.8M Settlement: The Dornan Firing Scandal | Reform NB",
+    title: "$1.8M Settlement: The Dornan Firing Scandal",
     description: "Higgs fired Horizon CEO John Dornan during a press conference. The province fought him in court for 2 years, then quietly paid $1.8M of taxpayer money to settle. Dornan is now Health Minister.",
     images: [{ url: "https://images.unsplash.com/photo-1523292562811-8fa7962a78c8?w=1200", width: 1200, height: 675, alt: "Government building" }],
   },
@@ -29,12 +30,16 @@ export default function ArticlePage() {
         { title: "CBC: Dornan drops appeal of $2M payout (2024)", url: "https://www.cbc.ca/news/canada/new-brunswick/province-drops-appeal-john-dornan-fired-horizon-ceo-2-million-payout-1.7174114" },
       ]}
     >
-      <h1 className="text-4xl md:text-5xl font-black font-serif tracking-tight uppercase mb-8">$1.8M Settlement: Health Minister Dornan's Firing Exposed</h1>
+      <h1 className="text-4xl md:text-5xl font-bold font-serif tracking-tight uppercase mb-8">$1.8M Settlement: Health Minister Dornan's Firing Exposed</h1>
 
       <h2>The Firing</h2>
       <p>
         On July 12, 2022, Darrell Mesheau, 78, spent seven hours waiting for care at the Dr. Everett Chalmers Regional Hospital emergency department in Fredericton. He was discovered unresponsive by a nurse at 4:30 a.m. He died.
       </p>
+      <div className="my-8">
+        <YouTubeEmbed videoId="r2mlk44O1Ww" title="Amendments to the Limitations of Actions Act" />
+      </div>
+
       <p>
         What followed was not accountability for a failing system — it was a public execution of leadership. Premier Blaine Higgs used a press conference to announce the firing of Dr. John Dornan as President and CEO of Horizon Health Network, along with Health Minister Dorothy Shephard and the boards of both Horizon and Vitalité health networks.
       </p>
@@ -88,7 +93,7 @@ export default function ArticlePage() {
 
       <h2>The Real Victims</h2>
       <p>
-        While the government spent years and millions fighting in court, 238,000 New Brunswickers still don't have a family doctor. 2,199 patients have been pronounced dead after ER arrival since 2020. 63,000+ walk out of ERs every year without being seen.
+        While the government spent years and millions fighting in court, 238,000 New Brunswickers still don't have a family doctor. 2,199 patients have been pronounced dead after ER arrival since 2020. 61,000+ walk out of ERs every year without being seen.
       </p>
       <p>
         Darrell Mesheau's death was supposed to trigger accountability. Instead, it triggered a political purge, a legal battle, and a $1.8 million settlement — while the system that killed him remains fundamentally unchanged.

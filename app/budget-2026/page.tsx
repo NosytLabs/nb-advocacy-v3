@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Image from "next/image";
+import { ArticleSchema } from "@/components/StructuredData";
 import { DollarSign, AlertTriangle } from "lucide-react";
 import { PageWrapper } from "@/components/PageWrapper";
 import { BackLink } from "@/components/BackLink";
@@ -144,7 +145,7 @@ export default function Budget2026Page() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
         <div className="absolute bottom-6 left-6 right-6">
-          <h2 className="text-3xl md:text-4xl font-black text-white mb-2">Budget 2026-27 Analysis</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">Budget 2026-27 Analysis</h2>
           <p className="text-gray-300 text-lg">Record deficit. Corporate subsidies. Services cut.</p>
         </div>
       </div>
@@ -158,11 +159,11 @@ export default function Budget2026Page() {
 
       {/* Deficit Section */}
       <section className="mb-16">
-        <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-6 border-l-4 border-red-500 pl-4">
+        <h2 className="text-3xl font-bold text-white uppercase tracking-tight mb-6 pl-4">
           Record Deficit & Fiscal Crisis
         </h2>
-        <div className="prose prose-invert max-w-none mb-8">
-          <h1 className="text-4xl md:text-5xl font-black font-serif tracking-tight uppercase mb-8">NB Budget 2026-27: $1.39B Deficit, $45M Irving Subsidy, Services Cut</h1>
+        <div className="prose prose-invert max-w-4xl mb-8">
+          <h1 className="text-4xl md:text-5xl font-bold font-serif tracking-tight uppercase mb-8">NB Budget 2026-27: $1.39B Deficit, $45M Irving Subsidy, Services Cut</h1>
 
           <p className="text-neutral-300 text-lg leading-relaxed">
             The Holt Liberal government tabled its 2026-27 budget on March 17, 2026, projecting a{" "}
@@ -242,10 +243,10 @@ export default function Budget2026Page() {
 
       {/* Irving Subsidy Section */}
       <section className="mb-16">
-        <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-6 border-l-4 border-red-500 pl-4">
+        <h2 className="text-3xl font-bold text-white uppercase tracking-tight mb-6 pl-4">
           The Irving Subsidy
         </h2>
-        <div className="prose prose-invert max-w-none mb-8">
+        <div className="prose prose-invert max-w-4xl mb-8">
           <p className="text-neutral-300 text-lg leading-relaxed">
             The single most alarming item in this budget: <strong className="text-white">Irving Paper
             received up to $45 million over 3 years</strong> from Opportunities New Brunswick&apos;s
@@ -336,10 +337,10 @@ export default function Budget2026Page() {
 
       {/* Services Being Cut */}
       <section className="mb-16">
-        <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-6 border-l-4 border-red-500 pl-4">
+        <h2 className="text-3xl font-bold text-white uppercase tracking-tight mb-6 pl-4">
           Services Being Cut
         </h2>
-        <div className="prose prose-invert max-w-none mb-8">
+        <div className="prose prose-invert max-w-4xl mb-8">
           <p className="text-neutral-300 text-lg leading-relaxed">
             While giving $45M to Irving, the government is cutting services that New Brunswickers
             depend on — disproportionately affecting rural communities.
@@ -416,10 +417,10 @@ export default function Budget2026Page() {
 
       {/* Healthcare Analysis */}
       <section className="mb-16">
-        <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-6 border-l-4 border-red-500 pl-4">
+        <h2 className="text-3xl font-bold text-white uppercase tracking-tight mb-6 pl-4">
           Healthcare — Headline vs Reality
         </h2>
-        <div className="prose prose-invert max-w-none mb-8">
+        <div className="prose prose-invert max-w-4xl mb-8">
           <p className="text-neutral-300 text-lg leading-relaxed">
             The budget claims a <strong className="text-white">$710M increase in healthcare
             spending</strong> (+17.4%), calling it &ldquo;the single largest investment in health
@@ -446,10 +447,10 @@ export default function Budget2026Page() {
 
       {/* Tax Fairness */}
       <section className="mb-16">
-        <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-6 border-l-4 border-red-500 pl-4">
+        <h2 className="text-3xl font-bold text-white uppercase tracking-tight mb-6 pl-4">
           What&apos;s Missing — No Tax Fairness
         </h2>
-        <div className="prose prose-invert max-w-none mb-8">
+        <div className="prose prose-invert max-w-4xl mb-8">
           <p className="text-neutral-300 text-lg leading-relaxed">
             <strong className="text-white">
               No changes to corporate or personal income tax rates.
@@ -473,10 +474,10 @@ export default function Budget2026Page() {
 
       {/* Environmental Concerns */}
       <section className="mb-16">
-        <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-6 border-l-4 border-red-500 pl-4">
+        <h2 className="text-3xl font-bold text-white uppercase tracking-tight mb-6 pl-4">
           Environmental & Resource Concerns
         </h2>
-        <div className="prose prose-invert max-w-none mb-8">
+        <div className="prose prose-invert max-w-4xl mb-8">
           <p className="text-neutral-300 text-lg leading-relaxed">
             A new &ldquo;detailed minerals strategy&rdquo; released March 2 aggressively
             promotes NB as mining-friendly, but{" "}
@@ -500,7 +501,7 @@ export default function Budget2026Page() {
 
       {/* Sources */}
       <section className="mb-16">
-        <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-6 border-l-4 border-red-500 pl-4">
+        <h2 className="text-3xl font-bold text-white uppercase tracking-tight mb-6 pl-4">
           Sources
         </h2>
         <div className="grid md:grid-cols-2 gap-4">
@@ -574,6 +575,7 @@ export default function Budget2026Page() {
         buttonText="Take Action Now"
         buttonHref="/take-action"
       />
+      <ArticleSchema title="Budget 2026 Analysis" description="Analysis of the New Brunswick 2026 provincial budget" datePublished="2025-03-31" image="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80" url="https://nbreform.ca/budget-2026" />
     </PageWrapper>
   );
 }

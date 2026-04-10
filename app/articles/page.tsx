@@ -8,11 +8,11 @@ import { CTASection } from "@/components/CTASection";
 import { FileSearch, Send } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Investigative Journalism: NB Government & Corporate Accountability | Reform NB",
+  title: "Investigative Journalism: NB Government & Corporate Accountability",
   description: "In-depth investigative reporting on healthcare collapse, corporate oligarchy, environmental destruction, and government corruption in New Brunswick, Canada.",
   alternates: { canonical: "https://nbreform.ca/articles/" },
   openGraph: {
-    title: "Investigative Articles | Reform NB",
+    title: "Investigative Articles",
     description: "In-depth reporting on New Brunswick's systemic governance failures. Real data, real sources.",
   },
 };
@@ -181,14 +181,14 @@ export default function ArticlesPage() {
                   src={article.image}
                   alt={article.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover group-transition-transform duration-500"
                   sizes="(max-width: 768px) 100vw, 256px"
                   loading="lazy"
                 />
               </div>
               <div className="p-6 flex-1 flex flex-col justify-center">
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="text-neutral-300 font-black text-sm font-mono">{article.date}</span>
+                  <span className="text-neutral-300 font-bold text-sm font-mono">{article.date}</span>
                   <span className="text-sm font-bold text-white uppercase tracking-widest px-2 py-1 bg-black border border-neutral-800 rounded transition-colors duration-200">
                     {article.category}
                   </span>

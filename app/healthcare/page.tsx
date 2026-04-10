@@ -13,18 +13,29 @@ import { VideoGrid } from "@/components/VideoGrid";
 import { SourceCard } from "@/components/SourceCard";
 import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 import Image from "next/image";
+import { ArticleSchema } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "Healthcare Collapse | Reform NB",
-  description:
-    "Exposing the fatal failure of the New Brunswick healthcare system. Documenting waiting room deaths, negligence settlements, the $173.9M travel nurse scandal, and the systemic abandonment of patients.",
+  description: "Exposing the fatal failure of the New Brunswick healthcare system. Documenting waiting room deaths, negligence settlements, the $173.9M travel nurse scandal, and the systemic abandonment of patients.",
+  openGraph: {
+    title: "Reform NB",
+    url: "https://nbreform.ca",
+    siteName: "Reform NB",
+    images: [{ url: "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=1200&q=80", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Reform NB",
+    images: ["https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=1200&q=80"],
+  },
 };
 
 const healthcareTimeline = [
   { date: "JULY 2022", title: "Darrell Mesheau Dies Waiting", description: "78-year-old dies at Chalmers ER in Fredericton after a 7-hour wait. Family later files negligence lawsuit.", color: "red" as const },
   { date: "DEC 2022", title: "Edmundston Waiting Room Death", description: "70-year-old man dies in his chair after 5-hour wait, triaged as 'Level 4'. Community demands answers.", color: "red" as const },
   { date: "2023-24", title: "Travel Nurse Spending Explodes", description: "Auditor General reveals $173.9M in untendered travel nurse contracts. Canadian Health Labs paid $300.72/hour per nurse.", color: "gold" as const },
-  { date: "SEP 2025", title: "MEI Report: 63,000 Walk Out", description: "Montreal Economic Institute reveals 12.9% ER walkout rate — third highest in Canada. 41,000 from Horizon, 22,000 from Vitalité.", color: "red" as const },
+  { date: "SEP 2025", title: "MEI Report: 61,000 Walk Out", description: "Montreal Economic Institute reveals 12.9% ER walkout rate — among highest in Canada. 41,000 from Horizon, 22,000 from Vitalité.", color: "red" as const },
   { date: "JUNE 2025", title: "Litigation Privilege Ruling", description: "Chief Justice DeWare rules 'litigation privilege' overrides Auditor General's mandate — legalizing the travel nurse cover-up.", color: "gold" as const },
   { date: "NOV 2025", title: "Mesheau Settlement Reached", description: "Family reaches settlement regarding 2022 death. Continues lobbying for 'Value of Life' legal reforms.", color: "neutral" as const },
   { date: "DEC 2025", title: "AG Report: 2,199 ER Deaths", description: "Auditor General confirms 2,199 patients pronounced deceased after arriving at NB ERs between 2020-2024. 43% not seen within safe triage.", color: "red" as const },
@@ -35,7 +46,7 @@ const healthcareTimeline = [
 
 const doctorShortageData = [
   { value: "238K+", label: "Without Family Doctor", sublabel: "Nearly one-third of the entire NB population lacks permanent primary care" },
-  { value: "63K+", label: "ER Walkouts/Year", sublabel: "12.9% of all ER patients leave before being seen — third highest in Canada" },
+  { value: "61K+", label: "ER Walkouts/Year", sublabel: "12.9% of all ER patients leave before being seen — among highest in Canada" },
   { value: "2,199", label: "ER Arrivals → Deceased", sublabel: "Patients pronounced dead after arriving at ERs, 2020-2024 (AG Report)" },
   { value: "40%", label: "Beds Blocked by ALC", sublabel: "635 seniors occupying acute care beds while awaiting long-term care" },
 ];
@@ -52,14 +63,15 @@ export default function HealthcarePage() {
       />
 
       {/* Hero Image */}
-      <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
+      <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl relative">
         <Image 
           src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&q=80" 
           alt="Empty hospital corridor representing the healthcare crisis in New Brunswick"
           fill
           sizes="(max-width: 768px) 100vw, 1200px"
         />
-        <div className="bg-neutral-900 p-4 text-xs text-neutral-400 uppercase tracking-widest text-center">
+        <div className="absolute inset-0 bg-black/70 z-10"></div>
+        <div className="bg-neutral-900 p-4 text-xs text-neutral-400 uppercase tracking-widest text-center relative z-20">
           238,000 New Brunswickers without a family doctor — patients dying in waiting rooms while the government calls it &quot;efficiency&quot;
         </div>
         <div className="bg-neutral-900 p-2 text-xs text-neutral-400 uppercase tracking-widest text-center">
@@ -74,7 +86,7 @@ export default function HealthcarePage() {
         ))}
       </div>
 
-      <div className="prose prose-invert prose-lg max-w-none space-y-16">
+      <div className="prose prose-invert prose-lg max-w-4xl space-y-16">
         {/* Section 1: The Scale of Collapse */}
         <section>
           <h2 className="text-3xl font-serif font-bold text-white mb-6 border-b border-neutral-800 pb-2 uppercase tracking-tighter italic">
@@ -171,7 +183,7 @@ export default function HealthcarePage() {
 
         {/* Video Section */}
         <div className="my-12">
-          <h3 className="text-xl font-black font-serif uppercase tracking-tight text-white mb-4">📺 ER Crisis Coverage</h3>
+          <h3 className="text-xl font-bold font-serif uppercase tracking-tight text-white mb-4">📺 ER Crisis Coverage</h3>
           <VideoGrid 
             columns={1}
             videos={[
@@ -204,7 +216,7 @@ export default function HealthcarePage() {
           </p>
           <p className="text-neutral-400 leading-relaxed">
             This &quot;bed-block&quot; is the direct driver of the{" "}
-            <strong className="text-white">12.9% walkout rate</strong> (over <strong className="text-white">41,000 patients</strong> from Horizon alone, plus 22,000 from Vitalité — totaling over 63,000) seen last
+            <strong className="text-white">12.9% walkout rate</strong> (over <strong className="text-white">41,000 patients</strong> from Horizon alone, plus 22,000 from Vitalité — totaling over 61,000) seen last
             year. Patients are triaged in parking lots because there is
             physically no room left.{" "}
             <a href="https://www.cbc.ca/news/canada/new-brunswick/new-brunswick-emergency-patient-leave-horizon-mei-report-vitalit%C3%A9-1.7637201" target="_blank" rel="noopener noreferrer" className="text-crisis-text hover:text-white underline">[CBC / MEI Report, Sep 2025]</a>
@@ -264,32 +276,32 @@ export default function HealthcarePage() {
           </p>
 
           <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 my-8">
-            <h4 className="text-crisis-text font-black uppercase text-xs tracking-widest mb-4 flex items-center gap-2">
+            <h4 className="text-crisis-text font-bold uppercase text-xs tracking-widest mb-4 flex items-center gap-2">
               <AlertTriangle size={16} aria-hidden="true" /> Key Revelations
             </h4>
             <ul className="space-y-3 text-neutral-300 text-sm" role="list">
               <li className="flex items-start gap-3">
-                <span className="text-crisis-text font-black">•</span>
+                <span className="text-crisis-text font-bold">•</span>
                 <span>CHL paid <strong>$300.72/hour</strong> per travel nurse vs. $45-55/hour for local RNs</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-crisis-text font-black">•</span>
+                <span className="text-crisis-text font-bold">•</span>
                 <span>Total contracts exceeded <strong>$173.9M</strong> — all untendered</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-crisis-text font-black">•</span>
+                <span className="text-crisis-text font-bold">•</span>
                 <span>Vitalité used <strong>&quot;litigation privilege&quot;</strong> to block Auditor General access</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-crisis-text font-black">•</span>
+                <span className="text-crisis-text font-bold">•</span>
                 <span>Chief Justice DeWare ruled AG&apos;s mandate is <strong>overridden</strong> by privilege</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-crisis-text font-black">•</span>
+                <span className="text-crisis-text font-bold">•</span>
                 <span>Local nurses received <strong>no comparable wage increases</strong> during the same period</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-crisis-text font-black">•</span>
+                <span className="text-crisis-text font-bold">•</span>
                 <span>Travel nurses often <strong>less experienced</strong> than permanent staff they replaced</span>
               </li>
             </ul>
@@ -388,9 +400,9 @@ export default function HealthcarePage() {
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-neutral-800">
-                  <th className="text-left p-4 text-white font-black uppercase tracking-wider text-xs">Metric</th>
-                  <th className="text-left p-4 text-crisis-text font-black uppercase tracking-wider text-xs">NB</th>
-                  <th className="text-left p-4 text-neutral-400 font-black uppercase tracking-wider text-xs">National Avg</th>
+                  <th className="text-left p-4 text-white font-bold uppercase tracking-wider text-xs">Metric</th>
+                  <th className="text-left p-4 text-crisis-text font-bold uppercase tracking-wider text-xs">NB</th>
+                  <th className="text-left p-4 text-neutral-400 font-bold uppercase tracking-wider text-xs">National Avg</th>
                 </tr>
               </thead>
               <tbody>
@@ -436,7 +448,7 @@ export default function HealthcarePage() {
             sizes="(max-width: 768px) 100vw, 1200px"
           />
           <div className="bg-neutral-900 p-3 text-xs text-neutral-400 uppercase tracking-widest text-center">
-            Emergency rooms overwhelmed — patients triaged in parking lots, 63,000 leaving untreated annually
+            Emergency rooms overwhelmed — patients triaged in parking lots, 61,000 leaving untreated annually
           </div>
         </div>
 
@@ -463,7 +475,7 @@ export default function HealthcarePage() {
 
         {/* External Links */}
         <section className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 mt-8">
-          <h3 className="text-xl font-black font-serif uppercase tracking-tight text-white mb-6">Essential Data & Sources</h3>
+          <h3 className="text-xl font-bold font-serif uppercase tracking-tight text-white mb-6">Essential Data & Sources</h3>
           <div className="grid gap-4 md:grid-cols-2">
             <SourceCard type="article" title="CBC: 41,000 Left Horizon ERs Without Treatment" url="https://www.cbc.ca/news/canada/new-brunswick/new-brunswick-emergency-patient-leave-horizon-mei-report-vitalit%C3%A9-1.7637201" description="MEI Report — Sep 2025" date="SEP 2025" />
             <SourceCard type="pdf" title="MEI Report: Patients Leaving NB Emergency Departments" url="https://www.iedm.org/wp-content/uploads/2025/09/2025-09-18-NR-Leaving-ER-NB.pdf" description="Full academic report with methodology and data" date="SEP 2025" />
@@ -540,6 +552,7 @@ export default function HealthcarePage() {
         buttonText="Join the Fight"
         buttonHref="/take-action"
       />
+      <ArticleSchema title="Healthcare Collapse" description="Exposing the fatal failure of the New Brunswick healthcare system" datePublished="2025-03-31" image="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80" url="https://nbreform.ca/healthcare" />
     </PageWrapper>
   );
 }

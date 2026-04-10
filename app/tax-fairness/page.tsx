@@ -7,6 +7,7 @@ import { KeyFactsGrid } from "@/components/KeyFactsGrid";
 import { QuoteBlock } from "@/components/QuoteBlock";
 import { CTASection } from "@/components/CTASection";
 import Image from "next/image";
+import { ArticleSchema } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "Tax Fairness in New Brunswick | Reform NB",
@@ -35,7 +36,7 @@ export default function TaxFairnessPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
         <div className="absolute bottom-6 left-6 right-6">
-          <h2 className="text-3xl md:text-4xl font-black text-white mb-2">Tax Fairness Analysis</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">Tax Fairness Analysis</h2>
           <p className="text-gray-300 text-lg">Who pays? Who benefits? The rigged system.</p>
         </div>
       </div>
@@ -98,10 +99,10 @@ export default function TaxFairnessPage() {
 
       {/* Wealth Tax Analysis */}
       <section className="mb-16">
-        <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-6 border-l-4 border-red-500 pl-4">
+        <h2 className="text-3xl font-bold text-white uppercase tracking-tight mb-6 pl-4">
           The Case for a Wealth Tax
         </h2>
-        <div className="prose prose-invert max-w-none mb-8">
+        <div className="prose prose-invert max-w-4xl mb-8">
           <p className="text-neutral-300 text-lg leading-relaxed">
             With the Irving family's wealth estimated at <strong className="text-white">$30+ billion</strong>, a modest wealth tax could generate significant revenue for public services while addressing extreme inequality.
           </p>
@@ -145,10 +146,10 @@ export default function TaxFairnessPage() {
 
       {/* Royalty Analysis */}
       <section className="mb-16">
-        <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-6 border-l-4 border-red-500 pl-4">
+        <h2 className="text-3xl font-bold text-white uppercase tracking-tight mb-6 pl-4">
           Natural Resource Royalties
         </h2>
-        <div className="prose prose-invert max-w-none mb-8">
+        <div className="prose prose-invert max-w-4xl mb-8">
           <p className="text-neutral-300 text-lg leading-relaxed">
             New Brunswick's natural resources - forests, minerals, and potential oil/gas - are extracted with minimal return to the public. Royalty rates lag behind other resource-rich jurisdictions.
           </p>
@@ -210,10 +211,10 @@ export default function TaxFairnessPage() {
 
       {/* Property Tax Inequality */}
       <section className="mb-16">
-        <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-6 border-l-4 border-red-500 pl-4">
+        <h2 className="text-3xl font-bold text-white uppercase tracking-tight mb-6 pl-4">
           Property Tax Disparities
         </h2>
-        <div className="prose prose-invert max-w-none mb-8">
+        <div className="prose prose-invert max-w-4xl mb-8">
           <p className="text-neutral-300 text-lg leading-relaxed">
             New Brunswick's property tax system creates significant inequities between residential homeowners and industrial complexes, particularly those owned by billionaire families.
           </p>
@@ -275,10 +276,10 @@ export default function TaxFairnessPage() {
 
       {/* Federal Transfers & Expenditures */}
       <section className="mb-16">
-        <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-6 border-l-4 border-red-500 pl-4">
+        <h2 className="text-3xl font-bold text-white uppercase tracking-tight mb-6 pl-4">
           Federal Tax Expenditures in NB
         </h2>
-        <div className="prose prose-invert max-w-none mb-8">
+        <div className="prose prose-invert max-w-4xl mb-8">
           <p className="text-neutral-300 text-lg leading-relaxed">
             Federal tax expenditures - subsidies and tax breaks delivered through the tax system - disproportionately benefit corporations and high-income individuals in New Brunswick.
           </p>
@@ -331,7 +332,7 @@ export default function TaxFairnessPage() {
 
       {/* Quote Analysis */}
       <section className="mb-16">
-        <div className="prose prose-invert max-w-none">
+        <div className="prose prose-invert max-w-4xl">
           <QuoteBlock
             quote="New Brunswick's tax system asks the least from those who have the most, while placing the heaviest burden on those who can least afford it."
             author="Tax Justice NB"
@@ -349,7 +350,7 @@ export default function TaxFairnessPage() {
 
       {/* Sources */}
       <section className="mb-16">
-        <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-6 border-l-4 border-red-500 pl-4">
+        <h2 className="text-3xl font-bold text-white uppercase tracking-tight mb-6 pl-4">
           Sources
         </h2>
         <div className="grid md:grid-cols-2 gap-4">
@@ -383,6 +384,7 @@ export default function TaxFairnessPage() {
         buttonText="Take Action Now"
         buttonHref="/take-action"
       />
+      <ArticleSchema title="Tax Fairness" description="Investigating tax inequity and corporate subsidies in New Brunswick" datePublished="2025-03-31" image="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80" url="https://nbreform.ca/tax-fairness" />
     </PageWrapper>
   );
 }

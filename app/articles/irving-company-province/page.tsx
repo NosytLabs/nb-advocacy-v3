@@ -1,4 +1,5 @@
 import { ShareButtons } from "@/components/ShareButtons";
+import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 import { Metadata } from "next";
 import { Building, TreePine, Fuel, Newspaper, DollarSign, AlertTriangle } from "lucide-react";
 import { PageWrapper } from "@/components/PageWrapper";
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     "media ownership", "corporate control", "vertical integration"
   ].join(", "),
   openGraph: {
-    title: "New Brunswick: The Irving Company Province | Reform NB",
+    title: "New Brunswick: The Irving Company Province",
     description: "An investigation into how one family came to control an entire province's economy, media, and government.",
     images: [
       {
@@ -79,8 +80,8 @@ export default function IrvingCompanyProvincePage() {
         ))}
       </div>
 
-      <div className="prose prose-invert prose-lg max-w-none space-y-16">
-        <h1 className="text-4xl md:text-5xl font-black font-serif tracking-tight uppercase mb-8">New Brunswick: The Irving Company Province</h1>
+      <div className="prose prose-invert prose-lg max-w-4xl space-y-16">
+        <h1 className="text-4xl md:text-5xl font-bold font-serif tracking-tight uppercase mb-8">New Brunswick: The Irving Company Province</h1>
 
         {/* Section 1: Irving Everywhere */}
         <section>
@@ -90,6 +91,10 @@ export default function IrvingCompanyProvincePage() {
           <p className="text-white leading-relaxed mb-6">
             If you cruise down the superhighway that crosses Saint John, you will see Irving everywhere.
           </p>
+      <div className="my-8">
+        <YouTubeEmbed videoId="N9I-HY3wfVM" title="The Family That Owns New Brunswick: The House of Irving" />
+      </div>
+
           <p className="text-white leading-relaxed mb-6">
             That big building rising up in the city center: home office for <strong className="text-white">J.D. Irving&apos;s 
             15,000 employees</strong>. Go off the highway to grab a coffee at an Irving Oil gas station on 
@@ -116,9 +121,9 @@ export default function IrvingCompanyProvincePage() {
             <div key={i} className="bg-neutral-900 border border-neutral-800 rounded-xl p-6 hover:border-crisis-red/50 transition-all">
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-white">{sector.icon}</span>
-                <h4 className="text-white font-black uppercase tracking-tight text-sm">{sector.name}</h4>
+                <h4 className="text-white font-bold uppercase tracking-tight text-sm">{sector.name}</h4>
               </div>
-              <p className="text-white text-sm leading-relaxed">{sector.description}</p>
+              <p className="text-neutral-200 text-base leading-relaxed">{sector.description}</p>
             </div>
           ))}
         </div>
@@ -232,7 +237,7 @@ export default function IrvingCompanyProvincePage() {
 
         {/* Sources */}
         <section className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8">
-          <h3 className="text-xl font-black font-serif uppercase tracking-tight text-white mb-6">Sources</h3>
+          <h3 className="text-xl font-bold font-serif uppercase tracking-tight text-white mb-6">Sources</h3>
           <div className="grid gap-4 md:grid-cols-2">
             <SourceCard type="article" title="Maine Monitor: New Brunswick, Irving Company Province" url="https://themainemonitor.org/new-brunswick-irving-company-province/" description="Three-part series on Irving corporate presence in Maine and New Brunswick" date="2016" />
             <SourceCard type="article" title="New York Times: The Irving Family" url="https://www.nytimes.com/2025/04/01/world/canada/irving-family-canada-oil-environment.html" description="A Family Business Empire, and a Culture of 'Keeping Your Mouth Shut'" date="APR 2025" />

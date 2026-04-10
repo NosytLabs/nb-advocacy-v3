@@ -7,6 +7,7 @@ import { KeyFactsGrid } from "@/components/KeyFactsGrid";
 import { QuoteBlock } from "@/components/QuoteBlock";
 import { CTASection } from "@/components/CTASection";
 import Image from "next/image";
+import { ArticleSchema } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "Rural Healthcare Crisis in New Brunswick | Reform NB",
@@ -35,7 +36,7 @@ export default function RuralHealthcarePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
         <div className="absolute bottom-6 left-6 right-6">
-          <h2 className="text-3xl md:text-4xl font-black text-white mb-2">Rural Healthcare Crisis</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">Rural Healthcare Crisis</h2>
           <p className="text-gray-300 text-lg">Communities abandoned. Healthcare deserts. Distance kills.</p>
         </div>
       </div>
@@ -98,10 +99,10 @@ export default function RuralHealthcarePage() {
 
       {/* Distance-to-Care Analysis */}
       <section className="mb-16">
-        <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-6 border-l-4 border-red-500 pl-4">
+        <h2 className="text-3xl font-bold text-white uppercase tracking-tight mb-6 pl-4">
           Distance-to-Care Analysis
         </h2>
-        <div className="prose prose-invert max-w-none mb-8">
+        <div className="prose prose-invert max-w-4xl mb-8">
           <p className="text-neutral-300 text-lg leading-relaxed">
             In rural New Brunswick, healthcare access is measured in hours, not minutes. The province is divided into stark healthcare haves and have-nots based on geography.
           </p>
@@ -154,10 +155,10 @@ export default function RuralHealthcarePage() {
 
       {/* Rural Communities Map */}
       <section className="mb-16">
-        <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-6 border-l-4 border-red-500 pl-4">
+        <h2 className="text-3xl font-bold text-white uppercase tracking-tight mb-6 pl-4">
           Communities Without Healthcare
         </h2>
-        <div className="prose prose-invert max-w-none mb-8">
+        <div className="prose prose-invert max-w-4xl mb-8">
           <p className="text-neutral-300 text-lg leading-relaxed">
             These communities lack any healthcare provider, clinic, or even visiting services:
           </p>
@@ -234,10 +235,10 @@ export default function RuralHealthcarePage() {
 
       {/* Telehealth Analysis */}
       <section className="mb-16">
-        <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-6 border-l-4 border-red-500 pl-4">
+        <h2 className="text-3xl font-bold text-white uppercase tracking-tight mb-6 pl-4">
           Telehealth: Promise vs Reality
         </h2>
-        <div className="prose prose-invert max-w-none mb-8">
+        <div className="prose prose-invert max-w-4xl mb-8">
           <p className="text-neutral-300 text-lg leading-relaxed">
             Telehealth was supposed to bridge the rural healthcare gap, but infrastructure limitations and implementation failures have left rural communities behind.
           </p>
@@ -303,10 +304,10 @@ export default function RuralHealthcarePage() {
 
       {/* French-Language Healthcare */}
       <section className="mb-16">
-        <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-6 border-l-4 border-red-500 pl-4">
+        <h2 className="text-3xl font-bold text-white uppercase tracking-tight mb-6 pl-4">
           French-Language Healthcare Access
         </h2>
-        <div className="prose prose-invert max-w-none mb-8">
+        <div className="prose prose-invert max-w-4xl mb-8">
           <p className="text-neutral-300 text-lg leading-relaxed">
             Francophone rural communities face double barriers - distance to care AND language barriers. French-language services are concentrated in urban centers.
           </p>
@@ -372,10 +373,10 @@ export default function RuralHealthcarePage() {
 
       {/* Solutions Section */}
       <section className="mb-16">
-        <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-6 border-l-4 border-red-500 pl-4">
+        <h2 className="text-3xl font-bold text-white uppercase tracking-tight mb-6 pl-4">
           Solutions & Recommendations
         </h2>
-        <div className="prose prose-invert max-w-none mb-8">
+        <div className="prose prose-invert max-w-4xl mb-8">
           <p className="text-neutral-300 text-lg leading-relaxed">
             Addressing rural healthcare requires immediate action on multiple fronts.
           </p>
@@ -455,10 +456,10 @@ export default function RuralHealthcarePage() {
 
       {/* Rural Healthcare Success Stories */}
       <section className="mb-16">
-        <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-6 border-l-4 border-red-500 pl-4">
+        <h2 className="text-3xl font-bold text-white uppercase tracking-tight mb-6 pl-4">
           Success Stories
         </h2>
-        <div className="prose prose-invert max-w-none mb-8">
+        <div className="prose prose-invert max-w-4xl mb-8">
           <p className="text-neutral-300 text-lg leading-relaxed">
             Some rural communities have found innovative solutions to their healthcare challenges.
           </p>
@@ -496,7 +497,7 @@ export default function RuralHealthcarePage() {
 
       {/* Sources */}
       <section className="mb-16">
-        <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-6 border-l-4 border-red-500 pl-4">
+        <h2 className="text-3xl font-bold text-white uppercase tracking-tight mb-6 pl-4">
           Sources
         </h2>
         <div className="grid md:grid-cols-2 gap-4">
@@ -532,6 +533,7 @@ export default function RuralHealthcarePage() {
         buttonText="Take Action Now"
         buttonHref="/take-action"
       />
+      <ArticleSchema title="Rural Healthcare" description="Exposing the rural healthcare crisis in New Brunswick" datePublished="2025-03-31" image="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80" url="https://nbreform.ca/rural-healthcare" />
     </PageWrapper>
   );
 }

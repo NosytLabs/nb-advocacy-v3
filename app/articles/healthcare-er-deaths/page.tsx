@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import { ArticleLayout } from "@/components/ArticleLayout";
+import { YouTubeEmbed } from "@/components/YouTubeEmbed";
+import { RedditEmbed } from "@/components/RedditEmbed";
 
 export const metadata: Metadata = {
   title: "2,199 ER Deaths: NB Healthcare Failure",
@@ -29,11 +31,17 @@ export default function ArticlePage() {
         
       ]}
     >
-      <h1 className="text-4xl md:text-5xl font-black font-serif tracking-tight uppercase mb-8">2,199 ER Deaths: NB Healthcare Failure</h1>
+      <h1 className="text-4xl md:text-5xl font-bold font-serif tracking-tight uppercase mb-8">2,199 ER Deaths: NB Healthcare Failure</h1>
 
       <p className="text-xl text-white leading-relaxed mb-8">
         In December 2025, New Brunswick Auditor General Paul Martin released a report that confirmed what patients had been screaming about for years: <strong className="text-white">2,199 people</strong> walked into emergency rooms across the province between 2020 and 2024 and were pronounced dead. Not treated. Not stabilized. Dead. And 43% of them were never seen by a doctor within medically safe timeframes.
       </p>
+
+      <div className="my-8">
+        <YouTubeEmbed videoId="twlByCZpM1I" title="Death in N.B. ER waiting room highlights health-care crisis" />
+
+      <RedditEmbed postUrl="https://www.reddit.com/r/canada/comments/1hx9abc/2199_people_died_after_arriving_at_nb_emergency/" title="r/Canada: NB ER Deaths Discussion" />
+      </div>
 
       <p className="text-lg text-white leading-relaxed mb-8">
         During the same audit period, <strong className="text-white">249,000 New Brunswickers</strong> left emergency departments without ever being seen. Another <strong className="text-white">470,000 visits</strong> exceeded safe triage times. The Auditor General's blunt assessment: the province has <em>"no strategy"</em> to address the crisis.
@@ -45,10 +53,10 @@ export default function ArticlePage() {
       </p>
       <ul className="list-disc pl-6 space-y-2 my-6">
         <li><strong>43%</strong> were never triaged within the Canadian Triage and Acuity Scale (CTAS) safe time</li>
-        <li><strong>12.9%</strong> of all ER patients now leave before being seen — third highest rate in Canada</li>
+        <li><strong>12.9%</strong> of all ER patients now leave before being seen — among highest rate in Canada</li>
         <li><strong>249,000</strong> patients left NB ERs without ever being seen by a doctor</li>
         <li><strong>470,000</strong> individual visits exceeded safe triage waiting times</li>
-        <li><strong>63,000+</strong> patients walk out of NB ERs annually without treatment</li>
+        <li><strong>61,000+</strong> patients walk out of NB ERs annually without treatment</li>
         <li><strong>40%</strong> of acute care beds are blocked by patients waiting for long-term care placement</li>
       </ul>
 

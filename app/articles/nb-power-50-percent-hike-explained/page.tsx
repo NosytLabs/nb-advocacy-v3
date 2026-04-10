@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { ArticleLayout } from "@/components/ArticleLayout";
+import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 import { AlertTriangle, ExternalLink, Users, Zap } from "lucide-react";
 import Link from "next/link";
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   keywords: "NB Power rate increase 2026, NB Power debt, Coleson Cove fossil fuel, energy poverty New Brunswick, NB Power 50% rate hike, EUB hearing, New Brunswick electricity rates, NB Power mismanagement, Irving Paper electricity discount, NB Power net zero greenwashing",
   alternates: { canonical: "https://nbreform.ca/articles/nb-power-50-percent-hike-explained/" },
   openGraph: {
-    title: "NB Power 50% Hike: Record Fossil Fuels, Record Debt | Reform NB",
+    title: "NB Power 50% Hike: Record Fossil Fuels, Record Debt",
     description: "NB Power burned 4M barrels of heavy fuel oil — most in 16 years — while asking ratepayers to fund a 'net-zero' transition. Your bills are going up.",
     images: [{ url: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1200", width: 1200, height: 675, alt: "Power lines against dark sky representing NB Power crisis" }],
   },
@@ -31,7 +32,7 @@ export default function ArticlePage() {
         { title: "Reform NB: NB Power Rate Hearing LIVE Coverage", url: "/articles/nb-power-rate-hearing-2026/" },
       ]}
     >
-      <h1 className="text-4xl md:text-5xl font-black font-serif tracking-tight uppercase mb-8">NB Power 50% Hike: Record Fossil Fuels, Record Debt</h1>
+      <h1 className="text-4xl md:text-5xl font-bold font-serif tracking-tight uppercase mb-8">NB Power 50% Hike: Record Fossil Fuels, Record Debt</h1>
 
       {/* Live Hearing Alert */}
       <div className="bg-crisis-red/10 border border-crisis-red rounded-xl p-6 mb-8 flex items-start gap-4">
@@ -44,6 +45,10 @@ export default function ArticlePage() {
               Watch the live streams →
             </Link>
           </p>
+      <div className="my-8">
+        <YouTubeEmbed videoId="5R64D-C_PiM" title="NB Power seeking rate hike" />
+      </div>
+
         </div>
       </div>
 
@@ -120,8 +125,8 @@ export default function ArticlePage() {
         <li><strong className="text-white">Join the conversation</strong> — the <a href="https://www.facebook.com/groups/2100356297072209" target="_blank" rel="noopener noreferrer" className="text-white underline">NB Power Rants</a> Facebook group has 20,000+ members sharing their experiences</li>
       </ul>
 
-      <div className="mt-12 bg-neutral-900 border-l-4 border-crisis-gold p-8 rounded-r-xl">
-        <p className="text-xl text-white font-serif italic leading-relaxed">
+      <div className="mt-12 bg-neutral-900 border-crisis-gold p-8 rounded-r-xl">
+        <p className="text-xl text-white leading-relaxed">
           "NB Power's $5.9 billion debt was created by governments that treated a public utility as a political tool. The ratepayers who had no say in those decisions are now being asked to pay for them — with interest."
         </p>
         <p className="text-sm text-white mt-4">— Reform NB</p>

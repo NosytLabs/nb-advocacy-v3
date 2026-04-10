@@ -1,9 +1,22 @@
 import { Metadata } from 'next';
+import { ArticleSchema } from "@/components/StructuredData";
 import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: "Crumbling Infrastructure | Reform NB",
   description: "297 bridges failing, $20 billion repair backlog. New Brunswick's infrastructure is collapsing while the province defers maintenance.",
+  openGraph: {
+    title: "Reform NB",
+    description: "New Brunswick accountability and reform.",
+    url: "https://nbreform.ca",
+    siteName: "Reform NB",
+    images: [{ url: "https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200&q=80", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Reform NB",
+    images: ["https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200&q=80"],
+  },
 };
 import { PageWrapper } from '@/components/PageWrapper';
 import { BackLink } from '@/components/BackLink';
@@ -50,7 +63,7 @@ export default function InfrastructurePage() {
       />
 
       {/* Hero Image - Closed Covered Bridge */}
-      <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
+      <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl relative">
         <Image
           src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1200&q=80"
           alt="Closed covered bridge in New Brunswick showing infrastructure neglect"
@@ -58,7 +71,7 @@ export default function InfrastructurePage() {
           sizes="(max-width: 768px) 100vw, 1200px"
         />
         <div className="bg-neutral-900 p-4 text-xs text-neutral-400 uppercase tracking-widest text-center relative z-10">
-          Wheaton Covered Bridge closed due to structural neglect | <span className="text-neutral-500">CBC/Radio-Canada</span>
+          Wheaton Covered Bridge closed due to structural neglect | <span className="text-neutral-400">CBC/Radio-Canada</span>
         </div>
       </div>
 
@@ -205,7 +218,7 @@ export default function InfrastructurePage() {
 
       {/* Sources */}
       <section className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 mb-16">
-        <h3 className="text-xl font-black font-serif uppercase tracking-tight text-white mb-6">Sources</h3>
+        <h3 className="text-xl font-bold font-serif uppercase tracking-tight text-white mb-6">Sources</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <SourceCard 
             type="article"
@@ -245,6 +258,7 @@ export default function InfrastructurePage() {
         buttonText="Take Action"
         buttonHref="/take-action"
       />
+      <ArticleSchema title="Infrastructure Failure" description="Documenting infrastructure neglect in New Brunswick" datePublished="2025-03-31" image="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80" url="https://nbreform.ca/infrastructure" />
     </PageWrapper>
   );
 }

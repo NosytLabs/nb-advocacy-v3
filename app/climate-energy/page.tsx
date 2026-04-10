@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Image from "next/image";
+import { ArticleSchema } from "@/components/StructuredData";
 import { Zap, Wind, Droplets, Factory, AlertTriangle, DollarSign, TrendingUp } from "lucide-react";
 import { PageWrapper } from "@/components/PageWrapper";
 import { BackLink } from "@/components/BackLink";
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
   keywords: "NB Power, Coleson Cove, heavy fuel oil, emissions, carbon tax, net-zero, climate change NB, renewable energy, tidal power, Bay of Fundy",
   alternates: { canonical: "https://nbreform.ca/climate-energy/" },
   openGraph: {
-    title: "NB Power's Climate Betrayal: Record Emissions, Fake Net-Zero | Reform NB",
+    title: "NB Power's Climate Betrayal: Record Emissions, Fake Net-Zero",
     description: "While claiming net-zero by 2035, NB Power burned 4M barrels of heavy fuel oil in 12 months — most fossil fuel generation in 16 years.",
     images: [{ url: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1200", width: 1200, height: 675, alt: "Power lines representing energy infrastructure" }],
   },
@@ -64,10 +65,10 @@ export default function ClimateEnergyPage() {
       {/* Coleson Cove */}
       <section className="py-24 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black font-serif uppercase tracking-tighter mb-8 italic">
+          <h2 className="text-4xl md:text-5xl font-bold font-serif uppercase tracking-tighter mb-8 italic">
             Coleson Cove: <span className="text-white">The Furnace</span>
           </h2>
-          <div className="prose prose-invert prose-lg max-w-none text-white space-y-6">
+          <div className="prose prose-invert prose-lg max-w-4xl text-white space-y-6">
             <p>
               The <strong className="text-white">Coleson Cove Generating Station</strong> is NB Power's largest thermal plant — a 1,050 MW facility that burns <strong className="text-white">heavy fuel oil</strong>, one of the dirtiest fossil fuels on the planet. Built in the 1970s, it was supposed to be a backup facility. Instead, it's become the backbone of NB's electricity system.
             </p>
@@ -89,10 +90,10 @@ export default function ClimateEnergyPage() {
       {/* NB Power Debt */}
       <section className="py-24 px-6 bg-neutral-900">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black font-serif uppercase tracking-tighter mb-8 italic">
+          <h2 className="text-4xl md:text-5xl font-bold font-serif uppercase tracking-tighter mb-8 italic">
             The <span className="text-white">$5.9 Billion</span> Debt Trap
           </h2>
-          <div className="prose prose-invert prose-lg max-w-none text-white space-y-6">
+          <div className="prose prose-invert prose-lg max-w-4xl text-white space-y-6">
             <p>
               NB Power carries <strong className="text-white">$5.9 billion in debt</strong> — one of the highest utility debt loads per capita in Canada. The utility operates at only <strong className="text-white">27% capacity</strong> while buying additional power on the open market at <strong className="text-white">$9 million per day</strong>.
             </p>
@@ -109,27 +110,27 @@ export default function ClimateEnergyPage() {
       {/* Renewable Lag */}
       <section className="py-24 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black font-serif uppercase tracking-tighter mb-8 italic">
+          <h2 className="text-4xl md:text-5xl font-bold font-serif uppercase tracking-tighter mb-8 italic">
             Renewable <span className="text-yellow-400">Lag</span>
           </h2>
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             <div className="p-6 bg-neutral-900 border border-neutral-800 rounded-xl text-center">
               <Wind className="text-blue-400 mx-auto mb-4" size={40} />
               <h3 className="text-lg font-bold text-white mb-2">Wind</h3>
-              <p className="text-white text-sm">NB has excellent wind resources but lags behind NS and PEI in wind farm development. Fewer than 300 MW installed.</p>
+              <p className="text-neutral-200 text-base">NB has excellent wind resources but lags behind NS and PEI in wind farm development. Fewer than 300 MW installed.</p>
             </div>
             <div className="p-6 bg-neutral-900 border border-neutral-800 rounded-xl text-center">
               <Droplets className="text-cyan-400 mx-auto mb-4" size={40} />
               <h3 className="text-lg font-bold text-white mb-2">Tidal</h3>
-              <p className="text-white text-sm">Bay of Fundy has highest tides in world — 160 billion tonnes of water twice daily. Potential: 2,500 MW. Actual: ~10 MW test projects.</p>
+              <p className="text-neutral-200 text-base">Bay of Fundy has highest tides in world — 160 billion tonnes of water twice daily. Potential: 2,500 MW. Actual: ~10 MW test projects.</p>
             </div>
             <div className="p-6 bg-neutral-900 border border-neutral-800 rounded-xl text-center">
               <Factory className="text-yellow-400 mx-auto mb-4" size={40} />
               <h3 className="text-lg font-bold text-white mb-2">Solar</h3>
-              <p className="text-white text-sm">NB has less solar capacity than most provinces. Net metering exists but incentive programs are minimal compared to NS.</p>
+              <p className="text-neutral-200 text-base">NB has less solar capacity than most provinces. Net metering exists but incentive programs are minimal compared to NS.</p>
             </div>
           </div>
-          <div className="prose prose-invert prose-lg max-w-none text-white space-y-6">
+          <div className="prose prose-invert prose-lg max-w-4xl text-white space-y-6">
             <p>
               New Brunswick has some of the best renewable energy resources in Canada — particularly the <strong className="text-white">Bay of Fundy's tidal power</strong>, which could theoretically generate 2,500 MW, enough to power the entire province. Yet after decades of study and pilot projects, tidal power remains a rounding error in NB's energy mix.
             </p>
@@ -146,7 +147,7 @@ export default function ClimateEnergyPage() {
       {/* Timeline */}
       <section className="py-24 px-6 bg-neutral-900">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-black font-serif uppercase tracking-tighter mb-12 italic">
+          <h2 className="text-3xl font-bold font-serif uppercase tracking-tighter mb-12 italic">
             Energy: Key Facts
           </h2>
           <KeyFactsGrid facts={keyFacts} title="Energy Timeline: Key Facts" />
@@ -182,6 +183,7 @@ export default function ClimateEnergyPage() {
         buttonText="Take Action"
         buttonHref="/take-action"
       />
+      <ArticleSchema title="Climate & Energy" description="Investigating climate and energy policy failures in New Brunswick" datePublished="2025-03-31" image="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80" url="https://nbreform.ca/climate-energy" />
     </PageWrapper>
   );
 }

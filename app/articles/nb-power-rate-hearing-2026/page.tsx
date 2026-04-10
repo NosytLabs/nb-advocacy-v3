@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   keywords: "NB Power, rate increase, EUB hearing, EL-003-2025, rate hike, energy poverty, New Brunswick, utilities board, live stream, Coleson Cove",
   alternates: { canonical: "https://nbreform.ca/articles/nb-power-rate-hearing-2026/" },
   openGraph: {
-    title: "NB Power Rate Hearing LIVE: 50% Hike | Reform NB",
+    title: "NB Power Rate Hearing LIVE: 50% Hike",
     description: "EUB hearings on NB Power's proposed 50% rate increase. Watch the live streams. Your money is on the line.",
     images: [{ url: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1200", width: 1200, height: 675, alt: "Power lines representing NB Power rate hearings" }],
   },
@@ -41,14 +41,14 @@ export default function ArticlePage() {
         { title: "Reform NB: NB Power's $5.9B Debt Trap", url: "/climate-energy" },
       ]}
     >
-      <h1 className="text-4xl md:text-5xl font-black font-serif tracking-tight uppercase mb-8">NB Power Rate Hearing LIVE: 50% Hike (EL-003-2025)</h1>
+      <h1 className="text-4xl md:text-5xl font-bold font-serif tracking-tight uppercase mb-8">NB Power Rate Hearing LIVE: 50% Hike (EL-003-2025)</h1>
 
       {/* Alert Banner */}
       <div className="bg-crisis-red/10 border border-crisis-red rounded-xl p-6 mb-8 flex items-start gap-4">
         <AlertTriangle className="text-white shrink-0 mt-1" size={24} />
         <div>
           <h3 className="text-lg font-bold text-white mb-2">HEARINGS IN PROGRESS — MARCH 16-20, 2026</h3>
-          <p className="text-white text-sm">
+          <p className="text-neutral-200 text-base">
             The NB Energy &amp; Utilities Board is holding public hearings on <strong className="text-white">Matter EL-003-2025</strong> — NB Power&apos;s 2026-2027 General Rate Application. The hearings run daily at 9:30 a.m. at the Fredericton Convention Centre. <strong className="text-white">Watch live below.</strong>
           </p>
         </div>
@@ -160,8 +160,8 @@ export default function ArticlePage() {
         The pattern is clear: <strong className="text-white">costs are socialized, profits are privatized</strong>. NB Power&apos;s rate increases are the mechanism by which ordinary New Brunswickers pay for decades of mismanagement, corporate giveaways, and failure to invest in renewable energy.
       </p>
 
-      <div className="mt-12 bg-neutral-900 border-l-4 border-crisis-gold p-8 rounded-r-xl">
-        <p className="text-xl text-white font-serif italic leading-relaxed">
+      <div className="mt-12 bg-neutral-900 border-crisis-gold p-8 rounded-r-xl">
+        <p className="text-xl text-white leading-relaxed">
           &quot;Every dollar of NB Power&apos;s $5.9 billion debt will be paid by ratepayers. The hearings are your only formal opportunity to object. Use it.&quot;
         </p>
         <p className="text-sm text-white mt-4">— Reform NB</p>

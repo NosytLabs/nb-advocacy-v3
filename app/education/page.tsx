@@ -9,11 +9,22 @@ import { Timeline } from "@/components/Timeline";
 import { QuoteBlock } from "@/components/QuoteBlock";
 import { SourceCard } from "@/components/SourceCard";
 import Image from "next/image";
+import { ArticleSchema } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "Education Crisis | Reform NB",
-  description:
-    "New Brunswick's education system ranks last in Canada. Lowest reading scores, below-average math, and schools at half capacity while costs rise 37%.",
+  description: "New Brunswick's education system ranks last in Canada. Lowest reading scores, below-average math, and schools at half capacity while costs rise 37%.",
+  openGraph: {
+    title: "Reform NB",
+    url: "https://nbreform.ca",
+    siteName: "Reform NB",
+    images: [{ url: "https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200&q=80", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Reform NB",
+    images: ["https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200&q=80"],
+  },
 };
 
 const eduData = [
@@ -41,7 +52,7 @@ export default function EducationPage() {
       />
 
       {/* Hero Image - Uncertified Teachers */}
-      <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
+      <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl relative">
         <Image 
           src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1200&q=80" 
           alt="New Brunswick classroom with uncertified teachers filling shortage gaps"
@@ -49,7 +60,7 @@ export default function EducationPage() {
           sizes="(max-width: 768px) 100vw, 1200px"
         />
         <div className="bg-neutral-900 p-4 text-xs text-neutral-400 uppercase tracking-widest text-center relative z-10">
-          Nearly 200 uncertified teachers now fill NB classrooms as shortage worsens | <span className="text-neutral-500">CBC/Radio-Canada</span>
+          Nearly 200 uncertified teachers now fill NB classrooms as shortage worsens | <span className="text-neutral-400">CBC/Radio-Canada</span>
         </div>
       </div>
 
@@ -123,7 +134,7 @@ export default function EducationPage() {
 
       {/* Sources */}
       <section className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 mb-16">
-        <h3 className="text-xl font-black font-serif uppercase tracking-tight text-white mb-6">Sources</h3>
+        <h3 className="text-xl font-bold font-serif uppercase tracking-tight text-white mb-6">Sources</h3>
         <div className="grid gap-4 md:grid-cols-2">
           <SourceCard
             type="article"
@@ -176,6 +187,7 @@ export default function EducationPage() {
         buttonText="Add Your Voice"
         buttonHref="/take-action"
       />
+      <ArticleSchema title="Education Crisis" description="Investigating the crisis in New Brunswick public education" datePublished="2025-03-31" image="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80" url="https://nbreform.ca/education" />
     </PageWrapper>
   );
 }

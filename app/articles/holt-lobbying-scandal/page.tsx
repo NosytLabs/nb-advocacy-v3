@@ -1,4 +1,6 @@
 import { ShareButtons } from "@/components/ShareButtons";
+import { YouTubeEmbed } from "@/components/YouTubeEmbed";
+import { RedditEmbed } from "@/components/RedditEmbed";
 import { Metadata } from "next";
 import { UserCheck, Building, AlertTriangle, Scale } from "lucide-react";
 import { PageWrapper } from "@/components/PageWrapper";
@@ -21,7 +23,7 @@ export const metadata: Metadata = {
     "corporate influence", "political access", "insider lobbying"
   ].join(", "),
   openGraph: {
-    title: "Liberal Lobbyists Line Up to Influence Holt Government | Reform NB",
+    title: "Liberal Lobbyists Line Up to Influence Holt Government",
     description: "Two former Liberal premiers and multiple cabinet ministers register as lobbyists after Holt's election. The revolving door between government and corporate interests.",
     images: [
       {
@@ -118,8 +120,8 @@ export default function HoltLobbyingPage() {
         ))}
       </div>
 
-      <div className="prose prose-invert prose-lg max-w-none space-y-16">
-        <h1 className="text-4xl md:text-5xl font-black font-serif tracking-tight uppercase mb-8">Liberal Lobbyists Line Up to Influence Holt Government</h1>
+      <div className="prose prose-invert prose-lg max-w-4xl space-y-16">
+        <h1 className="text-4xl md:text-5xl font-bold font-serif tracking-tight uppercase mb-8">Liberal Lobbyists Line Up to Influence Holt Government</h1>
 
         {/* Section 1: The Gallant Connection */}
         <section>
@@ -133,6 +135,10 @@ export default function HoltLobbyingPage() {
             meetings with Infrastructure Minister Chuck Chiasson and N.B. Power CEO Lori Clark to promote 
             Aecon&apos;s &quot;corporate brand awareness and capabilities.&quot;
           </p>
+      <div className="my-8">
+        <YouTubeEmbed videoId="stp248o86Uk" title="We need politics to change: Susan Holt on her plan for New Brunswick" />
+      </div>
+
           <p className="text-white leading-relaxed mb-6">
             The timing raised eyebrows. In December 2024, the Holt government announced a new natural gas 
             power plant in Scoudouc. Aecon has extensive experience in such projects. When asked whether 
@@ -144,7 +150,7 @@ export default function HoltLobbyingPage() {
             is a registered lobbyist seeking access to her government.
           </p>
           <div className="bg-neutral-900 p-6 rounded-xl border border-neutral-800 mb-6">
-            <h4 className="text-white font-black uppercase text-sm tracking-widest mb-4">
+            <h4 className="text-white font-bold uppercase text-sm tracking-widest mb-4">
               PC Opposition Leader Glen Savoie:
             </h4>
             <p className="text-white italic leading-relaxed">
@@ -266,7 +272,7 @@ export default function HoltLobbyingPage() {
 
         {/* Sources */}
         <section className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8">
-          <h3 className="text-xl font-black font-serif uppercase tracking-tight text-white mb-6">Sources</h3>
+          <h3 className="text-xl font-bold font-serif uppercase tracking-tight text-white mb-6">Sources</h3>
           <div className="grid gap-4 md:grid-cols-2">
             <SourceCard type="article" title="CBC: Liberal lobbyists line up to influence Holt government" url="https://www.cbc.ca/news/canada/new-brunswick/new-lobbyists-holt-liberal-government-1.7548527" description="Two former premiers among consultants working for companies hoping to influence decision-makers" date="JUN 2025" />
             <SourceCard type="article" title="CBC: Aecon Group Nuclear and Gas Projects" url="https://www.aecon.com/" description="Major construction company with nuclear and natural gas experience" />
@@ -282,6 +288,7 @@ export default function HoltLobbyingPage() {
         buttonText="Take Action"
         buttonHref="/take-action"
       />
+      <RedditEmbed postUrl="https://www.reddit.com/r/newbrunswick/comments/placeholder_holt-lobbying-scandal/" title="Community Discussion on Reddit" />
     </PageWrapper>
   );
 }

@@ -11,7 +11,7 @@ export function PageHeader({ icon: Icon, title, quote }: PageHeaderProps) {
     <>
       <div className="flex items-center gap-4 mb-8 mt-4">
         <div
-          className="w-16 h-16 bg-crisis-red rounded-full flex items-center justify-center text-white shrink-0 shadow-[0_0_20px_rgba(179,0,0,0.5)]"
+          className="w-16 h-16 bg-crisis-red rounded-full flex items-center justify-center text-white shrink-0 "
           aria-hidden="true"
         >
           <Icon size={32} />
@@ -21,8 +21,8 @@ export function PageHeader({ icon: Icon, title, quote }: PageHeaderProps) {
         </h1>
       </div>
       {quote && (
-        <div className="bg-neutral-900 border-l-4 border-crisis-red p-10 mb-12 mt-6 rounded-r-lg shadow-xl relative overflow-hidden">
-          <p className="text-2xl font-serif italic leading-relaxed text-white relative z-10">
+        <div className="bg-neutral-900 border-crisis-red p-10 mb-12 mt-6 rounded-r-lg shadow-xl relative overflow-hidden">
+          <p className="text-2xl leading-relaxed text-white relative z-10">
             &ldquo;{quote}&rdquo;
           </p>
         </div>

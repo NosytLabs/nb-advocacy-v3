@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { ArticleLayout } from "@/components/ArticleLayout";
 import { FacebookGroupEmbed } from "@/components/FacebookGroupEmbed";
+import { RedditEmbed } from "@/components/RedditEmbed";
 import { AlertTriangle, ExternalLink, Users } from "lucide-react";
 import Link from "next/link";
 
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   keywords: "NB Power Rants Facebook, New Brunswick electricity complaints, NB Power community response, EUB public hearing testimony, NB energy poverty stories, New Brunswick ratepayer voices, NB Power customer anger, New Brunswick electricity bills, NB Power rate hearing public comments",
   alternates: { canonical: "https://nbreform.ca/articles/nb-community-voices-nb-power/" },
   openGraph: {
-    title: "Community Voices: NB Power Ratepayer Stories | Reform NB",
+    title: "Community Voices: NB Power Ratepayer Stories",
     description: "20,000+ NB Power Rants members share their struggles with rising electricity costs. The voices the utility doesn't want you to hear.",
     images: [{ url: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1200", width: 1200, height: 675, alt: "Community gathering representing citizen voices" }],
   },
@@ -31,14 +32,14 @@ export default function ArticlePage() {
         { title: "Reform NB: NB Power Rate Hearing LIVE", url: "/articles/nb-power-rate-hearing-2026/" },
       ]}
     >
-      <h1 className="text-4xl md:text-5xl font-black font-serif tracking-tight uppercase mb-8">Community Voices: NB Power Ratepayer Stories</h1>
+      <h1 className="text-4xl md:text-5xl font-bold font-serif tracking-tight uppercase mb-8">Community Voices: NB Power Ratepayer Stories</h1>
 
       {/* Facebook Group CTA */}
       <div className="bg-blue-900/20 border border-blue-800/50 rounded-xl p-6 mb-8 flex items-start gap-4">
         <Users className="text-blue-400 shrink-0 mt-1" size={24} />
         <div>
           <h3 className="text-lg font-bold text-blue-300 mb-2">JOIN THE CONVERSATION</h3>
-          <p className="text-white text-sm mb-3">
+          <p className="text-neutral-200 text-base mb-3">
             The <strong className="text-white">NB Power Rants</strong> Facebook group has 20,000+ members sharing their experiences with rising electricity costs, service issues, and the utility's failures.
           </p>
           <a
@@ -172,12 +173,13 @@ export default function ArticlePage() {
         <li><strong className="text-white">Share this article</strong> — the more New Brunswickers know, the stronger the pressure</li>
       </ul>
 
-      <div className="mt-12 bg-neutral-900 border-l-4 border-crisis-gold p-8 rounded-r-xl">
-        <p className="text-xl text-white font-serif italic leading-relaxed">
+      <div className="mt-12 bg-neutral-900 border-crisis-gold p-8 rounded-r-xl">
+        <p className="text-xl text-white leading-relaxed">
           "Twenty thousand people didn't join a Facebook group because they were bored. They joined because their bills are crushing them, their utility isn't listening, and their government doesn't care. That's not a rant — that's a crisis."
         </p>
         <p className="text-sm text-white mt-4">— Reform NB</p>
       </div>
+      <RedditEmbed postUrl="https://www.reddit.com/r/newbrunswick/comments/placeholder_nbpower/" title="Community Discussion on Reddit" />
     </ArticleLayout>
   );
 }

@@ -45,7 +45,7 @@ const iconMap: Record<IconKey, React.ComponentType<{ className?: string }>> = {
 export function KeyFactsGrid({ facts, title = "Key Facts", className = "" }: KeyFactsGridProps) {
   return (
     <div className={className}>
-      <h3 className="text-2xl font-black text-white uppercase tracking-tight mb-6 border-l-4 border-crisis-red pl-4">
+      <h3 className="text-2xl font-bold text-white uppercase tracking-tight mb-6 border-crisis-red pl-4">
         {title}
       </h3>
       <div className="grid md:grid-cols-2 gap-4">
@@ -67,7 +67,7 @@ export function KeyFactsGrid({ facts, title = "Key Facts", className = "" }: Key
                 <div className="flex-1">
                   <h4 className="text-white font-bold text-lg mb-1">{fact.title}</h4>
                   {fact.value && (
-                    <p className="text-2xl font-black text-red-400 mb-2">{fact.value}</p>
+                    <p className="text-2xl font-bold text-red-400 mb-2">{fact.value}</p>
                   )}
                   <p className="text-neutral-400 text-sm leading-relaxed">{fact.description}</p>
                   {fact.source && (

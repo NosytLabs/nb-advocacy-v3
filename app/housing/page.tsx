@@ -12,11 +12,22 @@ import { QuoteBlock } from "@/components/QuoteBlock";
 import { VideoGrid } from "@/components/VideoGrid";
 import { SourceCard } from "@/components/SourceCard";
 import Image from "next/image";
+import { ArticleSchema } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "Housing & Affordability Crisis | Reform NB",
-  description:
-    "Investigating the eviction epidemic, explosion of homelessness in Moncton, Saint John, and Fredericton, and the corporate landlord profiteering that fuels New Brunswick's housing disaster.",
+  description: "Investigating the eviction epidemic, explosion of homelessness in Moncton, Saint John, and Fredericton, and the corporate landlord profiteering that fuels New Brunswick's housing disaster.",
+  openGraph: {
+    title: "Reform NB",
+    url: "https://nbreform.ca",
+    siteName: "Reform NB",
+    images: [{ url: "https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200&q=80", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Reform NB",
+    images: ["https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200&q=80"],
+  },
 };
 
 const housingData = [
@@ -50,14 +61,15 @@ export default function HousingPage() {
       />
       
       {/* Hero Image */}
-      <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
+      <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl relative">
         <Image 
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80" 
           alt="Affordable housing need representing New Brunswick housing crisis"
           fill
           sizes="(max-width: 768px) 100vw, 1200px"
         />
-        <div className="bg-neutral-900 p-4 text-xs text-neutral-400 uppercase tracking-widest text-center">
+        <div className="absolute inset-0 bg-black/70 z-10"></div>
+        <div className="bg-neutral-900 p-4 text-xs text-neutral-400 uppercase tracking-widest text-center relative z-20">
           1,500+ New Brunswickers chronically homeless while housing remains unaffordable and corporate landlords profit
         </div>
         <div className="bg-neutral-900 p-2 text-xs text-neutral-400 uppercase tracking-widest text-center">
@@ -72,7 +84,7 @@ export default function HousingPage() {
         ))}
       </div>
 
-      <div className="prose prose-invert prose-lg max-w-none space-y-16">
+      <div className="prose prose-invert prose-lg max-w-4xl space-y-16">
         {/* Section 1: The Eviction Epidemic */}
         <section>
           <h2 className="text-3xl font-serif font-bold text-white mb-6 border-b border-neutral-800 pb-2 uppercase tracking-tighter italic">
@@ -134,7 +146,7 @@ export default function HousingPage() {
 
         {/* Housing Crisis Video */}
         <div className="my-12">
-          <h3 className="text-xl font-black font-serif uppercase tracking-tight text-white mb-4">📺 Video Coverage</h3>
+          <h3 className="text-xl font-bold font-serif uppercase tracking-tight text-white mb-4">📺 Video Coverage</h3>
           <VideoGrid 
             columns={1}
             videos={[
@@ -346,7 +358,7 @@ export default function HousingPage() {
 
         {/* External Links */}
         <section className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 mt-8">
-          <h3 className="text-xl font-black font-serif uppercase tracking-tight text-white mb-6">Resources & Data</h3>
+          <h3 className="text-xl font-bold font-serif uppercase tracking-tight text-white mb-6">Resources & Data</h3>
           <div className="grid gap-4 md:grid-cols-2">
             <SourceCard type="organization" title="Human Development Council: Research & Reports" url="https://sjhdc.ca/research-and-reports/" description="Homelessness and poverty data for Greater Saint John" />
             <SourceCard type="pdf" title="NB Government: Overcoming Poverty Together 4 (2025-2030)" url="https://www2.gnb.ca/content/dam/gnb/Departments/esic/pdf/overcoming-poverty-4-2025-2030.pdf" description="Official provincial poverty reduction strategy" date="2025" />
@@ -372,6 +384,7 @@ export default function HousingPage() {
         buttonText="Mobilize"
         buttonHref="/take-action"
       />
+      <ArticleSchema title="Housing & Homelessness" description="Documenting the housing crisis and homelessness emergency in New Brunswick" datePublished="2025-03-31" image="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80" url="https://nbreform.ca/housing" />
     </PageWrapper>
   );
 }

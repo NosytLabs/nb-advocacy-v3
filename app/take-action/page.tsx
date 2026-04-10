@@ -19,8 +19,18 @@ import { ScrollLink } from "@/components/ScrollLink";
 
 export const metadata: Metadata = {
   title: "Take Action: Demand Accountability | Reform NB",
-  description:
-    "Contact Premier Susan Holt and Prime Minister Mark Carney. Support whistleblowers and sign petitions to save New Brunswick.",
+  description: "Contact Premier Susan Holt and Prime Minister Mark Carney. Support whistleblowers and sign petitions to save New Brunswick.",
+  openGraph: {
+    title: "Reform NB",
+    url: "https://nbreform.ca",
+    siteName: "Reform NB",
+    images: [{ url: "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Reform NB",
+    images: ["https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80"],
+  },
 };
 
 export default function TakeActionPage() {
@@ -70,14 +80,15 @@ Sincerely,
       />
       
       {/* Hero Image */}
-      <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
+      <div className="mb-12 rounded-2xl overflow-hidden shadow-xl relative">
         <Image 
           src="https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?w=1200&q=80" 
           alt="Protest rally representing New Brunswick citizens demanding accountability"
           fill
           sizes="(max-width: 768px) 100vw, 1200px"
         />
-        <div className="bg-neutral-900 p-3 text-xs text-neutral-400 uppercase tracking-widest text-center relative z-10">
+        <div className="absolute inset-0 bg-black/70 z-10"></div>
+        <div className="bg-neutral-900 p-3 text-xs text-neutral-400 uppercase tracking-widest text-center relative z-20">
           New Brunswickers are mobilizing — from healthcare protests to housing advocacy, people are demanding change
         </div>
       </div>
@@ -89,11 +100,11 @@ Sincerely,
       </p>
 
       {/* The Reform Plan */}
-      <section className="mb-20 bg-neutral-900 border border-neutral-800 rounded-3xl p-10 shadow-2xl relative overflow-hidden">
+      <section className="mb-20 bg-neutral-900 border border-neutral-800 rounded-3xl p-10 shadow-xl relative overflow-hidden">
         <div className="absolute top-0 right-0 p-4 opacity-5 rotate-12" aria-hidden="true">
           <ShieldAlert size={200} />
         </div>
-        <h2 className="text-3xl font-black font-serif uppercase tracking-tighter text-white mb-8 border-b border-neutral-800 pb-4 italic">
+        <h2 className="text-3xl font-semibold font-serif uppercase tracking-tighter text-white mb-8 border-b border-neutral-800 pb-4 italic">
           The Citizen Reform Plan
         </h2>
         <div className="grid gap-6" role="list">
@@ -104,7 +115,7 @@ Sincerely,
               aria-hidden="true"
             />
             <div>
-              <h4 className="font-black uppercase text-sm tracking-widest text-white mb-1">
+              <h4 className="font-semibold uppercase text-sm tracking-widest text-white mb-1">
                 Abolish the 20% Rule
               </h4>
               <p className="text-neutral-400 text-sm leading-relaxed">
@@ -124,7 +135,7 @@ Sincerely,
               aria-hidden="true"
             />
             <div>
-              <h4 className="font-black uppercase text-sm tracking-widest text-white mb-1">
+              <h4 className="font-semibold uppercase text-sm tracking-widest text-white mb-1">
                 Tax Equity Reform
               </h4>
               <p className="text-neutral-400 text-sm leading-relaxed">
@@ -144,7 +155,7 @@ Sincerely,
               aria-hidden="true"
             />
             <div>
-              <h4 className="font-black uppercase text-sm tracking-widest text-white mb-1">
+              <h4 className="font-semibold uppercase text-sm tracking-widest text-white mb-1">
                 Independent Health Audit
               </h4>
               <p className="text-neutral-400 text-sm leading-relaxed">
@@ -163,7 +174,7 @@ Sincerely,
               aria-hidden="true"
             />
             <div>
-              <h4 className="font-black uppercase text-sm tracking-widest text-white mb-1">
+              <h4 className="font-semibold uppercase text-sm tracking-widest text-white mb-1">
                 Forestry Restitution
               </h4>
               <p className="text-neutral-400 text-sm leading-relaxed">
@@ -186,7 +197,7 @@ Sincerely,
             size={40}
             aria-hidden="true"
           />
-          <h3 className="text-2xl font-black font-serif mb-4 uppercase tracking-tight">
+          <h3 className="text-2xl font-semibold font-serif mb-4 uppercase tracking-tight">
             Direct Intervention
           </h3>
           <p className="text-neutral-400 mb-8 leading-relaxed text-sm">
@@ -195,7 +206,7 @@ Sincerely,
           </p>
           <a
             href={mailtoLink}
-            className="w-full block text-center bg-crisis-red text-white font-black py-4 rounded-lg hover:bg-red-700 transition-all shadow-lg uppercase tracking-widest text-xs"
+            className="w-full block text-center bg-crisis-red text-white font-semibold py-4 rounded-lg hover:bg-red-700 transition-all shadow-lg uppercase tracking-widest text-xs"
             aria-label="Email the PM and Premier"
           >
             Email the PM & Premier
@@ -212,7 +223,7 @@ Sincerely,
             size={40}
             aria-hidden="true"
           />
-          <h3 className="text-2xl font-black font-serif mb-4 uppercase tracking-tight text-red-500">
+          <h3 className="text-2xl font-semibold font-serif mb-4 uppercase tracking-tight text-red-500">
             Demand Federal Investigation
           </h3>
           <p className="text-white/90 mb-8 leading-relaxed text-sm">
@@ -220,7 +231,7 @@ Sincerely,
           </p>
           <ScrollLink
             href="#petition"
-            className="w-full block text-center bg-white text-red-500 font-black py-4 rounded-lg hover:bg-neutral-100 transition-all shadow-lg uppercase tracking-widest text-xs"
+            className="w-full block text-center bg-white text-red-500 font-semibold py-4 rounded-lg hover:bg-neutral-100 transition-all shadow-lg uppercase tracking-widest text-xs"
             aria-label="Sign the Federal Investigation Petition"
           >
             Sign Federal Investigation Petition
@@ -237,7 +248,7 @@ Sincerely,
             size={40}
             aria-hidden="true"
           />
-          <h3 className="text-2xl font-black font-serif mb-4 uppercase tracking-tight">
+          <h3 className="text-2xl font-semibold font-serif mb-4 uppercase tracking-tight">
             Allied Assets
           </h3>
           <p className="text-neutral-400 mb-8 leading-relaxed text-xs italic">
@@ -248,7 +259,7 @@ Sincerely,
             <a
               href="https://savemiramichisalmon.com"
               target="_blank"
-              rel="noopener noreferrer" className="w-full block bg-white text-black font-black py-2 rounded hover:bg-neutral-200 transition-colors uppercase text-[10px] tracking-[0.2em]"
+              rel="noopener noreferrer" className="w-full block bg-white text-black font-semibold py-2 rounded hover:bg-neutral-200 transition-colors uppercase text-xs tracking-wide"
               aria-label="Visit Save Miramichi Salmon"
             >
               Save Miramichi Salmon
@@ -256,7 +267,7 @@ Sincerely,
             <a
               href="https://stopsprayingnb.ca/"
               target="_blank"
-              rel="noopener noreferrer" className="w-full block bg-neutral-800 text-white font-black py-2 rounded hover:bg-neutral-700 transition-colors uppercase text-[10px] tracking-[0.2em]"
+              rel="noopener noreferrer" className="w-full block bg-neutral-800 text-white font-semibold py-2 rounded hover:bg-neutral-700 transition-colors uppercase text-xs tracking-wide"
               aria-label="Visit Stop Spraying NB"
             >
               Stop Spraying NB
@@ -264,7 +275,7 @@ Sincerely,
             <a
               href="https://nbmediacoop.org/"
               target="_blank"
-              rel="noopener noreferrer" className="w-full block bg-neutral-800 text-white font-black py-2 rounded hover:bg-neutral-700 transition-colors uppercase text-[10px] tracking-[0.2em]"
+              rel="noopener noreferrer" className="w-full block bg-neutral-800 text-white font-semibold py-2 rounded hover:bg-neutral-700 transition-colors uppercase text-xs tracking-wide"
               aria-label="Visit NB Media Co-op"
             >
               NB Media Co-op
@@ -276,7 +287,7 @@ Sincerely,
         <div className="bg-neutral-900/30 p-10 border border-neutral-800 rounded-2xl md:col-span-2 shadow-xl text-white">
           <div className="flex items-center gap-3 mb-6 text-crisis-gold">
             <Info size={24} aria-hidden="true" />
-            <h3 className="text-2xl font-black font-serif uppercase tracking-tight">
+            <h3 className="text-2xl font-semibold font-serif uppercase tracking-tight">
               MP Contact Protocol
             </h3>
           </div>
@@ -286,7 +297,7 @@ Sincerely,
             ensure your demand for an investigation is officially recorded.
           </p>
           <div className="bg-black/50 p-8 rounded-xl border border-neutral-800 font-mono text-sm text-neutral-300 mb-8 shadow-inner relative text-left">
-            <div className="absolute top-2 right-4 text-[10px] font-black text-neutral-700 uppercase tracking-widest italic font-sans">
+            <div className="absolute top-2 right-4 text-xs font-semibold text-neutral-700 uppercase tracking-widest italic font-sans">
               Encrypted Transmission Path
             </div>
             <p className="font-bold text-crisis-text mb-2 tracking-tighter"></p>
@@ -298,7 +309,7 @@ Sincerely,
           <a
             href="https://www.ourcommons.ca/members/en"
             target="_blank"
-            rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-neutral-800 text-white font-black py-3 px-8 rounded-lg hover:bg-neutral-700 transition-all uppercase tracking-widest text-[10px]"
+            rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-neutral-800 text-white font-semibold py-3 px-8 rounded-lg hover:bg-neutral-700 transition-all uppercase tracking-widest text-xs"
             aria-label="Find your MP on the House of Commons website"
           >
             Find Your MP Locator <LucideExternalLink size={12} />
@@ -312,7 +323,7 @@ Sincerely,
           </div>
           <div className="flex items-center gap-4 mb-6">
             <Bitcoin className="text-[#FF6600]" size={40} aria-hidden="true" />
-            <h3 className="text-2xl font-black font-serif uppercase tracking-tight">
+            <h3 className="text-2xl font-semibold font-serif uppercase tracking-tight">
               Operational Funding
             </h3>
           </div>
@@ -323,7 +334,7 @@ Sincerely,
             be tracked by provincial surveillance.
           </p>
 
-          <div className="bg-black/80 p-6 rounded-xl border border-neutral-800 break-all font-mono text-[10px] md:text-sm text-[#FF6600] mb-6 text-center shadow-inner select-all selection:bg-[#FF6600] selection:text-black">
+          <div className="bg-black/80 p-6 rounded-xl border border-neutral-800 break-all font-mono text-xs md:text-sm text-[#FF6600] mb-6 text-center shadow-inner select-all selection:bg-[#FF6600] selection:text-black">
             47K21zBzgH5gdoTvLbF2pTQrsRUYsLRTVZkXCuQnyp4tXa4qWqNpfD8dXf2o5PL4R5PeQbEf7Z3xh9hy2BSqCnbD7SrRHHg
           </div>
 
@@ -332,7 +343,7 @@ Sincerely,
               href="https://cakewallet.com/"
               target="_blank"
               rel="noopener noreferrer" 
-              className="inline-flex items-center gap-2 bg-[#FF6600] text-black font-black py-2 px-4 rounded-lg hover:bg-[#ff8533] transition-all uppercase tracking-widest text-[10px]"
+              className="inline-flex items-center gap-2 bg-[#FF6600] text-black font-semibold py-2 px-4 rounded-lg hover:bg-[#ff8533] transition-all uppercase tracking-widest text-xs"
               aria-label="Download CakeWallet for Monero"
             >
               <Bitcoin size={14} /> Get CakeWallet
@@ -341,7 +352,7 @@ Sincerely,
               href="https://www.getmonero.org/get-started/what-is-monero/"
               target="_blank"
               rel="noopener noreferrer" 
-              className="inline-flex items-center gap-2 bg-neutral-800 text-white font-black py-2 px-4 rounded-lg hover:bg-neutral-700 transition-all uppercase tracking-widest text-[10px]"
+              className="inline-flex items-center gap-2 bg-neutral-800 text-white font-semibold py-2 px-4 rounded-lg hover:bg-neutral-700 transition-all uppercase tracking-widest text-xs"
               aria-label="Learn about Monero cryptocurrency"
             >
               Learn XMR
@@ -350,13 +361,13 @@ Sincerely,
         </div>
 
         {/* Action 5: Share */}
-        <div className="bg-crisis-red p-12 rounded-3xl text-center md:col-span-2 shadow-[0_0_50px_rgba(179,0,0,0.3)] group cursor-pointer text-white">
+        <div className="bg-crisis-red p-12 rounded-3xl text-center md:col-span-2 group cursor-pointer text-white">
           <Share2
             className="text-white mx-auto mb-6 group-hover:scale-110 transition-transform"
             size={48}
             aria-hidden="true"
           />
-          <h3 className="text-3xl font-black font-serif mb-4 uppercase tracking-tighter italic">
+          <h3 className="text-3xl font-semibold font-serif mb-4 uppercase tracking-tighter italic">
             Break the Silence
           </h3>
           <p className="text-white/90 mb-8 max-w-xl mx-auto text-lg font-medium leading-relaxed italic">
@@ -366,7 +377,7 @@ Sincerely,
           <a
             href="https://twitter.com/intent/tweet?text=Investigate%20the%20New%20Brunswick%20government%20failure.%20End%20the%20Company%20Province.%20Read%20the%20full%20report%20at%20https://nbreform.ca%20%23ReformNB%20%23nbpoli"
             target="_blank"
-            rel="noopener noreferrer" className="inline-block bg-white text-crisis-text font-black py-4 px-12 rounded-lg text-lg hover:bg-neutral-100 transition-all shadow-2xl hover:scale-105 uppercase tracking-[0.2em]"
+            rel="noopener noreferrer" className="inline-block bg-white text-crisis-text font-semibold py-4 px-12 rounded-lg text-lg hover:bg-neutral-100 transition-all shadow-xl uppercase tracking-wide"
             aria-label="Share on X (Twitter)"
           >
             Dispatch to X
@@ -381,7 +392,7 @@ Sincerely,
             size={64}
             aria-hidden="true"
           />
-          <h3 className="text-3xl font-black font-serif mb-4 uppercase tracking-tighter">
+          <h3 className="text-3xl font-semibold font-serif mb-4 uppercase tracking-tighter">
             Whistleblower Hotline
           </h3>
           <p className="text-neutral-400 mb-8 max-w-2xl mx-auto text-lg leading-relaxed">
@@ -390,12 +401,12 @@ Sincerely,
             <strong>We protect our sources.</strong>
           </p>
           <div className="inline-block bg-black p-6 rounded-xl border border-neutral-800 font-mono text-xl text-white shadow-inner select-all relative">
-            <div className="absolute -top-3 left-4 bg-neutral-900 px-2 text-[10px] font-black uppercase tracking-widest text-crisis-text border border-crisis-red rounded-full">
+            <div className="absolute -top-3 left-4 bg-neutral-900 px-2 text-xs font-semibold uppercase tracking-widest text-crisis-text border border-crisis-red rounded-full">
               Encrypted Node
             </div>
             reformnb-tips@proton.me
           </div>
-          <p className="text-sm text-neutral-500 mt-8 italic font-black uppercase tracking-widest">
+          <p className="text-sm text-neutral-400 mt-8 italic font-semibold uppercase tracking-widest">
             VPN Recommended End-to-End Encryption Required
           </p>
         </div>
@@ -403,7 +414,7 @@ Sincerely,
         {/* Federal Investigation Petition */}
         <section id="petition" className="mb-12 bg-crisis-red/10 border-2 border-crisis-red rounded-3xl p-8 md:p-12 text-white">
           <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-3xl font-black font-serif uppercase tracking-tight mb-6">
+            <h3 className="text-3xl font-semibold font-serif uppercase tracking-tight mb-6">
               Petition: Federal Investigation into NB Corruption
             </h3>
             <p className="text-lg mb-8 leading-relaxed max-w-3xl mx-auto">
@@ -441,10 +452,10 @@ Sincerely,
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-crisis-red hover:bg-red-700 text-white font-black py-3 px-8 rounded-lg transition-all uppercase tracking-widest text-sm">
+              <button className="bg-crisis-red hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-lg transition-all uppercase tracking-widest text-sm">
                 Sign the Petition
               </button>
-              <button className="bg-neutral-800 hover:bg-neutral-700 text-white font-black py-3 px-8 rounded-lg transition-all uppercase tracking-widest text-sm">
+              <button className="bg-neutral-800 hover:bg-neutral-700 text-white font-semibold py-3 px-8 rounded-lg transition-all uppercase tracking-widest text-sm">
                 Download PDF Version
               </button>
             </div>

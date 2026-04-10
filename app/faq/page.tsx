@@ -8,6 +8,18 @@ import { CTASection } from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "Frequently Asked Questions: New Brunswick Accountability | Reform NB",
   description: "Frequently asked questions about Reform NB, our methodology, sources, and how to get involved.",
+  openGraph: {
+    title: "Reform NB",
+    description: "New Brunswick accountability and reform.",
+    url: "https://nbreform.ca",
+    siteName: "Reform NB",
+    images: [{ url: "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Reform NB",
+    images: ["https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80"],
+  },
 };
 
 interface FAQItem {
@@ -23,7 +35,7 @@ const faqs: FAQItem[] = [
     category: "Healthcare",
     icon: <Heart size={20} className="text-white" />,
     question: "Why don't 238,000 New Brunswickers have a family doctor?",
-    answer: "New Brunswick has the lowest doctor-to-patient ratio in Canada at ~220 per 100,000 (national average: 260). The province trains fewer doctors than any other, and rural/French-language positions are chronically understaffed. Meanwhile, 635 seniors occupy acute hospital beds while waiting for long-term care (ALC patients), blocking ER admissions. The result: 63,000+ ER walkouts per year, 2,199 patients pronounced dead after ER arrival (2020-2024), and wait times of 8+ hours for moderate emergencies.",
+    answer: "New Brunswick has the lowest doctor-to-patient ratio in Canada at ~220 per 100,000 (national average: 260). The province trains fewer doctors than any other, and rural/French-language positions are chronically understaffed. Meanwhile, 635 seniors occupy acute hospital beds while waiting for long-term care (ALC patients), blocking ER admissions. The result: 61,000+ ER walkouts per year, 2,199 patients pronounced dead after ER arrival (2020-2024), and wait times of 8+ hours for moderate emergencies.",
     eli5: "🏠 Imagine a town where 1 in 3 people can't find a doctor. When they get sick, they have to go to the emergency room — but the emergency room is SO full of old people who need to be somewhere else, there's no room! So sick people wait and wait in hard chairs until some of them... don't make it. That's happening RIGHT NOW in New Brunswick.",
   },
   {
@@ -99,7 +111,7 @@ export default function FAQPage() {
         <Baby size={24} className="text-white shrink-0 mt-1" />
         <div>
           <h3 className="text-white font-bold mb-2">🧸 Look for the ELI5 Badge</h3>
-          <p className="text-white text-sm">
+          <p className="text-neutral-200 text-base">
             Every answer includes an &quot;Explain Like I&apos;m 5&quot; section that breaks down complex issues into 
             simple language. No jargon, no politics — just the truth, explained like you&apos;re talking to a kid. 
             Because these issues affect everyone, and everyone deserves to understand them.
@@ -110,7 +122,7 @@ export default function FAQPage() {
       {/* FAQ by Category */}
       {categories.map((category) => (
         <div key={category} className="mb-12">
-          <h2 className="text-2xl font-black font-serif uppercase tracking-tighter italic text-white mb-6 border-b border-neutral-800 pb-2">
+          <h2 className="text-2xl font-bold font-serif uppercase tracking-tighter italic text-white mb-6 border-b border-neutral-800 pb-2">
             {category}
           </h2>
           <div className="space-y-6">
@@ -129,7 +141,7 @@ export default function FAQPage() {
                 <div className="px-6 pb-6">
                   {/* Full Answer */}
                   <div className="mb-6">
-                    <h4 className="text-sm font-black uppercase tracking-widest text-white mb-3">FULL ANSWER</h4>
+                    <h4 className="text-sm font-bold uppercase tracking-widest text-white mb-3">FULL ANSWER</h4>
                     <p className="text-white leading-relaxed">{faq.answer}</p>
                   </div>
                   
@@ -137,7 +149,7 @@ export default function FAQPage() {
                   <div className="bg-crisis-red/10 border border-crisis-red/30 rounded-xl p-5">
                     <div className="flex items-center gap-2 mb-3">
                       <Baby size={16} className="text-white" />
-                      <h4 className="text-sm font-black uppercase tracking-widest text-white">EXPLAIN LIKE I&apos;M 5</h4>
+                      <h4 className="text-sm font-bold uppercase tracking-widest text-white">EXPLAIN LIKE I&apos;M 5</h4>
                     </div>
                     <p className="text-white leading-relaxed italic">{faq.eli5}</p>
                   </div>
@@ -150,7 +162,7 @@ export default function FAQPage() {
 
       {/* Quick Stats */}
       <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 mb-12">
-        <h2 className="text-xl font-black font-serif uppercase tracking-tight text-white mb-6">
+        <h2 className="text-xl font-bold font-serif uppercase tracking-tight text-white mb-6">
           Quick Stats: New Brunswick by the Numbers
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -165,7 +177,7 @@ export default function FAQPage() {
             { value: "2,199", label: "ER arrival deaths" },
           ].map((stat, i) => (
             <div key={i} className="text-center p-4 bg-black/50 rounded-lg">
-              <div className="text-2xl font-black text-white">{stat.value}</div>
+              <div className="text-2xl font-bold text-white">{stat.value}</div>
               <div className="text-sm text-white uppercase tracking-wider mt-1">{stat.label}</div>
             </div>
           ))}

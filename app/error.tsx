@@ -18,7 +18,7 @@ export default function Error({
           size={80}
           aria-hidden="true"
         />
-        <h1 className="text-4xl md:text-5xl font-black font-serif text-white mb-6 uppercase tracking-tighter italic">
+        <h1 className="text-4xl md:text-5xl font-bold font-serif text-white mb-6 uppercase tracking-tighter italic">
           System Error
         </h1>
         <p className="text-xl text-neutral-400 mb-12 max-w-lg leading-relaxed">
@@ -28,13 +28,13 @@ export default function Error({
         <div className="flex flex-col sm:flex-row gap-6">
           <button
             onClick={reset}
-            className="bg-crisis-red hover:bg-red-700 text-white font-black py-4 px-12 rounded-xl transition-all shadow-lg hover:scale-105 uppercase tracking-widest text-sm"
+            className="bg-crisis-red hover:bg-red-700 text-white font-bold py-4 px-12 rounded-xl transition-all shadow-lg uppercase tracking-widest text-sm"
           >
             Try Again
           </button>
           <Link
             href="/"
-            className="bg-neutral-800 hover:bg-neutral-700 text-white font-black py-4 px-12 rounded-xl transition-all uppercase tracking-widest text-sm"
+            className="bg-neutral-800 hover:bg-neutral-700 text-white font-bold py-4 px-12 rounded-xl transition-all uppercase tracking-widest text-sm"
             aria-label="Return to homepage"
           >
             Return to Hub

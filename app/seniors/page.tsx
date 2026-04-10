@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Image from "next/image";
+import { ArticleSchema } from "@/components/StructuredData";
 import { HeartPulse, AlertTriangle, Building2, Home, MapPin, Clock } from "lucide-react";
 import { PageWrapper } from "@/components/PageWrapper";
 import { BackLink } from "@/components/BackLink";
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   keywords: "seniors care New Brunswick, nursing home shortage, home care, palliative care, aging population, nursing home waitlist, rural seniors isolation",
   alternates: { canonical: "https://nbreform.ca/seniors/" },
   openGraph: {
-    title: "Growing Old in NB: Abandoned by a Broken System | Reform NB",
+    title: "Growing Old in NB: Abandoned by a Broken System",
     description: "Severe nursing home bed shortage. Underfunded home care with workers earning poverty wages. Rural seniors isolated without services. Palliative care that depends on your postal code.",
     images: [{ url: "https://images.unsplash.com/photo-1581579438747-104c53d7fbc4?w=1200", width: 1200, height: 675, alt: "Senior care representing NB's aging crisis" }],
   },
@@ -51,7 +52,7 @@ export default function SeniorsPage() {
       />
 
       {/* Hero Image */}
-      <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
+      <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl relative">
         <Image 
           src="https://images.unsplash.com/photo-1581579438747-104c53d7fbc4?w=1200&q=80" 
           alt="Senior care representing New Brunswick's aging population crisis"
@@ -77,10 +78,10 @@ export default function SeniorsPage() {
       {/* Nursing Home Crisis */}
       <section className="py-24 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black font-serif uppercase tracking-tighter mb-8 italic">
+          <h2 className="text-4xl md:text-5xl font-bold font-serif uppercase tracking-tighter mb-8 italic">
             <span className="text-white">No Room</span> at the End
           </h2>
-          <div className="prose prose-invert prose-lg max-w-none text-white space-y-6">
+          <div className="prose prose-invert prose-lg max-w-4xl text-white space-y-6">
             <p>
               New Brunswick has one of the <strong className="text-white">oldest populations in Canada</strong> — and one of the most severe shortages of nursing home beds. Seniors who need long-term care face waitlists that stretch for <strong className="text-white">months or even years</strong>. Many die before a bed becomes available.
             </p>
@@ -105,10 +106,10 @@ export default function SeniorsPage() {
       {/* Home Care */}
       <section className="py-24 px-6 bg-neutral-900">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black font-serif uppercase tracking-tighter mb-8 italic">
+          <h2 className="text-4xl md:text-5xl font-bold font-serif uppercase tracking-tighter mb-8 italic">
             <span className="text-white">Underfunded</span> Home Care
           </h2>
-          <div className="prose prose-invert prose-lg max-w-none text-white space-y-6">
+          <div className="prose prose-invert prose-lg max-w-4xl text-white space-y-6">
             <p>
               <strong className="text-white">Home care</strong> is supposed to be the alternative — allowing seniors to age in place, maintaining independence while receiving essential services. In NB, home care is <strong className="text-white">chronically underfunded</strong> and unable to meet demand.
             </p>
@@ -141,10 +142,10 @@ export default function SeniorsPage() {
       {/* Rural Isolation */}
       <section className="py-24 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black font-serif uppercase tracking-tighter mb-8 italic">
+          <h2 className="text-4xl md:text-5xl font-bold font-serif uppercase tracking-tighter mb-8 italic">
             <span className="text-white">Forgotten</span> in Rural NB
           </h2>
-          <div className="prose prose-invert prose-lg max-w-none text-white space-y-6">
+          <div className="prose prose-invert prose-lg max-w-4xl text-white space-y-6">
             <p>
               Rural New Brunswick's seniors face a <strong className="text-white">double burden</strong>: they are older on average than urban residents, and they have far fewer services available to them. As younger people leave rural communities for cities, the remaining population skews older and more dependent — while the services they need are the first to be cut.
             </p>
@@ -169,10 +170,10 @@ export default function SeniorsPage() {
       {/* Palliative Care */}
       <section className="py-24 px-6 bg-neutral-900">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black font-serif uppercase tracking-tighter mb-8 italic">
+          <h2 className="text-4xl md:text-5xl font-bold font-serif uppercase tracking-tighter mb-8 italic">
             <span className="text-white">Dignity</span> Denied
           </h2>
-          <div className="prose prose-invert prose-lg max-w-none text-white space-y-6">
+          <div className="prose prose-invert prose-lg max-w-4xl text-white space-y-6">
             <p>
               <strong className="text-white">Palliative care</strong> — the specialized care for people with terminal illnesses — varies wildly across New Brunswick. Access depends heavily on where you live, what resources your local health authority has, and whether you can afford private options.
             </p>
@@ -192,7 +193,7 @@ export default function SeniorsPage() {
       {/* Timeline */}
       <section className="py-24 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-black font-serif uppercase tracking-tighter mb-12 italic">
+          <h2 className="text-3xl font-bold font-serif uppercase tracking-tighter mb-12 italic">
             Seniors Care: Key Facts
           </h2>
           <KeyFactsGrid facts={keyFacts} title="Seniors Care: Key Facts" />
@@ -221,6 +222,7 @@ export default function SeniorsPage() {
         buttonText="Take Action"
         buttonHref="/take-action"
       />
+      <ArticleSchema title="Seniors & Long-Term Care" description="Documenting the crisis in senior care across New Brunswick" datePublished="2025-03-31" image="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80" url="https://nbreform.ca/seniors" />
     </PageWrapper>
   );
 }

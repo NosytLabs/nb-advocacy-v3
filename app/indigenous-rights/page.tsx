@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { ArticleSchema } from "@/components/StructuredData";
 import { Users, AlertTriangle, Scale, TreePine, ArrowRight, Calendar, FileText } from "lucide-react";
 import { PageWrapper } from "@/components/PageWrapper";
 import { BackLink } from "@/components/BackLink";
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
   keywords: "Wolastoqey, Mi'kmaq, Indigenous rights NB, land title claim, Elsipogtog, fracking protest, treaty rights, residential schools, unceded territory, First Nations New Brunswick",
   alternates: { canonical: "https://nbreform.ca/indigenous-rights/" },
   openGraph: {
-    title: "Indigenous Rights in New Brunswick: Land, Treaties, and Sovereignty | Reform NB",
+    title: "Indigenous Rights in New Brunswick: Land, Treaties, and Sovereignty",
     description: "The Wolastoqey Nation is pursuing landmark title claims over NB. Mi'kmaq treaty rights persist. Elsipogtog stood against fracking. The fight for Indigenous sovereignty continues.",
     images: [{ url: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200", width: 1200, height: 675, alt: "Forest landscape representing Indigenous land" }],
   },
@@ -53,7 +54,7 @@ export default function IndigenousRightsPage() {
       />
 
       {/* Hero Image */}
-      <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
+      <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl relative">
         <Image 
           src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=80" 
           alt="Forest landscape representing Indigenous land and sovereignty in New Brunswick"
@@ -79,10 +80,10 @@ export default function IndigenousRightsPage() {
       {/* Wolastoqey Land Title Claim */}
       <section className="py-24 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black font-serif uppercase tracking-tighter mb-8 italic">
+          <h2 className="text-4xl md:text-5xl font-bold font-serif uppercase tracking-tighter mb-8 italic">
             The <span className="text-white">Wolastoqey Title Claim</span>
           </h2>
-          <div className="prose prose-invert prose-lg max-w-none text-white space-y-6">
+          <div className="prose prose-invert prose-lg max-w-4xl text-white space-y-6">
             <p>
               In 2020, the <strong className="text-white">Wolastoqey Nation</strong> (representing six First Nations: Neqotkuk, Madawaska, Woodstock, Bilijk, Sitansisk, Welamukotuk) filed a landmark title claim over approximately <strong className="text-white">60% of New Brunswick's land mass</strong> — including vast Crown forests, hydroelectric dams, and land licensed to J.D. Irving Ltd. Unlike previous title claims in Canada, this one names <strong className="text-white">six corporate entities</strong> as defendants alongside the provincial and federal governments.
             </p>
@@ -120,10 +121,10 @@ export default function IndigenousRightsPage() {
       {/* Elsipogtog */}
       <section className="py-24 px-6 bg-neutral-900">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black font-serif uppercase tracking-tighter mb-8 italic">
+          <h2 className="text-4xl md:text-5xl font-bold font-serif uppercase tracking-tighter mb-8 italic">
             Elsipogtog: <span className="text-white">The Stand</span>
           </h2>
-          <div className="prose prose-invert prose-lg max-w-none text-white space-y-6">
+          <div className="prose prose-invert prose-lg max-w-4xl text-white space-y-6">
             <p>
               In the fall of 2013, members of the <strong className="text-white">Elsipogtog First Nation</strong> and their allies blockaded roads near Rexton, NB to prevent SWN Resources from conducting shale gas exploration on their traditional territory. They opposed hydraulic fracturing (fracking) — a process that injects chemical-laced water underground to extract gas, posing risks to groundwater and ecosystems.
             </p>
@@ -165,7 +166,7 @@ export default function IndigenousRightsPage() {
       {/* Timeline */}
       <section className="py-24 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black font-serif uppercase tracking-tighter mb-12 italic">
+          <h2 className="text-4xl md:text-5xl font-bold font-serif uppercase tracking-tighter mb-12 italic">
             Indigenous Rights: <span className="text-white">Key Facts</span>
           </h2>
           <KeyFactsGrid facts={keyFacts} title="Indigenous Rights: Key Facts" />
@@ -175,10 +176,10 @@ export default function IndigenousRightsPage() {
       {/* Treaty Rights */}
       <section className="py-24 px-6 bg-neutral-900">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black font-serif uppercase tracking-tighter mb-8 italic">
+          <h2 className="text-4xl md:text-5xl font-bold font-serif uppercase tracking-tighter mb-8 italic">
             Peace & Friendship <span className="text-yellow-400">Treaties</span>
           </h2>
-          <div className="prose prose-invert prose-lg max-w-none text-white space-y-6">
+          <div className="prose prose-invert prose-lg max-w-4xl text-white space-y-6">
             <p>
               The <strong className="text-white">Peace and Friendship Treaties</strong> (1725-1779) were agreements between the British Crown and the Wabanaki Confederacy — including the Mi'kmaq, Wolastoqey, and Passamaquoddy peoples. Unlike treaties elsewhere in Canada, <strong className="text-white">these treaties did not involve land surrender</strong>.
             </p>
@@ -195,7 +196,7 @@ export default function IndigenousRightsPage() {
       {/* Current Disputes */}
       <section className="py-24 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black font-serif uppercase tracking-tighter mb-8 italic">
+          <h2 className="text-4xl md:text-5xl font-bold font-serif uppercase tracking-tighter mb-8 italic">
             Ongoing <span className="text-white">Disputes</span>
           </h2>
           <div className="grid gap-6">
@@ -259,6 +260,7 @@ export default function IndigenousRightsPage() {
         buttonText="Take Action"
         buttonHref="/take-action"
       />
+      <ArticleSchema title="Indigenous Rights" description="Covering Indigenous rights issues in New Brunswick" datePublished="2025-03-31" image="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80" url="https://nbreform.ca/indigenous-rights" />
     </PageWrapper>
   );
 }

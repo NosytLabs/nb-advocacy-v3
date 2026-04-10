@@ -48,17 +48,17 @@ export default function ContactPage() {
 
       <div className="flex items-center gap-4 mb-6">
         <div
-          className="w-16 h-16 bg-crisis-red rounded-full flex items-center justify-center text-white shrink-0 shadow-[0_0_20px_rgba(179,0,0,0.5)]"
+          className="w-16 h-16 bg-crisis-red rounded-full flex items-center justify-center text-white shrink-0 "
           aria-hidden="true"
         >
           <Mail size={32} />
         </div>
-        <h1 className="text-4xl md:text-5xl font-black font-serif tracking-tight uppercase">
+        <h1 className="text-4xl md:text-5xl font-bold font-serif tracking-tight uppercase">
           Contact Us
         </h1>
       </div>
 
-      <p className="text-neutral-400 mb-8 text-lg">
+      <p className="text-neutral-300 mb-8 text-lg">
         Have a tip? Want to volunteer? Contact us below. All communications are
         confidential.
       </p>
@@ -116,6 +116,7 @@ export default function ContactPage() {
             }`}
             aria-required="true"
             aria-invalid={!!errors.email}
+            aria-label="Email address"
           />
           {errors.email && (
             <p className="text-crisis-text text-xs mt-1" role="alert">
@@ -154,7 +155,7 @@ export default function ContactPage() {
 
         <button
           type="submit"
-          className="bg-crisis-red text-white font-black py-3 px-8 rounded hover:bg-red-700 transition-all uppercase tracking-widest text-sm flex items-center gap-2"
+          className="bg-crisis-red text-white font-bold py-3 px-8 rounded hover:bg-red-700 transition-all uppercase tracking-widest text-sm flex items-center gap-2"
           aria-label="Send message"
         >
           <Send size={16} />
@@ -169,10 +170,10 @@ export default function ContactPage() {
       </form>
 
       <div className="mt-12 p-8 bg-neutral-900/50 rounded-xl border border-neutral-800">
-        <h2 className="text-xl font-black uppercase tracking-tight text-white mb-4">
+        <h2 className="text-xl font-bold uppercase tracking-tight text-white mb-4">
           Encrypted Tips
         </h2>
-        <p className="text-neutral-400 text-sm leading-relaxed mb-4">
+        <p className="text-neutral-300 text-sm leading-relaxed mb-4">
           For sensitive information, contact us via encrypted email:
         </p>
         <code className="text-crisis-text font-mono text-sm select-all">

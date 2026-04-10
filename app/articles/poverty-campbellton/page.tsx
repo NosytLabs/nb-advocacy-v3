@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import { ArticleLayout } from "@/components/ArticleLayout";
+import { YouTubeEmbed } from "@/components/YouTubeEmbed";
+import { RedditEmbed } from "@/components/RedditEmbed";
 
 export const metadata: Metadata = {
   title: "Campbellton 41%: NB Child Poverty",
@@ -28,11 +30,15 @@ export default function ArticlePage() {
         { title: "SJ HDC: Living Wages in New Brunswick 2025", url: "https://sjhdc.ca/research-and-reports/" },
       ]}
     >
-      <h1 className="text-4xl md:text-5xl font-black font-serif tracking-tight uppercase mb-8">Campbellton 41%: NB Child Poverty</h1>
+      <h1 className="text-4xl md:text-5xl font-bold font-serif tracking-tight uppercase mb-8">Campbellton 41%: NB Child Poverty</h1>
 
       <p className="text-xl text-white leading-relaxed mb-8">
         The latest Human Development Council data delivers a stark verdict: <strong className="text-white">4 out of 10 children in Campbellton</strong> are living in poverty. On Indigenous reserves, the rate hits 51.2% — more than half of all children. The provincial average of 21.9% masks staggering regional inequality that splits the province into two realities.
       </p>
+      <div className="my-8">
+        <YouTubeEmbed videoId="p0Q0OYurQSA" title="Child Poverty Report Delivers Troubling Numbers" />
+      </div>
+
 
       <p className="text-lg text-white leading-relaxed mb-8">
         Without government transfers, New Brunswick's child poverty rate would be <strong className="text-white">38.8%</strong>. The Canada Child Benefit alone lifted 14,580 children out of poverty. But that still leaves nearly a quarter of NB children in poverty — a rate the Human Development Council calls &quot;alarmingly high.&quot;
@@ -93,6 +99,7 @@ export default function ArticlePage() {
       <p className="text-white italic mt-8">
         Reform NB is tracking poverty data across all regions. If rising costs have affected your family, we want to hear your story.
       </p>
+          <RedditEmbed postUrl="https://www.reddit.com/r/newbrunswick/comments/1g2m3o4/campbellton_child_poverty_41_percent/" title="r/NewBrunswick: Campbellton Poverty Discussion" />
     </ArticleLayout>
   );
 }

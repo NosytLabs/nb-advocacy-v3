@@ -1,8 +1,21 @@
 import { Metadata } from 'next';
+import { ArticleSchema } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "Silencing Dissent | Reform NB",
   description: "Cartoonists fired, academics purged, conservationists threatened. How New Brunswick's corporate oligarchy silences opposition.",
+  openGraph: {
+    title: "Reform NB",
+    description: "New Brunswick accountability and reform.",
+    url: "https://nbreform.ca",
+    siteName: "Reform NB",
+    images: [{ url: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1200&q=80", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Reform NB",
+    images: ["https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1200&q=80"],
+  },
 };
 import { PageWrapper } from '@/components/PageWrapper';
 import { BackLink } from '@/components/BackLink';
@@ -39,12 +52,12 @@ export default function IntimidationPage() {
       <BackLink href="/" label="Back to Home" />
       
       <div className="flex items-center gap-4 mb-6">
-        <div className="w-16 h-16 bg-crisis-red rounded-full flex items-center justify-center text-white shrink-0 shadow-[0_0_20px_rgba(179,0,0,0.5)]" aria-hidden="true">
+        <div className="w-16 h-16 bg-crisis-red rounded-full flex items-center justify-center text-white shrink-0 " aria-hidden="true">
           <Ban size={32} />
         </div>
-        <h1 className="text-5xl md:text-6xl font-black font-serif tracking-tight text-white uppercase">Intimidation & Censorship</h1>
+        <h1 className="text-4xl md:text-5xl font-bold font-serif tracking-tight text-white uppercase">Intimidation & Censorship</h1>
       </div>
-      <div className="bg-neutral-900 border-l-4 border-crisis-red p-6 mb-12 rounded-r-lg">
+      <div className="bg-neutral-900 border-crisis-red p-6 mb-12 rounded-r-lg">
         <p className="text-lg text-neutral-300">How corporate power silences critics, controls media, bends the law, and punishes dissent in the Company Province</p>
       </div>
 
@@ -62,7 +75,8 @@ export default function IntimidationPage() {
           alt="Censored newspaper with redaction marks"
           className="w-full h-64 md:h-80 object-cover"
         />
-        <div className="bg-neutral-900 p-4 text-xs text-neutral-400 uppercase tracking-widest text-center">
+        <div className="absolute inset-0 bg-black/70 z-10"></div>
+        <div className="bg-neutral-900 p-4 text-xs text-neutral-400 uppercase tracking-widest text-center relative z-20">
           New Brunswick&apos;s media landscape shaped by 90+ years of corporate ownership and editorial control
         </div>
       </div>
@@ -198,30 +212,30 @@ export default function IntimidationPage() {
             against Irving means risking your job, your access, and your community standing.
           </p>
           <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 my-8">
-            <h4 className="text-crisis-gold font-black uppercase text-xs tracking-widest mb-4">Documented Intimidation Patterns</h4>
+            <h4 className="text-crisis-gold font-bold uppercase text-xs tracking-widest mb-4">Documented Intimidation Patterns</h4>
             <ul className="space-y-3 text-neutral-300 text-sm" role="list">
               <li className="flex items-start gap-3">
-                <span className="text-crisis-text font-black">•</span>
+                <span className="text-crisis-text font-bold">•</span>
                 <span><strong>River access revocation:</strong> Threatened to block salmon conservation groups from accessing rivers if they oppose glyphosate (2017)</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-crisis-text font-black">•</span>
+                <span className="text-crisis-text font-bold">•</span>
                 <span><strong>Academic purging:</strong> Instructors fired from forestry college for criticizing Irving practices (2019)</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-crisis-text font-black">•</span>
+                <span className="text-crisis-text font-bold">•</span>
                 <span><strong>Cartoonist termination:</strong> De Adder fired same day his Trump cartoon went viral (2019)</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-crisis-text font-black">•</span>
+                <span className="text-crisis-text font-bold">•</span>
                 <span><strong>Election law violations:</strong> Full-page political ads without third-party registration (2020)</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-crisis-text font-black">•</span>
+                <span className="text-crisis-text font-bold">•</span>
                 <span><strong>Property tax intimidation:</strong> Government gives $700K refunds when Irving challenges assessments (2023)</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-crisis-text font-black">•</span>
+                <span className="text-crisis-text font-bold">•</span>
                 <span><strong>Indigenous consultation dismissal:</strong> Wolastoqey told consultations are &quot;hollow&quot; without self-determination (2026)</span>
               </li>
             </ul>
@@ -230,7 +244,7 @@ export default function IntimidationPage() {
 
         {/* Video: Corporate Capture */}
         <div className="my-12">
-          <h3 className="text-xl font-black font-serif uppercase tracking-tight text-white mb-4">📺 Video: Corporate Capture</h3>
+          <h3 className="text-xl font-bold font-serif uppercase tracking-tight text-white mb-4">📺 Video: Corporate Capture</h3>
           <VideoGrid
             columns={1}
             videos={[
@@ -273,7 +287,7 @@ export default function IntimidationPage() {
 
         {/* Sources */}
         <section className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8">
-          <h3 className="text-xl font-black font-serif uppercase tracking-tight text-white mb-6">Essential Sources</h3>
+          <h3 className="text-xl font-bold font-serif uppercase tracking-tight text-white mb-6">Essential Sources</h3>
           <div className="grid gap-4 md:grid-cols-2">
             <SourceCard type="article" title="NB Media Co-op: The Irvings Get Trumped" url="https://nbmediacoop.org/2025/03/02/the-irvings-get-trumped/" description="Cartoonist de Adder fired for Trump cartoon" date="MAR 2025" />
             <SourceCard type="article" title="NB Media Co-op: Irving Breaking Election Laws?" url="https://nbmediacoop.org/2020/09/01/are-jdirving-and-forestnb-breaking-elections-nb-laws/" description="Full-page ads without third-party registration" date="2020" />
@@ -284,6 +298,7 @@ export default function IntimidationPage() {
           </div>
         </section>
       </div>
+      <ArticleSchema title="Intimidation & Censorship" description="Exposing government intimidation and media censorship in New Brunswick" datePublished="2025-03-31" image="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80" url="https://nbreform.ca/intimidation" />
     </PageWrapper>
   );
 }

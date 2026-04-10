@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { ArticleLayout } from "@/components/ArticleLayout";
+import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 
 export const metadata: Metadata = {
   title: "Fredericton Chemical Spill: Cancer Risk",
@@ -27,11 +28,15 @@ export default function ArticlePage() {
         { title: "CBC: Fredericton firm identified in chemical spill", url: "https://www.cbc.ca/news/canada/new-brunswick/fredericton-chemical-spill-firm-identified" },
       ]}
     >
-      <h1 className="text-4xl md:text-5xl font-black font-serif tracking-tight uppercase mb-8">Fredericton Chemical Spill: Cancer Risk</h1>
+      <h1 className="text-4xl md:text-5xl font-bold font-serif tracking-tight uppercase mb-8">Fredericton Chemical Spill: Cancer Risk</h1>
 
       <p className="text-xl text-white leading-relaxed mb-8">
         A potentially <strong className="text-white">cancer-causing chemical</strong> coated roads across Fredericton in early March 2026. Preliminary testing detected traces of sodium-based compounds. Residents reported a strong chemical odor across multiple neighborhoods hours before any official notification. By the time the province issued a public advisory, the substance had been present on roads and in storm drains for approximately 18 hours.
       </p>
+      <div className="my-8">
+        <YouTubeEmbed videoId="GxwMycNUKl8" title="Company behind chemical spill in Fredericton identified" />
+      </div>
+
 
       <h2 className="text-2xl font-bold mt-12 mb-4">What Happened</h2>
       <p>

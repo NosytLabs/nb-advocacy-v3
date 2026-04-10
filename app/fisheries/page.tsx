@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ArticleSchema } from "@/components/StructuredData";
 import { Metadata } from "next";
 import { Fish, AlertTriangle, Shell, ThermometerSun, Factory, Scale, DollarSign, Gavel } from "lucide-react";
 import { PageWrapper } from "@/components/PageWrapper";
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   keywords: "Atlantic salmon, Miramichi River, MSX oyster disease, Cooke Aquaculture, lobster NB, fisheries crisis, DFO, Northumberland Strait, sea lice, salmon farming",
   alternates: { canonical: "/fisheries/" },
   openGraph: {
-    title: "The Collapse of NB's Fisheries: Salmon, Oysters, and Corporate Aquaculture | Reform NB",
+    title: "The Collapse of NB's Fisheries: Salmon, Oysters, and Corporate Aquaculture",
     description: "96% salmon collapse. MSX disease decimating oysters. Cooke Aquaculture environmental controversies. Climate warming lobster waters. The fisheries crisis NB can't ignore.",
     images: [{ url: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200", width: 1200, height: 675, alt: "Fishing boats representing NB fisheries" }],
   },
@@ -76,10 +77,10 @@ export default function FisheriesPage() {
       {/* Salmon Collapse */}
       <section className="py-24 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black font-serif uppercase tracking-tighter mb-8 italic">
+          <h2 className="text-4xl md:text-5xl font-bold font-serif uppercase tracking-tighter mb-8 italic">
             The <span className="text-white">Salmon Collapse</span>
           </h2>
-          <div className="prose prose-invert prose-lg max-w-none text-white space-y-6">
+          <div className="prose prose-invert prose-lg max-w-4xl text-white space-y-6">
             <p>
               The <strong className="text-white">Miramichi River</strong> was once the greatest Atlantic salmon river in the world. Generations of anglers traveled to New Brunswick to fish its legendary pools. Today, the salmon are nearly gone.
             </p>
@@ -106,11 +107,11 @@ export default function FisheriesPage() {
           <div className="mt-12 bg-red-900/10 border border-red-900/30 rounded-2xl p-8">
             <div className="flex items-center gap-3 mb-4">
               <Gavel className="text-white" size={24} />
-              <h3 className="text-xl font-black font-serif uppercase tracking-tight text-white">
+              <h3 className="text-xl font-bold font-serif uppercase tracking-tight text-white">
                 Federal Court: DFO Sued for Salmon Mismanagement
               </h3>
             </div>
-            <p className="text-white text-sm leading-relaxed mb-4">
+            <p className="text-neutral-200 text-base leading-relaxed mb-4">
               In <strong className="text-white">March 2025</strong>, <strong className="text-white">Save Miramichi Salmon Inc.</strong> filed a 
               federal lawsuit against the Minister of Fisheries and Oceans, alleging DFO systematically mismanaged Atlantic 
               salmon by overprotecting invasive striped bass at the expense of native salmon populations. The group argues 
@@ -118,19 +119,19 @@ export default function FisheriesPage() {
               preying on juvenile smolts during their seaward migration and preventing recovery despite millions spent on 
               habitat restoration.
             </p>
-            <p className="text-white text-sm leading-relaxed mb-4">
+            <p className="text-neutral-200 text-base leading-relaxed mb-4">
               In <strong className="text-white">September 2025</strong>, Federal Court Justice denied the government&apos;s 
               attempt to dismiss the lawsuit — a significant legal victory for conservation groups. The case proceeds 
               on the merits, with DFO now required to defend its management decisions in court.
             </p>
-            <p className="text-white text-sm leading-relaxed mb-4">
+            <p className="text-neutral-200 text-base leading-relaxed mb-4">
               In <strong className="text-white">December 2025</strong>, the government again attempted to have the 
               lawsuit dismissed, arguing DFO has &ldquo;discretionary authority&rdquo; over fisheries management. The Federal 
               Court rejected this argument, ruling the case raises legitimate questions about whether DFO&apos;s management 
               decisions are evidence-based or politically motivated.
             </p>
             <div className="bg-black/30 rounded-xl p-4 mt-4">
-              <h4 className="text-white font-black text-sm mb-2">Key Numbers</h4>
+              <h4 className="text-white font-bold text-sm mb-2">Key Numbers</h4>
               <ul className="space-y-1 text-white text-sm">
                 <li>• <strong className="text-white">514 salmon</strong> killed in failed smallmouth bass eradication (vs. only 32 bass)</li>
                 <li>• <strong className="text-white">70%+</strong> of southwest Miramichi smolts eaten by striped bass</li>
@@ -145,11 +146,11 @@ export default function FisheriesPage() {
           <div className="mt-8 bg-neutral-900 border border-neutral-800 rounded-2xl p-8">
             <div className="flex items-center gap-3 mb-4">
               <DollarSign className="text-white" size={24} />
-              <h3 className="text-xl font-black font-serif uppercase tracking-tight text-white">
+              <h3 className="text-xl font-bold font-serif uppercase tracking-tight text-white">
                 Budget 2026: Zero for Fishing Industry
               </h3>
             </div>
-            <p className="text-white text-sm leading-relaxed mb-4">
+            <p className="text-neutral-200 text-base leading-relaxed mb-4">
               Despite the catastrophic collapse of the Miramichi salmon fishery and tariff threats to the $3B lobster 
               industry, <strong className="text-white">Budget 2026-27 contains no specific allocation for the fishing industry</strong>. 
               The province gave <strong className="text-white">$45 million to Irving Paper</strong> (83% of the tariff relief 
@@ -168,10 +169,10 @@ export default function FisheriesPage() {
       {/* MSX Disease */}
       <section className="py-24 px-6 bg-neutral-900">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black font-serif uppercase tracking-tighter mb-8 italic">
+          <h2 className="text-4xl md:text-5xl font-bold font-serif uppercase tracking-tighter mb-8 italic">
             MSX: <span className="text-white">The Silent Killer</span>
           </h2>
-          <div className="prose prose-invert prose-lg max-w-none text-white space-y-6">
+          <div className="prose prose-invert prose-lg max-w-4xl text-white space-y-6">
             <p>
               In 2024, <strong className="text-white">MSX (Multinucleate Sphere X)</strong> — a deadly parasitic disease — was discovered in New Brunswick oyster beds near Spencer Cove, Northumberland Strait. The parasite causes <strong className="text-white">90-95% mortality</strong> in infected oysters. By fall 2025, the Canadian Food Inspection Agency declared all Maritime waters a disease-present area.
             </p>
@@ -188,10 +189,10 @@ export default function FisheriesPage() {
       {/* Cooke Aquaculture */}
       <section className="py-24 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black font-serif uppercase tracking-tighter mb-8 italic">
+          <h2 className="text-4xl md:text-5xl font-bold font-serif uppercase tracking-tighter mb-8 italic">
             Cooke Aquaculture: <span className="text-yellow-400">The Giant</span>
           </h2>
-          <div className="prose prose-invert prose-lg max-w-none text-white space-y-6">
+          <div className="prose prose-invert prose-lg max-w-4xl text-white space-y-6">
             <p>
               <strong className="text-white">Cooke Aquaculture</strong> is one of the world's largest salmon farming companies, headquartered in Blacks Harbour, NB. The company operates farms across Atlantic Canada, the US, Chile, and Europe.
             </p>
@@ -211,7 +212,7 @@ export default function FisheriesPage() {
       {/* Timeline */}
       <section className="py-24 px-6 bg-neutral-900">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-black font-serif uppercase tracking-tighter mb-12 italic">
+          <h2 className="text-3xl font-bold font-serif uppercase tracking-tighter mb-12 italic">
             Fisheries: Key Facts
           </h2>
           <KeyFactsGrid facts={keyFacts} title="Fisheries: Key Facts" />
@@ -238,6 +239,7 @@ export default function FisheriesPage() {
         buttonText="Take Action"
         buttonHref="/take-action"
       />
+      <ArticleSchema title="Fisheries Collapse" description="Documenting the collapse of New Brunswick fisheries" datePublished="2025-03-31" image="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80" url="https://nbreform.ca/fisheries" />
     </PageWrapper>
   );
 }

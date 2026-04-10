@@ -2,6 +2,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, Calendar, User, ExternalLink } from "lucide-react";
 import { ShareButtons } from "./ShareButtons";
+import { RelatedPages } from "./RelatedPages";
+
+interface RelatedPage {
+  href: string;
+  title: string;
+  description: string;
+}
 
 interface ArticleLayoutProps {
   title: string;
@@ -12,10 +19,11 @@ interface ArticleLayoutProps {
   imageCredit: string;
   imageCreditUrl?: string;
   sources: { title: string; url: string }[];
+  relatedPages?: RelatedPage[];
   children: React.ReactNode;
 }
 
-export function ArticleLayout({ title, date, author = "Reform NB Investigative Team", image, imageAlt, imageCredit, imageCreditUrl, sources, children }: ArticleLayoutProps) {
+export function ArticleLayout({ title, date, author = "Reform NB Investigative Team", image, imageAlt, imageCredit, imageCreditUrl, sources, relatedPages, children }: ArticleLayoutProps) {
   return (
     <article className="min-h-screen bg-neutral-950 text-white">
       {/* Back link */}
@@ -24,6 +32,19 @@ export function ArticleLayout({ title, date, author = "Reform NB Investigative T
           <Link href="/" className="text-white hover:text-white transition-colors flex items-center gap-2 text-sm">
             <ArrowLeft size={16} /> Back to Reform NB
           </Link>
+        </div>
+      </div>
+
+      {/* Breadcrumbs */}
+      <div className="border-b border-neutral-800 bg-neutral-950">
+        <div className="container mx-auto px-6 py-3">
+          <nav className="text-sm text-neutral-400 flex items-center gap-2" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <span>/</span>
+            <Link href="/articles" className="hover:text-white transition-colors">Investigations</Link>
+            <span>/</span>
+            <span className="text-neutral-300 truncate max-w-xs">{title}</span>
+          </nav>
         </div>
       </div>
 
@@ -59,6 +80,11 @@ export function ArticleLayout({ title, date, author = "Reform NB Investigative T
         <div className="prose prose-invert prose-lg max-w-none">
           {children}
         </div>
+
+        {/* Related Pages */}
+        {relatedPages && relatedPages.length > 0 && (
+          <RelatedPages pages={relatedPages} />
+        )}
 
         {/* Sources */}
         {sources.length > 0 && (

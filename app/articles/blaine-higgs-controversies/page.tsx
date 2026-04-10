@@ -1,4 +1,6 @@
 import { ShareButtons } from "@/components/ShareButtons";
+import { YouTubeEmbed } from "@/components/YouTubeEmbed";
+import { RedditEmbed } from "@/components/RedditEmbed";
 import { Metadata } from "next";
 import { UserX, AlertTriangle, Scale, Users, Rainbow } from "lucide-react";
 import { PageWrapper } from "@/components/PageWrapper";
@@ -20,7 +22,7 @@ export const metadata: Metadata = {
     "social conservatism", "minister resignations", "PC Party", "election 2024"
   ].join(", "),
   openGraph: {
-    title: "Blaine Higgs: Policy 713 and the Downfall | Reform NB",
+    title: "Blaine Higgs: Policy 713 and the Downfall",
     description: "How the former premier's social conservative agenda split his party and cost him the election.",
     images: [
       {
@@ -117,8 +119,8 @@ export default function BlaineHiggsPage() {
         ))}
       </div>
 
-      <div className="prose prose-invert prose-lg max-w-none space-y-16">
-        <h1 className="text-4xl md:text-5xl font-black font-serif tracking-tight uppercase mb-8">Blaine Higgs: Policy 713 and the Downfall</h1>
+      <div className="prose prose-invert prose-lg max-w-4xl space-y-16">
+        <h1 className="text-4xl md:text-5xl font-bold font-serif tracking-tight uppercase mb-8">Blaine Higgs: Policy 713 and the Downfall</h1>
 
         {/* Section 1: Policy 713 */}
         <section>
@@ -131,6 +133,10 @@ export default function BlaineHiggsPage() {
             environment for LGBTQ students. It was developed after extensive consultation with educators, 
             parents, and LGBTQ advocates.
           </p>
+      <div className="my-8">
+        <YouTubeEmbed videoId="fOQvwCzBaVU" title="N.B. Premier Blaine Higgs faces growing revolt" />
+      </div>
+
           <p className="text-white leading-relaxed mb-6">
             The policy required schools to:
           </p>
@@ -180,20 +186,20 @@ export default function BlaineHiggsPage() {
           </p>
           <div className="grid md:grid-cols-2 gap-6 my-8">
             <div className="bg-neutral-900 p-6 rounded-xl border border-neutral-800">
-              <h4 className="text-white font-black mb-3 uppercase text-sm tracking-widest">Resigned in Protest</h4>
-              <p className="text-white text-sm mb-3">
+              <h4 className="text-white font-bold mb-3 uppercase text-sm tracking-widest">Resigned in Protest</h4>
+              <p className="text-neutral-200 text-base mb-3">
                 <strong className="text-white">Bill Hogan</strong> — Education Minister responsible for Policy 713
               </p>
-              <p className="text-white text-sm">
+              <p className="text-neutral-200 text-base">
                 <strong className="text-white">Dorothy Shephard</strong> — Social Development Minister
               </p>
             </div>
             <div className="bg-neutral-900 p-6 rounded-xl border border-neutral-800">
-              <h4 className="text-white font-black mb-3 uppercase text-sm tracking-widest">Pushed Out</h4>
-              <p className="text-white text-sm mb-3">
+              <h4 className="text-white font-bold mb-3 uppercase text-sm tracking-widest">Pushed Out</h4>
+              <p className="text-neutral-200 text-base mb-3">
                 <strong className="text-white">Trevor Holder</strong> — Removed for not supporting changes
               </p>
-              <p className="text-white text-sm">
+              <p className="text-neutral-200 text-base">
                 <strong className="text-white">Jeff Carr</strong> — Removed for not supporting changes
               </p>
             </div>
@@ -267,7 +273,7 @@ export default function BlaineHiggsPage() {
 
         {/* Sources */}
         <section className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8">
-          <h3 className="text-xl font-black font-serif uppercase tracking-tight text-white mb-6">Sources</h3>
+          <h3 className="text-xl font-bold font-serif uppercase tracking-tight text-white mb-6">Sources</h3>
           <div className="grid gap-4 md:grid-cols-2">
             <SourceCard type="article" title="BBC: LGBT school policy change causes political turmoil" url="https://www.bbc.com/news/world-us-canada-66061514" description="Two ministers quit, two pushed out over Policy 713" date="JUL 2023" />
             <SourceCard type="article" title="CBC: What is New Brunswick's LGBTQ student controversy?" url="https://www.cbc.ca/news/canada/new-brunswick/policy-713-explainer-1.6890043" description="Explainer on Policy 713 changes" date="AUG 2023" />
@@ -284,6 +290,7 @@ export default function BlaineHiggsPage() {
         buttonText="Take Action"
         buttonHref="/take-action"
       />
+      <RedditEmbed postUrl="https://www.reddit.com/r/newbrunswick/comments/placeholder_blaine-higgs-controversies/" title="Community Discussion on Reddit" />
     </PageWrapper>
   );
 }

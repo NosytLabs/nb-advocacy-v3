@@ -3,10 +3,23 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: "Environmental Devastation | Reform NB",
   description: "96% salmon collapse, 15,000 hectares of glyphosate spraying, 3M+ tonnes of CO2. The environmental destruction of New Brunswick.",
+  openGraph: {
+    title: "Reform NB",
+    description: "New Brunswick accountability and reform.",
+    url: "https://nbreform.ca",
+    siteName: "Reform NB",
+    images: [{ url: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&q=80", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Reform NB",
+    images: ["https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&q=80"],
+  },
 };
 import { PageWrapper } from '@/components/PageWrapper';
 import { BackLink } from '@/components/BackLink';
 import { RelatedPages } from "@/components/RelatedPages";
+import { ArticleSchema } from "@/components/StructuredData";
 import { CTASection } from '@/components/CTASection';
 import { DataCard } from '@/components/DataCard';
 import { Timeline } from '@/components/Timeline';
@@ -41,12 +54,12 @@ export default function EnvironmentPage() {
       <BackLink href="/" label="Back to Home" />
       
       <div className="flex items-center gap-4 mb-6">
-        <div className="w-16 h-16 bg-crisis-red rounded-full flex items-center justify-center text-white shrink-0 shadow-[0_0_20px_rgba(179,0,0,0.5)]" aria-hidden="true">
+        <div className="w-16 h-16 bg-crisis-red rounded-full flex items-center justify-center text-white shrink-0 " aria-hidden="true">
           <Fish size={32} />
         </div>
-        <h1 className="text-5xl md:text-6xl font-black font-serif tracking-tight text-white uppercase">Environment & Ecocide</h1>
+        <h1 className="text-4xl md:text-5xl font-semibold font-serif tracking-tight text-white uppercase">Environment & Ecocide</h1>
       </div>
-      <div className="bg-neutral-900 border-l-4 border-crisis-red p-6 mb-12 rounded-r-lg">
+      <div className="bg-neutral-900 border-crisis-red p-6 mb-12 rounded-r-lg">
         <p className="text-lg text-neutral-300">The slow death of New Brunswick&apos;s rivers, forests, wild Atlantic salmon, and the corporate impunity that enables ecological destruction</p>
       </div>
 
@@ -58,14 +71,15 @@ export default function EnvironmentPage() {
       </div>
       
       {/* Hero Image */}
-      <div className="my-10 rounded-2xl overflow-hidden shadow-2xl">
+      <div className="my-10 rounded-2xl overflow-hidden shadow-xl relative">
         <Image
           src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&q=80"
           alt="Aerial view of forest clearcutting - devastated landscape"
           fill
           sizes="(max-width: 768px) 100vw, 1200px"
         />
-        <div className="bg-neutral-900 p-4 text-xs text-neutral-400 uppercase tracking-widest text-center">
+        <div className="absolute inset-0 bg-black/70 z-10"></div>
+        <div className="bg-neutral-900 p-4 text-xs text-neutral-400 uppercase tracking-widest text-center relative z-20">
           New Brunswick&apos;s Crown forests are clearcut and sprayed with glyphosate — destroying salmon habitat and poisoning watersheds
         </div>
       </div>
@@ -106,7 +120,7 @@ export default function EnvironmentPage() {
               the wild salmon are still dying. The knock-out blow isn&apos;t coming from fishing. 
               It&apos;s coming from our forests.&rdquo;
             </p>
-            <div className="text-xs font-black text-crisis-text uppercase tracking-[0.3em]">
+            <div className="text-xs font-semibold text-crisis-text uppercase tracking-wide">
               — Inka Milewski, NB Media Co-op (2015)
             </div>
             <a href="https://nbmediacoop.org/2015/11/13/wild-salmons-knock-out-blow/" target="_blank" rel="noopener noreferrer" className="text-crisis-text hover:text-white underline text-sm mt-2 inline-block">[NB Media Co-op: Wild Salmon&apos;s Knock-Out Blow]</a>
@@ -148,7 +162,7 @@ export default function EnvironmentPage() {
 
         {/* Video: Miramichi Salmon */}
         <div className="my-12">
-          <h3 className="text-xl font-black font-serif uppercase tracking-tight text-white mb-4">📺 Video: Salmon Conservation</h3>
+          <h3 className="text-xl font-semibold font-serif uppercase tracking-tight text-white mb-4">📺 Video: Salmon Conservation</h3>
           <VideoGrid
             columns={1}
             videos={[
@@ -271,7 +285,7 @@ export default function EnvironmentPage() {
 
         {/* Video: NB Forest */}
         <div className="my-12">
-          <h3 className="text-xl font-black font-serif uppercase tracking-tight text-white mb-4">📺 Video: Forest Industry</h3>
+          <h3 className="text-xl font-semibold font-serif uppercase tracking-tight text-white mb-4">📺 Video: Forest Industry</h3>
           <VideoGrid
             columns={1}
             videos={[
@@ -293,7 +307,7 @@ export default function EnvironmentPage() {
         </section>
 
         {/* Polluted Water Image */}
-        <div className="my-12 rounded-2xl overflow-hidden shadow-2xl">
+        <div className="my-12 rounded-2xl overflow-hidden shadow-xl">
           <Image
             src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&q=80"
             alt="Foggy forest landscape representing environmental degradation in New Brunswick"
@@ -307,7 +321,7 @@ export default function EnvironmentPage() {
 
         {/* Sources */}
         <section className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8">
-          <h3 className="text-xl font-black font-serif uppercase tracking-tight text-white mb-6">Essential Sources</h3>
+          <h3 className="text-xl font-semibold font-serif uppercase tracking-tight text-white mb-6">Essential Sources</h3>
           <div className="grid gap-4 md:grid-cols-2">
             <SourceCard type="article" title="NB Media Co-op: Irving Threatens Miramichi Salmon Group" url="https://nbmediacoop.org/2017/08/03/we-wont-be-intimidated-miramichi-salmon-group-on-forest-spraying/" description="Glyphosate intimidation campaign" date="2017" />
             <SourceCard type="article" title="NB Media Co-op: Wolastoqiyik Women Stop Lake Poisoning" url="https://nbmediacoop.org/2021/08/18/wolastoqiyik-women-stop-smallmouth-bass-poisoning-in-miramichi-lake-for-now/" description="Rotenone opposition by First Nations" date="2021" />
@@ -335,6 +349,7 @@ export default function EnvironmentPage() {
         buttonText="Take Action"
         buttonHref="/take-action"
       />
+      <ArticleSchema title="Ecological Failure" description="Documenting environmental destruction and ecological failure in New Brunswick" datePublished="2025-03-31" image="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80" url="https://nbreform.ca/environment" />
     </PageWrapper>
   );
 }

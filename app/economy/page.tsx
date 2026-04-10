@@ -12,11 +12,22 @@ import { VideoGrid } from "@/components/VideoGrid";
 import { SourceCard } from "@/components/SourceCard";
 import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 import Image from "next/image";
+import { ArticleSchema } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "The Manufactured Deficit & NB Power Crisis | Reform NB",
-  description:
-    "Analyzing the nearly $6 billion NB Power debt, $173.9M corporate welfare scandals, the systematic siphoning of provincial wealth, and crushing child poverty in Canada's 'Company Province'.",
+  description: "Analyzing the nearly $6 billion NB Power debt, $173.9M corporate welfare scandals, the systematic siphoning of provincial wealth, and crushing child poverty in Canada's 'Company Province'.",
+  openGraph: {
+    title: "Reform NB",
+    url: "https://nbreform.ca",
+    siteName: "Reform NB",
+    images: [{ url: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1200&q=80", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Reform NB",
+    images: ["https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1200&q=80"],
+  },
 };
 
 const economyData = [
@@ -49,14 +60,15 @@ export default function EconomyPage() {
       />
 
       {/* Hero Image */}
-      <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
+      <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl relative">
         <Image 
           src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80" 
           alt="Electrical grid infrastructure representing NB Power debt crisis"
           fill
           sizes="(max-width: 768px) 100vw, 1200px"
         />
-        <div className="bg-neutral-900 p-4 text-xs text-neutral-400 uppercase tracking-widest text-center">
+        <div className="absolute inset-0 bg-black/70 z-10"></div>
+        <div className="bg-neutral-900 p-4 text-xs text-neutral-400 uppercase tracking-widest text-center relative z-20">
           $5.9 billion in NB Power debt — rate increases of 50% over six years proposed while emissions surge to 16-year highs
         </div>
         <div className="bg-neutral-900 p-2 text-xs text-neutral-400 uppercase tracking-widest text-center">
@@ -71,7 +83,7 @@ export default function EconomyPage() {
         ))}
       </div>
 
-      <div className="prose prose-invert prose-lg max-w-none space-y-16">
+      <div className="prose prose-invert prose-lg max-w-4xl space-y-16">
         {/* Section 1: Crushing Poverty */}
         <section>
           <h2 className="text-3xl font-serif font-bold text-white mb-6 border-b border-neutral-800 pb-2 uppercase tracking-tighter italic">
@@ -161,7 +173,7 @@ export default function EconomyPage() {
               <li>• <strong>$49M carbon penalties</strong> - Passed directly to ratepayers</li>
             </ul>
             <div className="mt-4">
-              <a href="/climate-energy" className="inline-flex items-center gap-2 bg-crisis-red text-white font-black py-2 px-4 rounded-lg hover:bg-red-700 transition-colors text-sm uppercase tracking-widest">
+              <a href="/climate-energy" className="inline-flex items-center gap-2 bg-crisis-red text-white font-bold py-2 px-4 rounded-lg hover:bg-red-700 transition-colors text-sm uppercase tracking-widest">
                 Read Full Investigation <span className="text-xs">→</span>
               </a>
             </div>
@@ -322,9 +334,9 @@ export default function EconomyPage() {
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-neutral-800">
-                  <th className="text-left p-4 text-white font-black uppercase tracking-wider text-xs">Metric</th>
-                  <th className="text-left p-4 text-crisis-text font-black uppercase tracking-wider text-xs">NB</th>
-                  <th className="text-left p-4 text-neutral-400 font-black uppercase tracking-wider text-xs">National Avg</th>
+                  <th className="text-left p-4 text-white font-bold uppercase tracking-wider text-xs">Metric</th>
+                  <th className="text-left p-4 text-crisis-text font-bold uppercase tracking-wider text-xs">NB</th>
+                  <th className="text-left p-4 text-neutral-400 font-bold uppercase tracking-wider text-xs">National Avg</th>
                 </tr>
               </thead>
               <tbody>
@@ -363,7 +375,7 @@ export default function EconomyPage() {
 
         {/* External Links */}
         <section className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 mt-8">
-          <h3 className="text-xl font-black font-serif uppercase tracking-tight text-white mb-6">Essential Data & Sources</h3>
+          <h3 className="text-xl font-bold font-serif uppercase tracking-tight text-white mb-6">Essential Data & Sources</h3>
           <div className="grid gap-4 md:grid-cols-2">
             <SourceCard type="article" title="CBC: Child Poverty 'Alarmingly High'" url="https://www.cbc.ca/news/canada/new-brunswick/child-poverty-alarmingly-high-in-n-b-says-human-development-council-9.7105164" description="21.9% provincial rate, 41.2% in Campbellton" date="FEB 2026" />
             <SourceCard type="pdf" title="Campaign 2000: 2025 NB Report Card" url="https://campaign2000.ca/wp-content/uploads/2026/02/2025-NB-Report-Card-on-Child-and-Family-Poverty.pdf" description="Full report with regional breakdowns" date="FEB 2026" />
@@ -395,6 +407,7 @@ export default function EconomyPage() {
         buttonText="Mobilize"
         buttonHref="/take-action"
       />
+      <ArticleSchema title="Economic Fraud" description="Investigating the economic fraud and fiscal mismanagement in New Brunswick" datePublished="2025-03-31" image="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80" url="https://nbreform.ca/economy" />
     </PageWrapper>
   );
 }

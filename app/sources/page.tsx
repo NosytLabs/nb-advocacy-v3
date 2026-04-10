@@ -17,8 +17,18 @@ import { SourceCard } from "@/components/SourceCard";
 
 export const metadata: Metadata = {
   title: "Intelligence Archive: Sources & Data | Reform NB",
-  description:
-    "The evidentiary basis for Reform NB's investigations. Every claim linked to original documents, audited reports, and verifiable journalism.",
+  description: "The evidentiary basis for Reform NB's investigations. Every claim linked to original documents, audited reports, and verifiable journalism.",
+  openGraph: {
+    title: "Reform NB",
+    url: "https://nbreform.ca",
+    siteName: "Reform NB",
+    images: [{ url: "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Reform NB",
+    images: ["https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80"],
+  },
 };
 
 export default function SourcesPage() {
@@ -28,12 +38,12 @@ export default function SourcesPage() {
 
       <div className="flex items-center gap-4 mb-6">
         <div
-          className="w-16 h-16 bg-crisis-red rounded-full flex items-center justify-center text-white shrink-0 shadow-[0_0_20px_rgba(179,0,0,0.5)]"
+          className="w-16 h-16 bg-crisis-red rounded-full flex items-center justify-center text-white shrink-0 "
           aria-hidden="true"
         >
           <BookOpen size={32} />
         </div>
-        <h1 className="text-5xl md:text-6xl font-black font-serif tracking-tight uppercase">
+        <h1 className="text-4xl md:text-5xl font-bold font-serif tracking-tight uppercase">
           Intelligence Archive
         </h1>
       </div>
@@ -53,12 +63,12 @@ export default function SourcesPage() {
           </div>
           <div className="flex items-center gap-3 mb-8">
             <Activity className="text-crisis-text" size={28} aria-hidden="true" />
-            <h3 className="text-2xl font-black font-serif text-white uppercase tracking-tight">
+            <h3 className="text-2xl font-bold font-serif text-white uppercase tracking-tight">
               Healthcare & High-Level Fraud
             </h3>
           </div>
           <div className="grid gap-4 md:grid-cols-2">
-            <SourceCard type="article" title="CBC: 41,000 Left Horizon ERs Without Treatment" url="https://www.cbc.ca/news/canada/new-brunswick/new-brunswick-emergency-patient-leave-horizon-mei-report-vitalit%C3%A9-1.7637201" description="MEI Report on 12.9% walkout rate — 3rd highest in Canada" date="SEP 2025" />
+            <SourceCard type="article" title="CBC: 41,000 Left Horizon ERs Without Treatment" url="https://www.cbc.ca/news/canada/new-brunswick/new-brunswick-emergency-patient-leave-horizon-mei-report-vitalit%C3%A9-1.7637201" description="MEI Report on 12.9% walkout rate " date="SEP 2025" />
             <SourceCard type="pdf" title="MEI Report: Patients Leaving NB Emergency Departments" url="https://www.iedm.org/wp-content/uploads/2025/09/2025-09-18-NR-Leaving-ER-NB.pdf" description="Full academic report with methodology and data" date="SEP 2025" />
             <SourceCard type="pdf" title="Auditor General: $173.9M Travel Nurse Contract Scandal" url="https://www.agnb-vgnb.ca/uploads/volume_translations/81/report/agnb-V2-2025-Report_E.pdf" description="2025 Report — Chapter 2: Untendered Contracts" date="2025" />
             <SourceCard type="article" title="National Post: Canada's ER 'Hidden Pandemic'" url="https://nationalpost.com/news/canada/emergency-department-deaths" description="Investigating preventable ER deaths across Canada" date="MAR 2026" />
@@ -76,7 +86,7 @@ export default function SourcesPage() {
           </div>
           <div className="flex items-center gap-3 mb-8">
             <Database className="text-crisis-text" size={28} aria-hidden="true" />
-            <h3 className="text-2xl font-black font-serif text-white uppercase tracking-tight">
+            <h3 className="text-2xl font-bold font-serif text-white uppercase tracking-tight">
               NB Power & Fiscal Failure
             </h3>
           </div>
@@ -96,7 +106,7 @@ export default function SourcesPage() {
         <section className="bg-neutral-900 p-10 rounded-2xl border border-neutral-800 shadow-2xl relative overflow-hidden">
           <div className="flex items-center gap-3 mb-8">
             <DollarSign className="text-crisis-text" size={28} aria-hidden="true" />
-            <h3 className="text-2xl font-black font-serif text-white uppercase tracking-tight">
+            <h3 className="text-2xl font-bold font-serif text-white uppercase tracking-tight">
               The Oligarchy Dossier
             </h3>
           </div>
@@ -114,7 +124,7 @@ export default function SourcesPage() {
         <section className="bg-neutral-900 p-10 rounded-2xl border border-neutral-800 shadow-2xl relative overflow-hidden">
           <div className="flex items-center gap-3 mb-8">
             <AlertTriangle className="text-crisis-text" size={28} aria-hidden="true" />
-            <h3 className="text-2xl font-black font-serif text-white uppercase tracking-tight">
+            <h3 className="text-2xl font-bold font-serif text-white uppercase tracking-tight">
               Ecological Failure
             </h3>
           </div>
@@ -134,7 +144,7 @@ export default function SourcesPage() {
         <section className="bg-neutral-900 p-10 rounded-2xl border border-neutral-800 shadow-2xl relative overflow-hidden">
           <div className="flex items-center gap-3 mb-8">
             <Home className="text-crisis-text" size={28} aria-hidden="true" />
-            <h3 className="text-2xl font-black font-serif text-white uppercase tracking-tight">
+            <h3 className="text-2xl font-bold font-serif text-white uppercase tracking-tight">
               Housing & Social Crisis
             </h3>
           </div>
@@ -152,7 +162,7 @@ export default function SourcesPage() {
         <section className="bg-neutral-900 p-10 rounded-2xl border border-neutral-800 shadow-2xl relative overflow-hidden">
           <div className="flex items-center gap-3 mb-8">
             <Newspaper className="text-crisis-text" size={28} aria-hidden="true" />
-            <h3 className="text-2xl font-black font-serif text-white uppercase tracking-tight">
+            <h3 className="text-2xl font-bold font-serif text-white uppercase tracking-tight">
               Intimidation & Corporate Capture
             </h3>
           </div>
@@ -170,7 +180,7 @@ export default function SourcesPage() {
         <section className="bg-neutral-900 p-10 rounded-2xl border border-neutral-800 shadow-2xl relative overflow-hidden">
           <div className="flex items-center gap-3 mb-8">
             <ShieldCheck className="text-crisis-text" size={28} aria-hidden="true" />
-            <h3 className="text-2xl font-black font-serif text-white uppercase tracking-tight">
+            <h3 className="text-2xl font-bold font-serif text-white uppercase tracking-tight">
               Corruption & Embezzlement Cases
             </h3>
           </div>
@@ -186,16 +196,16 @@ export default function SourcesPage() {
 
         {/* Data Verification */}
         <section className="bg-neutral-900 p-10 rounded-2xl border border-neutral-800 shadow-2xl">
-          <h3 className="text-2xl font-black font-serif text-white uppercase tracking-tight mb-6">
+          <h3 className="text-2xl font-bold font-serif text-white uppercase tracking-tight mb-6">
             Data Verification Status
           </h3>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-neutral-800">
-                  <th className="text-left p-3 text-white font-black uppercase tracking-wider text-xs">Data Point</th>
-                  <th className="text-left p-3 text-neutral-400 font-black uppercase tracking-wider text-xs">Source</th>
-                  <th className="text-left p-3 text-neutral-400 font-black uppercase tracking-wider text-xs">Verified</th>
+                  <th className="text-left p-3 text-white font-bold uppercase tracking-wider text-xs">Data Point</th>
+                  <th className="text-left p-3 text-neutral-400 font-bold uppercase tracking-wider text-xs">Source</th>
+                  <th className="text-left p-3 text-neutral-400 font-bold uppercase tracking-wider text-xs">Verified</th>
                 </tr>
               </thead>
               <tbody className="text-neutral-400">

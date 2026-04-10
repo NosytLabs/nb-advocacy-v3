@@ -20,12 +20,12 @@ export function QuoteBlock({ quote, author, role, color = 'red', className = '' 
   };
 
   return (
-    <div className={`border-l-4 ${colorClasses[color]} p-8 rounded-r-2xl ${className}`}>
-      <blockquote className="text-xl md:text-2xl text-white font-serif italic leading-relaxed mb-4">
+    <div className={`${colorClasses[color]} p-8 rounded-r-2xl ${className}`}>
+      <blockquote className="text-xl md:text-2xl text-white leading-relaxed mb-4">
         &ldquo;{quote}&rdquo;
       </blockquote>
       <div className="flex flex-col">
-        <span className={`text-sm font-black uppercase tracking-[0.3em] ${textColors[color]}`}>
+        <span className={`text-sm font-bold uppercase tracking-wide ${textColors[color]}`}>
           — {author}
         </span>
         {role && (

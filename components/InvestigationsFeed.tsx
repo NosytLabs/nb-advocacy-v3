@@ -50,7 +50,7 @@ export function InvestigationsFeed() {
               <span className="text-sm bg-red-800 text-white px-2 py-0.5 rounded font-bold">{item.category}</span>
             </div>
             <h2 className="text-lg font-bold text-white group-hover:text-crisis-text transition-colors mb-2">{item.title}</h2>
-            <p className="text-white text-sm leading-relaxed">{item.description}</p>
+            <p className="text-neutral-300 text-base leading-relaxed">{item.description}</p>
             <div className="mt-3 flex items-center gap-1 text-crisis-text text-sm font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">
               Read Full Article <ChevronRight size={14} />
             </div>

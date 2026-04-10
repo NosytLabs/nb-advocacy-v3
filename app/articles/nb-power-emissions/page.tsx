@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import { ArticleLayout } from "@/components/ArticleLayout";
+import { YouTubeEmbed } from "@/components/YouTubeEmbed";
+import { RedditEmbed } from "@/components/RedditEmbed";
 
 export const metadata: Metadata = {
   title: "NB Power: 4M Barrels Oil, 16-Year High",
@@ -29,11 +31,15 @@ export default function ArticlePage() {
         { title: "CTV News: NB Power applies for 4.75% rate hike", url: "https://www.ctvnews.ca/atlantic/new-brunswick/article/nb-power-applies-for-475-per-cent-rate-hike-for-2026/" },
       ]}
     >
-      <h1 className="text-4xl md:text-5xl font-black font-serif tracking-tight uppercase mb-8">NB Power: 4M Barrels Oil, 16-Year High</h1>
+      <h1 className="text-4xl md:text-5xl font-bold font-serif tracking-tight uppercase mb-8">NB Power: 4M Barrels Oil, 16-Year High</h1>
 
       <p className="text-xl text-white leading-relaxed mb-8">
         New Brunswick's Energy and Utilities Board filings reveal a utility in crisis. NB Power burned nearly <strong className="text-white">4 million barrels of oil</strong> in just 12 months, pushing greenhouse gas emissions past 3 million tonnes — a level not seen since 2010. The data comes as the utility seeks a 4.75% rate increase for 2026, compounding a 50% rate hike over the past six years.
       </p>
+      <div className="my-8">
+        <YouTubeEmbed videoId="9BI6E2Lfk-c" title="N.B. town offers to take gas power facility" />
+      </div>
+
 
       <h2 className="text-2xl font-bold mt-12 mb-4">Coleson Cove: The $254 Million Furnace</h2>
       <p>
@@ -98,6 +104,7 @@ export default function ArticlePage() {
       <p className="text-white italic mt-8">
         Reform NB is tracking NB Power's emissions, debt, and rate decisions. If rising energy costs have affected your household, we want to hear your story.
       </p>
+      <RedditEmbed postUrl="https://www.reddit.com/r/newbrunswick/comments/placeholder_power/" title="Community Discussion on Reddit" />
     </ArticleLayout>
   );
 }

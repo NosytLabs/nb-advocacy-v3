@@ -1,4 +1,5 @@
 import { ShareButtons } from "@/components/ShareButtons";
+import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 import { Metadata } from "next";
 import { AlertTriangle, DollarSign, Users, Scale } from "lucide-react";
 import { PageWrapper } from "@/components/PageWrapper";
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     "conflict of interest", "taxpayer money", "bankruptcy", "Miramichi"
   ].join(", "),
   openGraph: {
-    title: "The Atcon Scandal: $70M Lost | Reform NB",
+    title: "The Atcon Scandal: $70M Lost",
     description: "How political decisions cost New Brunswick taxpayers $70 million when cabinet ignored warnings.",
     images: [
       {
@@ -123,8 +124,8 @@ export default function AtconScandalPage() {
         ))}
       </div>
 
-      <div className="prose prose-invert prose-lg max-w-none space-y-16">
-        <h1 className="text-4xl md:text-5xl font-black font-serif tracking-tight uppercase mb-8">The Atcon Scandal: $70M Lost</h1>
+      <div className="prose prose-invert prose-lg max-w-4xl space-y-16">
+        <h1 className="text-4xl md:text-5xl font-bold font-serif tracking-tight uppercase mb-8">The Atcon Scandal: $70M Lost</h1>
 
         {/* Section 1: What Happened */}
         <section>
@@ -136,6 +137,10 @@ export default function AtconScandalPage() {
             $70 million in loans and loan guarantees for Atcon, a Miramichi-based forestry and construction company. 
             The government argued the funding was needed to prevent major job losses in the region.
           </p>
+      <div className="my-8">
+        <YouTubeEmbed videoId="0hmNVKCsBTw" title="Inside the Dramatic Capture of an Alleged Scam Kingpin" />
+      </div>
+
           <p className="text-white leading-relaxed mb-6">
             But civil servants had warned that the company was likely to fail regardless — and take the 
             $70 million with it. The warnings were ignored. In April 2010, Atcon went bankrupt, and 
@@ -198,7 +203,7 @@ export default function AtconScandalPage() {
 
         {/* Sources */}
         <section className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8">
-          <h3 className="text-xl font-black font-serif uppercase tracking-tight text-white mb-6">Sources</h3>
+          <h3 className="text-xl font-bold font-serif uppercase tracking-tight text-white mb-6">Sources</h3>
           <div className="grid gap-4 md:grid-cols-2">
             <SourceCard type="article" title="CBC: Ghosts of Atcon Haunt Travel Nurse Debate" url="https://www.cbc.ca/news/canada/new-brunswick/atcon-scandal-compared-to-travel-nurse-contracts-1.7225832" description="How Atcon became the benchmark for NB political scandals" />
             <SourceCard type="article" title="CBC: Atcon Was So Badly Managed" url="https://www.cbc.ca/news/canada/new-brunswick/atcon-funding-auditor-general-report-1.4317029" description="Auditor General report on the $63M loss" />

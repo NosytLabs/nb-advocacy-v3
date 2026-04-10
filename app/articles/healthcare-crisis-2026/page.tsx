@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import { ArticleLayout } from "@/components/ArticleLayout";
+import { YouTubeEmbed } from "@/components/YouTubeEmbed";
+import { RedditEmbed } from "@/components/RedditEmbed";
 import { Activity, AlertTriangle, Users, Bed, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -8,7 +10,7 @@ export const metadata: Metadata = {
   keywords: "NB healthcare, doctor shortage, ER deaths, ALC patients, travel nurses, Horizon Health, Vitalité, 238K, family doctor, New Brunswick health crisis",
   alternates: { canonical: "https://nbreform.ca/articles/healthcare-crisis-2026/" },
   openGraph: {
-    title: "238K Without a Doctor: New Brunswick Healthcare in Freefall | Reform NB",
+    title: "238K Without a Doctor: New Brunswick Healthcare in Freefall",
     description: "Nearly 1 in 3 New Brunswickers has no family doctor. 2,199 ER deaths in 4 years. The full anatomy of healthcare system collapse.",
     images: [{ url: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200", width: 1200, height: 675, alt: "Hospital corridor representing healthcare crisis" }],
   },
@@ -32,41 +34,45 @@ export default function ArticlePage() {
         { title: "Reform NB: ER Deaths Report", url: "/articles/healthcare-er-deaths" },
       ]}
     >
-      <h1 className="text-4xl md:text-5xl font-black font-serif tracking-tight uppercase mb-8">238K Without a Doctor: NB Healthcare in Freefall</h1>
+      <h1 className="text-4xl md:text-5xl font-bold font-serif tracking-tight uppercase mb-8">238K Without a Doctor: NB Healthcare in Freefall</h1>
 
       <p className="text-xl text-white leading-relaxed mb-8">
         New Brunswick&apos;s healthcare system is not struggling. It is <strong className="text-white">failing</strong>. Nearly one in three residents has no family doctor. Patients are dying in emergency rooms after waiting hours without being seen. And the government&apos;s solution — funneling $173.9 million to private travel nurse agencies — has enriched corporations while leaving hospitals understaffed.
       </p>
+      <div className="my-8">
+        <YouTubeEmbed videoId="KX9G29-lpPk" title="Is Canada's health-care system in critical condition? CTV News Atlantic Oct 2025" />
+      </div>
+
 
       {/* Key Stats Grid */}
       <div className="grid md:grid-cols-2 gap-4 my-8">
         <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-6">
           <div className="flex items-center gap-3 mb-2">
             <Users className="text-white" size={24} />
-            <span className="text-3xl font-black text-white">238K+</span>
+            <span className="text-3xl font-bold text-white">238K+</span>
           </div>
-          <p className="text-white text-sm">Without a family doctor — nearly 1/3 of NB&apos;s 800K population</p>
+          <p className="text-neutral-200 text-base">Without a family doctor — nearly 1/3 of NB&apos;s 800K population</p>
         </div>
         <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-6">
           <div className="flex items-center gap-3 mb-2">
             <AlertTriangle className="text-white" size={24} />
-            <span className="text-3xl font-black text-white">2,199</span>
+            <span className="text-3xl font-bold text-white">2,199</span>
           </div>
-          <p className="text-white text-sm">Patients pronounced dead after ER arrival, 2020-2024</p>
+          <p className="text-neutral-200 text-base">Patients pronounced dead after ER arrival, 2020-2024</p>
         </div>
         <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-6">
           <div className="flex items-center gap-3 mb-2">
             <Bed className="text-white" size={24} />
-            <span className="text-3xl font-black text-white">40%</span>
+            <span className="text-3xl font-bold text-white">40%</span>
           </div>
-          <p className="text-white text-sm">Of hospital beds occupied by ALC patients who need nursing homes</p>
+          <p className="text-neutral-200 text-base">Of hospital beds occupied by ALC patients who need nursing homes</p>
         </div>
         <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-6">
           <div className="flex items-center gap-3 mb-2">
             <Clock className="text-white" size={24} />
-            <span className="text-3xl font-black text-white">41K+</span>
+            <span className="text-3xl font-bold text-white">41K+</span>
           </div>
-          <p className="text-white text-sm">ER walkouts per year — 12.9% of patients leave before being seen</p>
+          <p className="text-neutral-200 text-base">ER walkouts per year — 12.9% of patients leave before being seen</p>
         </div>
       </div>
 
@@ -140,8 +146,8 @@ export default function ArticlePage() {
         <li><strong className="text-white">Invest in mental health</strong> as a parallel system, not an afterthought</li>
       </ul>
 
-      <div className="mt-12 bg-neutral-900 border-l-4 border-crisis-red p-8 rounded-r-xl">
-        <p className="text-xl text-white font-serif italic leading-relaxed">
+      <div className="mt-12 bg-neutral-900 border-crisis-red p-8 rounded-r-xl">
+        <p className="text-xl text-white leading-relaxed">
           &quot;A government that cannot keep its citizens alive in emergency rooms has no moral authority to govern.&quot;
         </p>
         <p className="text-sm text-white mt-4">— Reform NB</p>
@@ -150,6 +156,7 @@ export default function ArticlePage() {
       <p className="text-white italic mt-12">
         This article is part of Reform NB&apos;s ongoing healthcare investigation. If you or a family member has experienced the failures described here, <a href="mailto:reformnb-tips@proton.me" className="text-white hover:text-white underline">we want to hear your story</a>.
       </p>
+      <RedditEmbed postUrl="https://www.reddit.com/r/newbrunswick/comments/placeholder_healthcare-crisis-2026/" title="Community Discussion on Reddit" />
     </ArticleLayout>
   );
 }

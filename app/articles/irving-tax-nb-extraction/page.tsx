@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { ArticleLayout } from "@/components/ArticleLayout";
+import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 import { ExternalLink, Users } from "lucide-react";
 import Link from "next/link";
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   keywords: "Irving family New Brunswick, Irving property tax, Irving monopoly, Irving Oil taxes, Irving forestry Crown land, Irving media monopoly, James Irving, Arthur Irving, Irving wealth $30 billion, New Brunswick oligarchy, Irving Paper electricity, corporate capture New Brunswick, vertical monopoly Irving",
   alternates: { canonical: "https://nbreform.ca/articles/irving-tax-nb-extraction/" },
   openGraph: {
-    title: "Irving Tax: 5x Less Property Tax | Reform NB",
+    title: "Irving Tax: 5x Less Property Tax",
     description: "The Irving family's $30B+ empire: below-market Crown forest access, preferential NB Power rates, lowest property taxes in North America. NB pays the price.",
     images: [{ url: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=1200", width: 1200, height: 675, alt: "Industrial refinery representing Irving empire" }],
   },
@@ -31,11 +32,15 @@ export default function ArticlePage() {
         { title: "Reform NB: Irving Monopoly — Forestry & Media", url: "/articles/irving-monopoly-forestry-media/" },
       ]}
     >
-      <h1 className="text-4xl md:text-5xl font-black font-serif tracking-tight uppercase mb-8">Irving Tax: 5x Less Property Tax Than US Refineries</h1>
+      <h1 className="text-4xl md:text-5xl font-bold font-serif tracking-tight uppercase mb-8">Irving Tax: 5x Less Property Tax Than US Refineries</h1>
 
       <p className="text-xl text-white leading-relaxed mb-8">
         In any functioning democracy, the wealthiest pay proportionally. In New Brunswick, the <strong className="text-white">Irving family</strong> — worth an estimated <strong className="text-white">$14.5 billion</strong> — pays property taxes at a fraction of what comparable operations pay in the United States. This isn't a loophole. It's the system working exactly as designed.
       </p>
+      <div className="my-8">
+        <YouTubeEmbed videoId="YTn3W4YLfXI" title="Proposed mining project dividing New Brunswick town" />
+      </div>
+
 
       <h2 className="text-2xl font-bold mt-12 mb-4">The Property Tax Gap</h2>
       <p>
@@ -119,8 +124,8 @@ export default function ArticlePage() {
         None of these are radical. Most are standard practice in other provinces and states. The only reason they're controversial in New Brunswick is that <strong className="text-white">the current system serves a very small, very powerful constituency</strong>.
       </p>
 
-      <div className="mt-12 bg-neutral-900 border-l-4 border-crisis-gold p-8 rounded-r-xl">
-        <p className="text-xl text-white font-serif italic leading-relaxed">
+      <div className="mt-12 bg-neutral-900 border-crisis-gold p-8 rounded-r-xl">
+        <p className="text-xl text-white leading-relaxed">
           "New Brunswick doesn't have a revenue problem. It has a collection problem. The province's wealthiest family has engineered a system where public resources flow to private accounts, and the rest of the province picks up the tab."
         </p>
         <p className="text-sm text-white mt-4">— Reform NB</p>

@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import { ArticleLayout } from "@/components/ArticleLayout";
+import { YouTubeEmbed } from "@/components/YouTubeEmbed";
+import { RedditEmbed } from "@/components/RedditEmbed";
 
 export const metadata: Metadata = {
   title: "Tent Cities: NB Housing Catastrophe",
@@ -28,11 +30,15 @@ export default function ArticlePage() {
         { title: "Global News: Dear Moncton — homelessness crisis doubles", url: "https://globalnews.ca/news/nb-homelessness-crisis-moncton/" },
       ]}
     >
-      <h1 className="text-4xl md:text-5xl font-black font-serif tracking-tight uppercase mb-8">Tent Cities: NB Housing Catastrophe</h1>
+      <h1 className="text-4xl md:text-5xl font-bold font-serif tracking-tight uppercase mb-8">Tent Cities: NB Housing Catastrophe</h1>
 
       <p className="text-xl text-white leading-relaxed mb-8">
         New Brunswick's population surged by <strong className="text-white">12% in just four years</strong> — from 775,000 to 869,000 — driven by aggressive immigration targets and interprovincial migration. But the housing supply didn't keep pace. The result: <strong className="text-white">1,500+ people now chronically homeless</strong> across Moncton, Saint John, and Fredericton, with tent cities becoming a permanent fixture of the urban landscape.
       </p>
+      <div className="my-8">
+        <YouTubeEmbed videoId="PYeRG-GQzHc" title="Report released on homelessness in N.B. cities" />
+      </div>
+
 
       <p className="text-lg text-white leading-relaxed mb-8">
         More than <strong className="text-white">100 homeless New Brunswickers died in 2025</strong> — from toxic drug supply, exposure, violence, and the cascading health failures that come with sleeping outside. In the same year, 59 homeless deaths were recorded in Toronto. New Brunswick, with a fraction of Toronto's population, nearly matched that toll.
@@ -86,6 +92,7 @@ export default function ArticlePage() {
       <p className="text-white italic mt-8">
         Reform NB is tracking the housing crisis across all three cities. If you or someone you know is affected by housing insecurity, we want to hear your story.
       </p>
+      <RedditEmbed postUrl="https://www.reddit.com/r/newbrunswick/comments/placeholder_housing-crisis-2026/" title="Community Discussion on Reddit" />
     </ArticleLayout>
   );
 }

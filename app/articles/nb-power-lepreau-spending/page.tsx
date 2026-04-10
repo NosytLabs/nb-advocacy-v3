@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { ArticleLayout } from "@/components/ArticleLayout";
+import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 import { RelatedPages } from "@/components/RelatedPages";
 
 export const metadata: Metadata = {
@@ -28,11 +29,15 @@ export default function ArticlePage() {
         { title: "NB Power: 10-Year Plan (2021-2030)", url: "https://www.nbpower.com/media/1489656/10-year-plan-2021-to-2030.pdf" },
       ]}
     >
-      <h1 className="text-4xl md:text-5xl font-black font-serif tracking-tight uppercase mb-8">NB Power Spends $88.4M on Hired Guns for Lepreau</h1>
+      <h1 className="text-4xl md:text-5xl font-bold font-serif tracking-tight uppercase mb-8">NB Power Spends $88.4M on Hired Guns for Lepreau</h1>
 
       <p className="text-white leading-relaxed mb-6">
         New Brunswick Power is spending <strong className="text-white">$88.4 million over three years</strong> on outside experts from Ontario Power Generation to run the chronically unreliable Point Lepreau Nuclear Generating Station — a plant that has been offline for repairs and maintenance a total of <strong className="text-white">616 days in the last four years</strong>.
       </p>
+      <div className="my-8">
+        <YouTubeEmbed videoId="zd3o9cOLGD4" title="Rare glimpse into Point Lepreau facility in New Brunswick" />
+      </div>
+
 
       <h2 className="text-3xl font-serif font-bold text-white mt-12 mb-6 uppercase tracking-tighter italic">The Laurentis Deal</h2>
       

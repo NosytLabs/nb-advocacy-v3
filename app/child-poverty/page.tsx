@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Image from "next/image";
+import { ArticleSchema } from "@/components/StructuredData";
 import { Baby, AlertTriangle, Home, Utensils, Landmark, Users } from "lucide-react";
 import { PageWrapper } from "@/components/PageWrapper";
 import { BackLink } from "@/components/BackLink";
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   keywords: "child poverty New Brunswick, Campaign 2000, poverty rate, Indigenous poverty, food insecurity, child welfare, Campbellton poverty, single parent poverty",
   alternates: { canonical: "https://nbreform.ca/child-poverty/" },
   openGraph: {
-    title: "32,140 Children in Poverty: NB's Shame | Reform NB",
+    title: "32,140 Children in Poverty: NB's Shame",
     description: "One in five children lives in poverty in New Brunswick. On Indigenous reserves, it's one in two. This is a policy choice — not an inevitability.",
     images: [{ url: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200", width: 1200, height: 675, alt: "Child in poverty representing NB's crisis" }],
   },
@@ -51,7 +52,7 @@ export default function ChildPovertyPage() {
       />
 
       {/* Hero Image */}
-      <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
+      <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl relative">
         <Image 
           src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200&q=80" 
           alt="Child representing the 32,140 children living in poverty in New Brunswick"
@@ -77,11 +78,11 @@ export default function ChildPovertyPage() {
       {/* The Numbers */}
       <section className="py-24 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black font-serif uppercase tracking-tighter mb-8 italic">
+          <h2 className="text-4xl md:text-5xl font-bold font-serif uppercase tracking-tighter mb-8 italic">
             <span className="text-white">32,140 Children</span> in Poverty
           </h2>
-          <div className="prose prose-invert prose-lg max-w-none text-white space-y-6">
-            <h1 className="text-4xl md:text-5xl font-black font-serif tracking-tight uppercase mb-8">Child Poverty: 32,140 Children Living in Poverty in NB</h1>
+          <div className="prose prose-invert prose-lg max-w-4xl text-white space-y-6">
+            <h1 className="text-4xl md:text-5xl font-bold font-serif tracking-tight uppercase mb-8">Child Poverty: 32,140 Children Living in Poverty in NB</h1>
 
             <p>
               According to the <strong className="text-white">February 2026 Campaign 2000 Report Card</strong>, compiled by the Human Development Council, New Brunswick has a <strong className="text-white">21.9% child poverty rate</strong> — meaning nearly <strong className="text-white">one in five children</strong> lives below the poverty line. That's 32,140 children.
@@ -104,10 +105,10 @@ export default function ChildPovertyPage() {
       {/* Geography of Poverty */}
       <section className="py-24 px-6 bg-neutral-900">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black font-serif uppercase tracking-tighter mb-8 italic">
+          <h2 className="text-4xl md:text-5xl font-bold font-serif uppercase tracking-tighter mb-8 italic">
             The <span className="text-white">Geography</span> of Poverty
           </h2>
-          <div className="prose prose-invert prose-lg max-w-none text-white space-y-6">
+          <div className="prose prose-invert prose-lg max-w-4xl text-white space-y-6">
             <p>
               Child poverty in New Brunswick is not evenly distributed. It is concentrated in specific communities — and the patterns reveal deep structural inequalities.
             </p>
@@ -130,10 +131,10 @@ export default function ChildPovertyPage() {
       {/* Single-Parent Households */}
       <section className="py-24 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black font-serif uppercase tracking-tighter mb-8 italic">
+          <h2 className="text-4xl md:text-5xl font-bold font-serif uppercase tracking-tighter mb-8 italic">
             <span className="text-white">Single Parents</span> Under Siege
           </h2>
-          <div className="prose prose-invert prose-lg max-w-none text-white space-y-6">
+          <div className="prose prose-invert prose-lg max-w-4xl text-white space-y-6">
             <p>
               In NB, <strong className="text-white">47.8% of children</strong> in single-parent households live in poverty — compared to just <strong className="text-white">11.3%</strong> in two-parent households. This four-fold gap reflects systemic failures in childcare, social assistance, and workforce support.
             </p>
@@ -168,10 +169,10 @@ export default function ChildPovertyPage() {
       {/* Food Insecurity */}
       <section className="py-24 px-6 bg-neutral-900">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black font-serif uppercase tracking-tighter mb-8 italic">
+          <h2 className="text-4xl md:text-5xl font-bold font-serif uppercase tracking-tighter mb-8 italic">
             <span className="text-white">Hungry</span> Children
           </h2>
-          <div className="prose prose-invert prose-lg max-w-none text-white space-y-6">
+          <div className="prose prose-invert prose-lg max-w-4xl text-white space-y-6">
             <p>
               <strong className="text-white">Food insecurity</strong> is rising across New Brunswick. Food bank usage has surged in recent years, with demand far outstripping supply. The <strong className="text-white">15% HST</strong> — the highest provincial sales tax in Canada — makes food and essentials more expensive for families already struggling.
             </p>
@@ -188,7 +189,7 @@ export default function ChildPovertyPage() {
       {/* Timeline */}
       <section className="py-24 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-black font-serif uppercase tracking-tighter mb-12 italic">
+          <h2 className="text-3xl font-bold font-serif uppercase tracking-tighter mb-12 italic">
             Child Poverty: Key Facts
           </h2>
           <KeyFactsGrid facts={keyFacts} title="Child Poverty: Key Facts" />
@@ -216,6 +217,7 @@ export default function ChildPovertyPage() {
         buttonText="Take Action"
         buttonHref="/take-action"
       />
+      <ArticleSchema title="Child Poverty" description="Exposing child poverty rates and the failure to protect New Brunswick children" datePublished="2025-03-31" image="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80" url="https://nbreform.ca/child-poverty" />
     </PageWrapper>
   );
 }

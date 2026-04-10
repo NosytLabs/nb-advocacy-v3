@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { ArticleLayout } from "@/components/ArticleLayout";
+import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 
 export const metadata: Metadata = {
   title: "Glyphosate Spraying: 15K+ Hectares, New Cancer Study, NB's Refusal to Act",
@@ -30,12 +31,16 @@ export default function ArticlePage() {
         { title: "NB Environment: Vegetation Management and Herbicide Use (Government)", url: "https://www2.gnb.ca/content/gnb/en/departments/erd/forestry-conservation/content/vegetation-management-herbicides.html" },
       ]}
     >
-      <h1 className="text-4xl md:text-5xl font-black font-serif tracking-tight uppercase mb-8">Glyphosate Spraying: 15K+ Hectares, New Cancer Study, NB's Refusal to Act</h1>
+      <h1 className="text-4xl md:text-5xl font-bold font-serif tracking-tight uppercase mb-8">Glyphosate Spraying: 15K+ Hectares, New Cancer Study, NB's Refusal to Act</h1>
 
       <h2>The Scale of Spraying</h2>
       <p>
         Every year, New Brunswick's Crown forests are sprayed with glyphosate — the active ingredient in Roundup — on <strong>15,000+ hectares</strong> of public land. The purpose: kill hardwood trees so softwood (spruce, fir) can grow faster for the forestry industry. Since 2005, spraying has increased by 30%.
       </p>
+      <div className="my-8">
+        <YouTubeEmbed videoId="3umD1q7Bte4" title="What Is Spraying New Brunswick Glyphosate" />
+      </div>
+
       <p>
         <strong>76% of New Brunswick residents</strong> want glyphosate banned. Indigenous leaders have called for a ban, citing contamination of traditional food sources. The spraying continues.
       </p>

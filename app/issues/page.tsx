@@ -4,6 +4,18 @@ import { ArrowRight } from "lucide-react";
 export const metadata = {
   title: "Issues Archive | Reform NB",
   description: "Explore all critical issues facing New Brunswick: healthcare collapse, housing crisis, education cuts, child poverty, mental health, and seniors' care.",
+  openGraph: {
+    title: "Reform NB",
+    description: "New Brunswick accountability and reform.",
+    url: "https://nbreform.ca",
+    siteName: "Reform NB",
+    images: [{ url: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1200&q=80", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Reform NB",
+    images: ["https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1200&q=80"],
+  },
 };
 
 const issueGroups = [
@@ -53,7 +65,7 @@ export default function IssuesPage() {
       <div className="container mx-auto px-4 md:px-6 max-w-6xl">
         {/* Header */}
         <div className="mb-16 text-center">
-          <h1 className="text-5xl md:text-6xl font-black font-serif tracking-tight text-white uppercase mb-6">
+          <h1 className="text-4xl md:text-5xl font-semibold font-serif tracking-tight text-white uppercase mb-6">
             Issues
           </h1>
           <p className="text-xl text-neutral-400 max-w-3xl mx-auto leading-relaxed">
@@ -66,7 +78,7 @@ export default function IssuesPage() {
         <div className="space-y-16">
           {issueGroups.map((group) => (
             <section key={group.title} className="border-t border-neutral-800 pt-12">
-              <h2 className="text-3xl font-black font-serif text-crisis-text uppercase mb-8 tracking-tight">
+              <h2 className="text-3xl font-semibold font-serif text-crisis-text uppercase mb-8 tracking-tight">
                 {group.title}
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
@@ -77,13 +89,13 @@ export default function IssuesPage() {
                     className="group bg-neutral-900/50 border border-neutral-800 rounded-xl p-8 hover:border-crisis-red hover:bg-crisis-red/5 transition-all duration-300 relative overflow-hidden"
                   >
                     <div className="relative z-10">
-                      <h3 className="text-xl font-black uppercase tracking-wider text-white mb-3 group-hover:text-crisis-text transition-colors">
+                      <h3 className="text-xl font-semibold uppercase tracking-wider text-white mb-3 group-hover:text-crisis-text transition-colors">
                         {issue.title}
                       </h3>
                       <p className="text-neutral-400 text-sm leading-relaxed mb-6">
                         {issue.description}
                       </p>
-                      <div className="flex items-center gap-2 text-crisis-text text-xs font-black uppercase tracking-widest group-hover:translate-x-1 transition-transform">
+                      <div className="flex items-center gap-2 text-crisis-text text-xs font-semibold uppercase tracking-widest group-hover:translate-x-1 transition-transform">
                         Read Intelligence
                         <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                       </div>
@@ -97,7 +109,7 @@ export default function IssuesPage() {
 
         {/* Call to Action */}
         <div className="mt-24 bg-crisis-red/10 border-2 border-crisis-red rounded-3xl p-12 text-center">
-          <h3 className="text-3xl font-black font-serif text-white uppercase mb-6">
+          <h3 className="text-3xl font-semibold font-serif text-white uppercase mb-6">
             Demand Accountability
           </h3>
           <p className="text-xl text-neutral-300 max-w-3xl mx-auto mb-8 leading-relaxed">
@@ -106,7 +118,7 @@ export default function IssuesPage() {
           </p>
           <Link
             href="/take-action"
-            className="inline-block bg-crisis-red hover:bg-red-700 text-white font-black py-5 px-16 rounded-xl text-lg transition-all shadow-lg hover:scale-105 uppercase tracking-[0.2em]"
+            className="inline-block bg-crisis-red hover:bg-red-700 text-white font-semibold py-5 px-16 rounded-xl text-lg transition-all shadow-lg uppercase tracking-wide"
           >
             Take Action
           </Link>

@@ -10,10 +10,10 @@ export default function NotFound() {
           size={80}
           aria-hidden="true"
         />
-        <h1 className="text-8xl md:text-9xl font-black font-serif text-white mb-4 tracking-tighter">
+        <h1 className="text-8xl md:text-9xl font-bold font-serif text-white mb-4 tracking-tighter">
           404
         </h1>
-        <h2 className="text-3xl md:text-4xl font-black font-serif text-white mb-6 uppercase tracking-tighter italic">
+        <h2 className="text-3xl md:text-4xl font-bold font-serif text-white mb-6 uppercase tracking-tighter italic">
           File Not Found
         </h2>
         <p className="text-xl text-neutral-400 mb-12 max-w-lg leading-relaxed">
@@ -23,14 +23,14 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row gap-6">
           <Link
             href="/"
-            className="bg-crisis-red hover:bg-red-700 text-white font-black py-4 px-12 rounded-xl transition-all shadow-lg hover:scale-105 uppercase tracking-widest text-sm"
+            className="bg-crisis-red hover:bg-red-700 text-white font-bold py-4 px-12 rounded-xl transition-all shadow-lg uppercase tracking-widest text-sm"
             aria-label="Return to homepage"
           >
             Return to Hub
           </Link>
           <Link
             href="/sources"
-            className="bg-neutral-800 hover:bg-neutral-700 text-white font-black py-4 px-12 rounded-xl transition-all uppercase tracking-widest text-sm"
+            className="bg-neutral-800 hover:bg-neutral-700 text-white font-bold py-4 px-12 rounded-xl transition-all uppercase tracking-widest text-sm"
             aria-label="Browse intelligence archive"
           >
             Browse Archive

@@ -21,7 +21,7 @@ export function CaseStudy({ type, date, title, location, content, status }: Case
       <div className="p-1 bg-neutral-800 flex justify-between items-center px-4">
         <div className="flex items-center gap-2">
           {icons[type]}
-          <span className="text-sm font-black uppercase tracking-tighter text-white">{type} REPORT {'//'} {date}</span>
+          <span className="text-sm font-bold uppercase tracking-tighter text-white">{type} REPORT {'//'} {date}</span>
         </div>
         <span className="text-sm font-bold text-crisis-text uppercase">{status}</span>
       </div>
@@ -30,7 +30,7 @@ export function CaseStudy({ type, date, title, location, content, status }: Case
         <div className="flex items-center gap-1 text-sm text-white mb-4 font-mono uppercase tracking-widest">
           <Clock size={12} /> {location}
         </div>
-        <p className="text-white text-sm leading-relaxed mb-4 italic border-l-2 border-neutral-800 pl-4">
+        <p className="text-neutral-200 text-base leading-relaxed mb-4 italic border-l-2 border-neutral-800 pl-4">
           &quot;{content}&quot;
         </p>
       </div>

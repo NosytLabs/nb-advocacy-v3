@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Image from "next/image";
+import { ArticleSchema } from "@/components/StructuredData";
 import { Brain, AlertTriangle, Clock, Users, Pill, Stethoscope } from "lucide-react";
 import { PageWrapper } from "@/components/PageWrapper";
 import { BackLink } from "@/components/BackLink";
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   keywords: "mental health New Brunswick, psychiatric care, ER mental health, opioid crisis NB, youth mental health, psychiatrist shortage, NB healthcare crisis",
   alternates: { canonical: "https://nbreform.ca/mental-health/" },
   openGraph: {
-    title: "NB's Mental Health Crisis: Failed by a Broken System | Reform NB",
+    title: "NB's Mental Health Crisis: Failed by a Broken System",
     description: "Among the worst mental health services in Canada. Days-long ER waits for psychiatric beds. Crisis-level shortages of mental health professionals. The crisis no one is fixing.",
     images: [{ url: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200", width: 1200, height: 675, alt: "Empty hospital corridor representing mental health crisis" }],
   },
@@ -51,7 +52,7 @@ export default function MentalHealthPage() {
       />
 
       {/* Hero Image */}
-      <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
+      <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl relative">
         <Image 
           src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&q=80" 
           alt="Empty hospital corridor representing the mental health crisis in New Brunswick"
@@ -77,15 +78,15 @@ export default function MentalHealthPage() {
       {/* ER Crisis */}
       <section className="py-24 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black font-serif uppercase tracking-tighter mb-8 italic">
+          <h2 className="text-4xl md:text-5xl font-bold font-serif uppercase tracking-tighter mb-8 italic">
             The <span className="text-white">ER Waiting Room</span>
           </h2>
-          <div className="prose prose-invert prose-lg max-w-none text-white space-y-6">
+          <div className="prose prose-invert prose-lg max-w-4xl text-white space-y-6">
             <p>
               In New Brunswick, people experiencing a <strong className="text-white">mental health crisis</strong> often end up in hospital emergency rooms — sometimes for <strong className="text-white">days</strong> — waiting for a psychiatric bed that doesn't exist. These patients are not receiving treatment. They are boarding. Sitting in hallways, in beds meant for heart attacks and broken bones, because the mental health system has no room for them.
             </p>
             <p>
-              NB's emergency rooms are already among the most overburdened in Canada. With a <strong className="text-white">12.9% walkout rate</strong> — the third highest in the country — patients routinely leave without being seen. For psychiatric patients, the situation is even worse: the province lacks sufficient inpatient beds, so patients are held in ERs under observation, sometimes in restraints, sometimes sedated, waiting for a transfer that may take days.
+              NB's emergency rooms are already among the most overburdened in Canada. With a <strong className="text-white">12.9% walkout rate</strong> — among the highest in the country — patients routinely leave without being seen. For psychiatric patients, the situation is even worse: the province lacks sufficient inpatient beds, so patients are held in ERs under observation, sometimes in restraints, sometimes sedated, waiting for a transfer that may take days.
             </p>
             <p>
               The <strong className="text-white">Horizon Health Network</strong> and <strong className="text-white">Vitalité Health Network</strong> operate the province's psychiatric services, but both are hampered by a lack of psychiatrists, nurses, and social workers. Rural hospitals often have no psychiatric coverage at all — meaning a person in crisis in Campbellton or Edmundston may need to be transported hundreds of kilometers to Moncton or Saint John.
@@ -102,10 +103,10 @@ export default function MentalHealthPage() {
       {/* Workforce Shortage */}
       <section className="py-24 px-6 bg-neutral-900">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black font-serif uppercase tracking-tighter mb-8 italic">
+          <h2 className="text-4xl md:text-5xl font-bold font-serif uppercase tracking-tighter mb-8 italic">
             No One to <span className="text-white">Help</span>
           </h2>
-          <div className="prose prose-invert prose-lg max-w-none text-white space-y-6">
+          <div className="prose prose-invert prose-lg max-w-4xl text-white space-y-6">
             <p>
               The root of NB's mental health crisis is a <strong className="text-white">severe shortage of mental health professionals</strong>. The province has among the lowest ratios of psychiatrists, psychologists, and social workers per capita in Canada. Rural areas are the hardest hit — entire regions function without a single psychiatrist.
             </p>
@@ -141,10 +142,10 @@ export default function MentalHealthPage() {
       {/* Youth Mental Health */}
       <section className="py-24 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black font-serif uppercase tracking-tighter mb-8 italic">
+          <h2 className="text-4xl md:text-5xl font-bold font-serif uppercase tracking-tighter mb-8 italic">
             <span className="text-white">Children</span> Left Behind
           </h2>
-          <div className="prose prose-invert prose-lg max-w-none text-white space-y-6">
+          <div className="prose prose-invert prose-lg max-w-4xl text-white space-y-6">
             <p>
               NB is experiencing a <strong className="text-white">crisis-level shortage</strong> of child and adolescent psychiatrists. Youth mental health referrals have surged since the pandemic, but the province's capacity to respond has not kept pace. Families report waiting <strong className="text-white">over a year</strong> for their children to see a specialist.
             </p>
@@ -166,10 +167,10 @@ export default function MentalHealthPage() {
       {/* Opioid Crisis */}
       <section className="py-24 px-6 bg-neutral-900">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black font-serif uppercase tracking-tighter mb-8 italic">
+          <h2 className="text-4xl md:text-5xl font-bold font-serif uppercase tracking-tighter mb-8 italic">
             The <span className="text-white">Opioid</span> Emergency
           </h2>
-          <div className="prose prose-invert prose-lg max-w-none text-white space-y-6">
+          <div className="prose prose-invert prose-lg max-w-4xl text-white space-y-6">
             <p>
               The <strong className="text-white">opioid crisis</strong> has hit New Brunswick's communities hard — particularly in <strong className="text-white">rural areas</strong> where addiction services are virtually non-existent. Fentanyl and carfentanil have driven overdose deaths to record levels, with toxic supply making every use potentially fatal.
             </p>
@@ -189,7 +190,7 @@ export default function MentalHealthPage() {
       {/* Timeline */}
       <section className="py-24 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-black font-serif uppercase tracking-tighter mb-12 italic">
+          <h2 className="text-3xl font-bold font-serif uppercase tracking-tighter mb-12 italic">
             Mental Health: Key Facts
           </h2>
           <KeyFactsGrid facts={keyFacts} title="Mental Health: Key Facts" />
@@ -218,6 +219,7 @@ export default function MentalHealthPage() {
         buttonText="Take Action"
         buttonHref="/take-action"
       />
+      <ArticleSchema title="Mental Health Crisis" description="Exposing the mental health crisis in New Brunswick" datePublished="2025-03-31" image="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80" url="https://nbreform.ca/mental-health" />
     </PageWrapper>
   );
 }

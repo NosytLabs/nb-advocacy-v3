@@ -31,11 +31,13 @@ export const metadata: Metadata = {
   description:
     "Investigating the systemic governance failure in New Brunswick. Exposing the truth about healthcare collapse, corporate monopoly, and government corruption.",
   openGraph: {
+    images: [{ url: "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80", width: 1200, height: 630 }],
     siteName: "Reform NB",
     type: "website",
     locale: "en_CA",
   },
   twitter: {
+    images: ["https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80"],
     card: "summary_large_image",
     site: "@ReformNB",
   },
@@ -70,12 +72,11 @@ export default function RootLayout({
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-crisis-red focus:text-white focus:px-4 focus:py-2 focus:rounded">
           Skip to main content
         </a>
-        <div className="noise-overlay" />
         <header className="main-header border-b border-neutral-900 bg-black/80 backdrop-blur-xl py-4 md:py-6 sticky top-0 z-50 relative">
-          <div className="container mx-auto px-4 md:px-8 flex justify-between items-center max-w-5xl">
+          <div className="container mx-auto px-4 md:px-8 flex justify-between items-center max-w-7xl">
             <Link
               href="/"
-              className="text-xl md:text-2xl font-black uppercase text-white hover:text-crisis-text transition-colors"
+              className="text-xl md:text-2xl font-bold uppercase text-white hover:text-crisis-text transition-colors"
               aria-label="Reform NB Home"
             >
               Reform NB
@@ -87,7 +88,7 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <BackToTop />
         <footer className="py-16 text-center text-sm text-neutral-400 border-t border-neutral-800 bg-black mt-20">
-          <div className="container mx-auto px-6 max-w-5xl">
+          <div className="container mx-auto px-6 max-w-7xl">
             <div className="mb-12">
               <Newsletter />
             </div>
@@ -97,6 +98,7 @@ export default function RootLayout({
               <Link href="/contact" className="hover:text-crisis-text transition-colors">Contact</Link>
               <Link href="/take-action" className="hover:text-crisis-text transition-colors">Take Action</Link>
               <Link href="/faq" className="hover:text-crisis-text transition-colors">FAQ</Link>
+              <Link href="/privacy" className="hover:text-crisis-text transition-colors">Privacy Policy</Link>
             </nav>
             <div className="flex justify-center gap-4 mb-6">
               <a href="https://twitter.com/ReformNB" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-neutral-900 hover:bg-neutral-800 transition-colors" aria-label="Twitter/X">
@@ -106,8 +108,8 @@ export default function RootLayout({
                 <Mail size={20} />
               </a>
             </div>
-            <p className="text-neutral-500">&copy; {new Date().getFullYear()} Reform NB. Uncovering the systemic failure.</p>
-            <p className="text-neutral-600 text-xs mt-2">Decentralized investigative journalism. No corporate funding. No government ties.</p>
+            <p className="text-neutral-400">&copy; {new Date().getFullYear()} Reform NB. Uncovering the systemic failure.</p>
+            <p className="text-neutral-500 text-xs mt-2">Decentralized investigative journalism. No corporate funding. No government ties.</p>
           </div>
         </footer>
       </body>
