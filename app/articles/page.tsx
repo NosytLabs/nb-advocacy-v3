@@ -155,6 +155,30 @@ const articles = [
     description: "Highest child poverty rate in Canada. Indigenous reserves at 51.2%. HST at 15% — highest in the country.",
     image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80",
   },
+  {
+    slug: "bc-drug-decriminalization-results",
+    title: "BC's Drug Decriminalization: 18-Month Results — What Worked, What Didn't",
+    date: "April 2026",
+    category: "Drug Policy",
+    description: "British Columbia's drug decriminalization pilot showed mixed results. Overdose deaths dropped initially but then spiked. Treatment gaps persisted.",
+    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80",
+  },
+  {
+    slug: "nb-healthcare-gender-gap",
+    title: "New Brunswick's Healthcare Crisis: Why the Gender Gap Is Getting Worse",
+    date: "April 2026",
+    category: "Healthcare",
+    description: "Women in NB face systemic healthcare disadvantages that are worsening with the province's healthcare collapse. Longer wait times, underdiagnosis, and male-norm standards.",
+    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80",
+  },
+  {
+    slug: "alberta-recovery-centre-model",
+    title: "Alberta's Recovery Centre Model: A Template for the Rest of Canada?",
+    date: "April 2026",
+    category: "Drug Policy",
+    description: "Alberta's integrated recovery centre model shows higher completion rates than fragmented care. Early results are promising — but could it work in New Brunswick?",
+    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80",
+  },
 ];
 
 export default function ArticlesPage() {
